@@ -24,13 +24,13 @@ body {
 }
 
 .header-items {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     width: 30%;
 }
 
 .item {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
     text-decoration: none;
     list-style: none;
     color: #ffffff;
