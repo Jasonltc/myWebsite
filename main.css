@@ -3,7 +3,7 @@ body {
     margin: 0; 
     padding: 0; 
     box-sizing: border-box;
-    background-color: #000000;
+    
 }
 
 .main-header{
@@ -11,6 +11,8 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+    width: 100%;
+    background-color: #000000;
 }
 
 .logo-container {
@@ -19,8 +21,8 @@ body {
 
 .logo-img {
     border-radius: 50%;
-    width: 100px;
-    height: 100px; 
+    width: 70px;
+    height: 70px; 
 }
 
 .header-items {
