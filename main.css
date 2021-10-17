@@ -12,7 +12,7 @@ body {
     align-items: center;
     padding: 10px;
     width: 100%;
-    background-color: #000000;
+    background-color: #0c0622;
 }
 
 .logo-container {
@@ -33,8 +33,10 @@ body {
 }
 
 .item {
-    text-decoration: none;
     list-style: none;
-    color: #ffffff;
 }
 
+.links {
+    text-decoration: none;
+    color: #ffffff;
+}
