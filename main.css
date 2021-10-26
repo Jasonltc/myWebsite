@@ -61,6 +61,7 @@ body {
 .started {
     font-weight: bold;
     color: #ffffff;
+    max-width: max-content;
     font-size: 40px;
     position: relative;
 }
@@ -78,14 +79,13 @@ body {
 .started::before {
     background: #060a1f;
     animation: typewitting 6s steps(41) forwards; 
-    width: max-content;
 }
 
 .started::after {
     background:#000000;
     animation:
-        typewitting 6s steps(41) forwards,  
-        blink 6s steps(41) forwards; 
+        typewitting 8s steps(41) forwards,  
+        blink 8s steps(41) forwards; 
     width: 2px;
 }
 
@@ -107,4 +107,14 @@ body {
     color: #ffffff;
     font-weight: 400;
     padding: 20px 0;
+    transform: translateY(4px);
+    opacity: 0;
+    animation: fadeInUp 2s ease 10s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
 }
