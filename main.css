@@ -86,7 +86,7 @@ body {
     width: 3px;
     animation:
         typewitting 8s steps(41) forwards,  
-        blink 8s steps(41) forwards; 
+        blink 8s steps(41) infinite; 
 }
 
 
@@ -109,7 +109,7 @@ body {
     padding: 20px 0;
     transform: translateY(4px);
     opacity: 0;
-    animation: fadeInUp 2s ease 8s forwards;
+    animation: fadeInUp 2s ease 9s forwards;
 }
 
 @keyframes fadeInUp {
