@@ -76,14 +76,29 @@ body {
 }
 
 .started::before {
-    background: rosybrown;
+    background: #060a1f;
     animation: typewitting 6s steps(41) forwards; 
+    width: max-content;
 }
+
+.started::after {
+    background: royalblue;
+    animation: typewitting 6s steps(41) forwards, 
+               blink 6s steps(41) forwards; 
+    width: 2px;
+}
+
 
 @keyframes typewitting {
     to {
      left: 100%;
    }
+}
+
+@keyframes blink {
+    to {
+        background: transparent;
+    }
 }
 
 .subtitle {
