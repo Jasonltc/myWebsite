@@ -78,15 +78,15 @@ body {
 
 .started::before {
     background: #060a1f;
-    animation: typewitting 6s steps(41) forwards; 
+    animation: typewitting 8s steps(41) forwards; 
 }
 
 .started::after {
     background:#000000;
+    width: 3px;
     animation:
         typewitting 8s steps(41) forwards,  
         blink 8s steps(41) forwards; 
-    width: 2px;
 }
 
 
@@ -109,7 +109,7 @@ body {
     padding: 20px 0;
     transform: translateY(4px);
     opacity: 0;
-    animation: fadeInUp 2s ease 10s forwards;
+    animation: fadeInUp 2s ease 8s forwards;
 }
 
 @keyframes fadeInUp {
