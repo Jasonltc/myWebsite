@@ -82,9 +82,10 @@ body {
 }
 
 .started::after {
-    background: royalblue;
-    animation: typewitting 6s steps(41) forwards, 
-               blink 6s steps(41) forwards; 
+    background:#000000;
+    animation:
+        typewitting 6s steps(41) forwards,  
+        blink 6s steps(41) forwards; 
     width: 2px;
 }
 
