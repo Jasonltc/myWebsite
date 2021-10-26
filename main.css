@@ -82,7 +82,7 @@ body {
 }
 
 .started::after {
-    background:#000000;
+    background:#ffffff;
     width: 3px;
     animation:
         typewitting 8s steps(41) forwards,  
