@@ -1,45 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./main.css" />
     <title>Document</title>
-</head>
-<body>
-<!-- main header -->
-<header>
-  <div class="main-header">
-      <div class="logo-container">
-          <img class="logo-img" src="./sources/image/avatar.jpg" alt="logo">
+  </head>
+  <body>
+    <!-- main header -->
+    <header>
+      <div class="main-header">
+        <div class="logo-container">
+          <img class="logo-img" src="./sources/image/avatar.jpg" alt="logo" />
+        </div>
+        <ul class="header-items">
+          <li class="item">
+            <a class="links" href="">Who is Jason</a>
+          </li>
+          <li class="item">
+            <a class="links" href="">Education</a>
+          </li>
+          <li class="item">
+            <a class="links" href="">works</a>
+          </li>
+          <li class="item">
+            <a class="links" href="">3D works</a>
+          </li>
+        </ul>
       </div>
-      <ul class="header-items">
-          <li class="item">
-              <a class="links" href="">Who is Jason</a>
-          </li>
-          <li class=item>
-              <a class="links" href="">Education</a>
-          </li>
-          <li class="item">
-              <a class="links" href="">works</a>
-          </li>
-          <li class="item">
-              <a class="links" href="">3D works</a>
-         </li>
-      </ul>
-  </div>
-</header>
-<section>
-  <div class="intro">
-    <div class="started">
-        Hello, I'm Jason and I'm a web developer!
-    </div>
-    <div class="subtitle">
-        welcome to my website
-    </div>
-  </div>
-</section>
-<script src="./main.js"></script>
-</body>
+    </header>
+    <main>
+      <section id="intro_animation" class="cv_section intro_animation">
+        <div class="started">Hello, I'm Jason and I'm a web developer!</div>
+        <div class="subtitle">welcome to my website</div>
+      </section>
+
+      <section id="profile_summary" class="cv_section profile_summary">
+        <div class="profile_summary__wrapper">
+          <div class="profile_picture"><img src="" alt="" /></div>
+          <div class="profile_summary"><p></p></div>
+        </div>
+      </section>
+
+      <section id="education_path" class="cv_section education_path">
+        <div class="eduction_path__wrapper">
+          <h2>Education Path</h2>
+          <div></div>
+        </div>
+      </section>
+
+      <section id="addition_info" class="cv_section addition_info">
+        <div class="addition_info__wrapper">
+          <div class="addition_info__hobbies">
+            <p>hobbies</p>
+          </div>
+          <div class="addition_info__lang">
+            <p>Language</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="career_path" class="cv_section career_path">
+        <div class="career_path__wrapper">
+          <h2>Career path</h2>
+        </div>
+      </section>
+
+      <section class="cv_section project_done"></section>
+      <section class="cv_section contact_me"></section>
+    </main>
+    <footer></footer>
+    <script src="./main.js"></script>
+  </body>
 </html>
