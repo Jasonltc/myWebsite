@@ -1,5 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.main_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  margin-bottom: 40px;
+}
+.main_header .main_header--section-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.main_header .section-item {
+  list-style: none;
+}
+.main_header .section-item .links {
+  color: #000000;
+  text-decoration: none;
+}
+
+.cv_section {
+  margin-bottom: 20px;
+}
+
+.intro_animation {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.intro_animation .started-animation {
+  font-weight: bold;
+  color: #000000;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  font-size: 40px;
+  position: relative;
+  font-family: "Oswald", sans-serif;
+}
+.intro_animation .started-animation::after, .intro_animation .started-animation::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.intro_animation .started-animation::after {
+  background: #ffffff;
+  width: 3px;
+  animation: typewitting 8s steps(41) forwards, blink 750ms steps(41) infinite;
+}
+.intro_animation .started-animation::before {
+  background: #060a1f;
+  animation: typewitting 8s steps(41) forwards;
+}
+.intro_animation .welcome-text {
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 400;
+  padding: 20px 0;
+  transform: translateY(4px);
+  opacity: 0;
+  animation: fadeInUp 2s ease 8.5s forwards;
+}
+
+@keyframes typewitting {
+  to {
+    left: 100%;
+  }
+}
+@keyframes blink {
+  to {
+    background: transparent;
+  }
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }/*# sourceMappingURL=style.css.map */
