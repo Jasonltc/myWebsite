@@ -13,6 +13,11 @@
   padding: 0 40px;
   margin-bottom: 40px;
 }
+.main_header .main_header--logo .logo-img {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
 .main_header .main_header--section-items {
   display: flex;
   justify-content: center;
@@ -25,10 +30,6 @@
 .main_header .section-item .links {
   color: #000000;
   text-decoration: none;
-}
-
-.cv_section {
-  margin-bottom: 20px;
 }
 
 .intro_animation {
@@ -66,7 +67,7 @@
 }
 .intro_animation .welcome-text {
   font-size: 20px;
-  color: #ffffff;
+  color: #000000;
   font-weight: 400;
   padding: 20px 0;
   transform: translateY(4px);
@@ -89,4 +90,24 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+.cv_section {
+  margin-bottom: 20px;
+}
+.cv_section .sub-title {
+  text-align: center;
+  font-family: "Lora", serif;
+}
+
+.addition_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.addition_info .addition_info__wrapper {
+  max-width: 500px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */

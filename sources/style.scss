@@ -14,6 +14,14 @@
   padding: 0 40px;
   margin-bottom: 40px;
 
+  .main_header--logo {
+    .logo-img {
+      border-radius: 50%;
+      width: 70px;
+      height: 70px;
+    }
+  }
+
   .main_header--section-items {
     @include display_flex_center;
     gap: 10px;
@@ -27,10 +35,6 @@
       text-decoration: none;
     }
   }
-}
-
-.cv_section {
-  margin-bottom: 20px;
 }
 
 .intro_animation {
@@ -71,7 +75,7 @@
 
   .welcome-text {
     font-size: 20px;
-    color: #ffffff;
+    color: $color-black;
     font-weight: 400;
     padding: 20px 0;
     transform: translateY(4px);
@@ -96,5 +100,23 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.cv_section {
+  margin-bottom: 20px;
+
+  .sub-title {
+    text-align: center;
+    @include font_family_lora;
+  }
+}
+
+.addition_info {
+  @include display_flex_center;
+  .addition_info__wrapper {
+    max-width: 500px;
+    width: 100%;
+    @include display_flex_space_around;
   }
 }
