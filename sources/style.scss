@@ -1,6 +1,7 @@
 @import "./scss/color";
 @import "./scss/reuse_function";
 @import "./scss/font";
+@import "./scss/device_size";
 
 * {
   margin: 0;
@@ -8,10 +9,20 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: $bg-color;
+}
+
+.wide-dimension {
+  max-width: $desktop;
+  margin: 0 auto 40px;
+  border: 1px solid $color-black;
+}
+
 //BMS
 .main_header {
   @include display_flex_space_between;
-  padding: 0 40px;
+  padding: 30px 40px;
   margin-bottom: 40px;
 
   .main_header--logo {
@@ -24,7 +35,7 @@
 
   .main_header--section-items {
     @include display_flex_center;
-    gap: 10px;
+    gap: 80px;
   }
 
   .section-item {
@@ -33,6 +44,10 @@
     .links {
       color: $color-black;
       text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
