@@ -61,7 +61,7 @@ body {
     font-weight: bold;
     color: $color-black;
     max-width: max-content;
-    font-size: 40px;
+    font-size: 75px;
     position: relative;
     @include font_family_oswald;
 
@@ -89,9 +89,9 @@ body {
   }
 
   .welcome-text {
-    font-size: 20px;
+    font-size: 50px;
     color: $color-black;
-    font-weight: 400;
+    font-weight: bold;
     padding: 20px 0;
     transform: translateY(4px);
     opacity: 0;
@@ -129,9 +129,57 @@ body {
 
 .addition_info {
   @include display_flex_center;
+
   .addition_info__wrapper {
-    max-width: 500px;
+    max-width: 650px;
     width: 100%;
     @include display_flex_space_around;
+    gap: 30px;
+  }
+
+  .addition-activity {
+    border: 1px solid #060a1f;
+    padding: 20px 40px 20px;
+    width: 100%;
+    max-width: 400px;
+    height: 140px;
+
+    .addition-info-title {
+      text-transform: uppercase;
+      text-align: center;
+      padding-bottom: 30px;
+    }
+
+    .hobbie-wrapper,
+    .lang-flap-wrapper {
+      @include display_flex_center;
+      gap: 40px;
+    }
+
+    .hobbie-wrapper {
+      .hobbie-item {
+        text-align: center;
+
+        i {
+          padding-top: 18px;
+        }
+
+        .hobbie-name {
+          margin-top: 10px;
+          display: block;
+        }
+      }
+    }
+
+    .lang-flap-wrapper {
+      .lang-item {
+        text-align: center;
+        width: 120px;
+      }
+
+      .lang-name {
+        display: block;
+      }
+    }
   }
 }

@@ -57,7 +57,7 @@ body {
   color: #000000;
   max-width: -moz-max-content;
   max-width: max-content;
-  font-size: 40px;
+  font-size: 75px;
   position: relative;
   font-family: "Oswald", sans-serif;
 }
@@ -79,9 +79,9 @@ body {
   animation: typewitting 8s steps(41) forwards;
 }
 .intro_animation .welcome-text {
-  font-size: 20px;
+  font-size: 50px;
   color: #000000;
-  font-weight: 400;
+  font-weight: bold;
   padding: 20px 0;
   transform: translateY(4px);
   opacity: 0;
@@ -118,9 +118,46 @@ body {
   align-items: center;
 }
 .addition_info .addition_info__wrapper {
-  max-width: 500px;
+  max-width: 650px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 30px;
+}
+.addition_info .addition-activity {
+  border: 1px solid #060a1f;
+  padding: 20px 40px 20px;
+  width: 100%;
+  max-width: 400px;
+  height: 140px;
+}
+.addition_info .addition-activity .addition-info-title {
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 30px;
+}
+.addition_info .addition-activity .hobbie-wrapper,
+.addition_info .addition-activity .lang-flap-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.addition_info .addition-activity .hobbie-wrapper .hobbie-item {
+  text-align: center;
+}
+.addition_info .addition-activity .hobbie-wrapper .hobbie-item i {
+  padding-top: 18px;
+}
+.addition_info .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
+  margin-top: 10px;
+  display: block;
+}
+.addition_info .addition-activity .lang-flap-wrapper .lang-item {
+  text-align: center;
+  width: 120px;
+}
+.addition_info .addition-activity .lang-flap-wrapper .lang-name {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
