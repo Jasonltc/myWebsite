@@ -106,6 +106,7 @@ body {
 }
 .cv_section {
   margin-bottom: 20px;
+  min-height: 50vh;
 }
 .cv_section .sub-title {
   text-align: center;
