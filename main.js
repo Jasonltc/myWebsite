@@ -9,7 +9,7 @@ const phrases = [
   "Go",
   "enjoying :)",
 ];
-const el = document.querySelector(".text");
+const el = document.querySelector(".flight-text");
 const fx = new TextScramble(el);
 let counter = 0;
 
@@ -19,19 +19,41 @@ const next = () => {
   });
   counter = (counter + 1) % phrases.length;
 };
-
 next();
 
 // add up button
 $(window).on("scroll", function () {
   if ($(this).scrollTop() > 300) {
-    $(".top").fadeIn(400);
+    $(".to-the-top").fadeIn(600);
   } else {
-    $(".top").fadeOut(400);
+    $(".to-the-top").fadeOut(600);
   }
 });
 
 $(".top").on("click", function (e) {
   e.preventDefault();
   $("html,body").animate({ scrollTop: 0 }, 300);
+});
+
+// swiper
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "vertical",
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
 });

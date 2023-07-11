@@ -107,10 +107,16 @@ body {
 .cv_section {
   margin-bottom: 20px;
   min-height: 50vh;
+  border: 1px solid #000000;
 }
 .cv_section .sub-title {
   text-align: center;
   font-family: "Lora", serif;
+}
+
+.profile_summary_text {
+  width: 100%;
+  max-width: 400px;
 }
 
 .addition_info {
@@ -119,19 +125,18 @@ body {
   align-items: center;
 }
 .addition_info .addition_info__wrapper {
-  max-width: 650px;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  gap: 30px;
+  align-items: unset;
+  gap: 10px;
 }
 .addition_info .addition-activity {
   border: 1px solid #060a1f;
-  padding: 20px 40px 20px;
-  width: 100%;
-  max-width: 400px;
-  height: 140px;
+  padding: 20px;
+  width: 25%;
+  min-height: 530px;
 }
 .addition_info .addition-activity .addition-info-title {
   text-transform: uppercase;
@@ -139,10 +144,13 @@ body {
   padding-bottom: 30px;
 }
 .addition_info .addition-activity .hobbie-wrapper,
-.addition_info .addition-activity .lang-flap-wrapper {
+.addition_info .addition-activity .lang-flap-wrapper,
+.addition_info .addition-activity .eduction-wrapper,
+.addition_info .addition-activity .skill-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 40px;
 }
 .addition_info .addition-activity .hobbie-wrapper .hobbie-item {
@@ -161,4 +169,47 @@ body {
 }
 .addition_info .addition-activity .lang-flap-wrapper .lang-name {
   display: block;
+  margin-top: 5px;
+}
+.addition_info .addition-activity .education-wrapper .education-year {
+  margin-bottom: 30px;
+}
+.addition_info .addition-activity .education-wrapper .education-year > p {
+  line-height: 25px;
+}
+
+.flight-announcement {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 30px;
+  border: 1px solid;
+}
+.flight-announcement .flight-text {
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.to-the-top {
+  height: 50px;
+  width: 50px;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #060a1f;
+}
+.to-the-top .top {
+  font-size: 30px;
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+  border: 1px solid red;
 }/*# sourceMappingURL=style.css.map */

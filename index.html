@@ -7,6 +7,7 @@
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
     <title>Document</title>
@@ -47,14 +48,21 @@
           <div class="profile_summary__wrapper">
             <div class="profile_picture"><img src="" alt="" /></div>
             <div class="profile_summary">
-              <p class="profile_summary_text">
-                Hi my name is Jason Lee Tien Choi and I'm a front end developer.
-                I'm a harworker and ambitious individual with a great passion in
-                coding. I have an excellent Positive and Friendly attitude which
-                enable me to effectively communicate with a wide range of
-                people. I'm also eager to face new challenges and to learn new
-                things
-              </p>
+              <div>
+                <div>
+                  <p>About me</p>
+                </div>
+                <div>
+                  <p class="profile_summary_text">
+                    Hi my name is Jason Lee Tien Choi and I'm a front end
+                    developer. I'm a harworker and ambitious individual with a
+                    great passion in coding. I have an excellent Positive and
+                    Friendly attitude which enable me to effectively communicate
+                    with a wide range of people. I'm also eager to face new
+                    challenges and to learn new things
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -62,7 +70,7 @@
         <section id="addition_info" class="cv_section addition_info">
           <div class="addition_info__wrapper">
             <div class="addition-activity addition_info__hobbies">
-              <p class="addition-info-title">hobbies</p>
+              <p class="addition-info-title">My interests</p>
               <div class="hobbie-wrapper">
                 <div class="hobbie-item">
                   <i class="fa-solid fa-dumbbell fa-2xl"></i>
@@ -82,6 +90,7 @@
                 </div>
               </div>
             </div>
+
             <div class="addition-activity addition_info__lang">
               <p class="addition-info-title">Language</p>
               <div class="lang-flap-wrapper">
@@ -99,75 +108,83 @@
                 </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        <section id="education_path" class="cv_section education_path">
-          <div class="eduction_path__wrapper">
-            <h2 class="sub-title">Education Path</h2>
-            <div>
-              <p>
-                I'm a self taught person and learn coding mostly by reading
-                article and watching Youtube
-              </p>
-              <p>
-                Some youtubers that inspired me to do front end wed development
-                are :
-              </p>
-            </div>
+            <div class="addition-activity education">
+              <p class="addition-info-title">Education</p>
+              <div class="education-wrapper">
+                <div class="education-year">
+                  <p>2015 -> 2018</p>
+                  <p><b>Curtin Mauritius University</b></p>
+                  <p>Bachelor in Marketing and Management</p>
+                </div>
 
-            <div>
-              <div>
-                <p>2015 -> 2018</p>
-                <p><b>Curtin Mauritius University</b></p>
-                <p>Bachelor in Marketing and Management</p>
+                <div class="education-year">
+                  <p>2019 -> 2020</p>
+                  <p><b>Unicomp institution</b></p>
+                  <p>Professional Certificate in Graphic Design</p>
+                  <p>Professional Certificate in Web Base Programming</p>
+                </div>
+
+                <div class="education-year">
+                  <p><b>Online Courses [Udemy]</b></p>
+                  <p>Advanced css and sass course</p>
+                  <p>JavaScript course</p>
+                  <p>React</p>
+                </div>
               </div>
             </div>
 
-            <div>
-              <div>
-                <p>2019 -> 2020</p>
-                <p><b>Unicomp institution</b></p>
-                <p>Professional Certificate in Graphic Design</p>
-                <p>Professional Certificate in Web Base Programming</p>
-              </div>
-            </div>
-
-            <div>
-              <div>
-                <p><b>Online Courses [Udemy]</b></p>
-                <p>Advanced css and sass course</p>
-                <p>JavaScript course</p>
+            <div class="addition-activity technology-used">
+              <p class="addition-info-title">Skill</p>
+              <div class="skill-wrapper">
+                <p>HTML 5</p>
+                <p>CSS 3</p>
+                <p>JavaScript</p>
+                <p>Front-end Framework</p>
+                <p>Bootstrap 4</p>
+                <p>uikit 3</p>
+                <p>Front-end Libraries</p>
+                <p>Gsap.js</p>
+                <p>Anime.js</p>
+                <p>Js framework</p>
                 <p>React</p>
               </div>
             </div>
-          </div>
-
-          <div>
-            <div>skill and Technology used</div>
-            <p>HTML 5</p>
-            <p>CSS 3</p>
-            <p>JavaScript</p>
-            <p>Front-end Framework</p>
-            <p>Bootstrap 4</p>
-            <p>uikit 3</p>
-            <p>Front-end Libraries</p>
-            <p>Gsap.js</p>
-            <p>Anime.js</p>
-            <p>Js framework</p>
-            <p>React</p>
           </div>
         </section>
 
         <section id="career_path" class="cv_section career_path">
           <div class="career_path__wrapper">
             <h2 class="sub-title">Career Path</h2>
-            <div class="container">
-            <div class="text"></div>
+            <div class="flight-announcement">
+              <div class="flight-text"></div>
+            </div>
           </div>
         </section>
 
-        <section class="cv_section project_done"></section>
+        <section class="cv_section project_done">
+          <div class="portfolio">
+            <div class="swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                ...
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+        </section>
         <section class="cv_section contact_me">
           <h2 class="sub-title">Contact Me</h2>
           <p>
@@ -184,13 +201,13 @@
           </p>
         </section>
 
-        <div>
+        <div class="to-the-top">
           <a href="#" class="top">&#9650;</a>
         </div>
-        
       </main>
       <footer>All rights reserved © 2023</footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./library/scramble.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

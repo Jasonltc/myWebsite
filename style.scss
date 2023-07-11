@@ -121,6 +121,7 @@ body {
 .cv_section {
   margin-bottom: 20px;
   min-height: 50vh;
+  border: 1px solid $color-black;
 
   .sub-title {
     text-align: center;
@@ -128,22 +129,26 @@ body {
   }
 }
 
+.profile_summary_text {
+  width: 100%;
+  max-width: 400px;
+}
+
 .addition_info {
   @include display_flex_center;
 
   .addition_info__wrapper {
-    max-width: 650px;
     width: 100%;
     @include display_flex_space_around;
-    gap: 30px;
+    align-items: unset;
+    gap: 10px;
   }
 
   .addition-activity {
     border: 1px solid #060a1f;
-    padding: 20px 40px 20px;
-    width: 100%;
-    max-width: 400px;
-    height: 140px;
+    padding: 20px;
+    width: 25%;
+    min-height: 530px;
 
     .addition-info-title {
       text-transform: uppercase;
@@ -152,8 +157,11 @@ body {
     }
 
     .hobbie-wrapper,
-    .lang-flap-wrapper {
+    .lang-flap-wrapper,
+    .eduction-wrapper,
+    .skill-wrapper {
       @include display_flex_center;
+      flex-direction: column;
       gap: 40px;
     }
 
@@ -180,7 +188,52 @@ body {
 
       .lang-name {
         display: block;
+        margin-top: 5px;
+      }
+    }
+
+    .education-wrapper {
+      .education-year {
+        margin-bottom: 30px;
+
+        & > p {
+          line-height: 25px;
+        }
       }
     }
   }
+}
+
+.flight-announcement {
+  width: 100%;
+  height: 50px;
+  @include display_flex_center;
+  padding: 50px 30px;
+  border: 1px solid;
+
+  .flight-text {
+    font-weight: bold;
+    font-size: 40px;
+  }
+}
+
+.to-the-top {
+  height: 50px;
+  width: 50px;
+  border: 1px solid;
+  @include display_flex_center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #060a1f;
+
+  .top {
+    font-size: 30px;
+  }
+}
+
+.swiper {
+  width: 600px;
+  height: 300px;
+  border: 1px solid red;
 }
