@@ -140,15 +140,16 @@ body {
 
   .addition_info__wrapper {
     width: 100%;
-    @include display_flex_space_around;
+    @include display_flex_center;
     align-items: unset;
-    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .addition-activity {
     border: 1px solid #060a1f;
-    padding: 20px;
-    width: 25%;
+    padding: 20px 5px;
+    width: 47.5%;
+    margin: 10px;
     min-height: 530px;
 
     .addition-info-title {
@@ -159,11 +160,31 @@ body {
 
     .hobbie-wrapper,
     .lang-flap-wrapper,
-    .eduction-wrapper,
-    .skill-wrapper {
+    .eduction-wrapper {
       @include display_flex_center;
       flex-direction: column;
       gap: 40px;
+    }
+
+    .skill-wrapper {
+      @include display_flex_space_around;
+      gap: 20px;
+
+      .skill-item {
+        text-align: center;
+        border: 1px solid $color-black;
+        min-height: 250px;
+
+        .skill-title {
+          font-weight: bold;
+          margin-bottom: 10px;
+          line-height: 20px;
+        }
+
+        & > p {
+          line-height: 30px;
+        }
+      }
     }
 
     .hobbie-wrapper {
@@ -193,13 +214,48 @@ body {
       }
     }
 
-    .education-wrapper {
-      .education-year {
-        margin-bottom: 30px;
+    .education-year {
+      @include display_flex_space_around;
+      height: 120px;
+      gap: 5px;
 
-        & > p {
-          line-height: 25px;
+      .time-year {
+        width: 100px;
+      }
+
+      .timeline {
+        width: 30px;
+        height: 30px;
+        border: 5px solid $color-black;
+        border-radius: 50%;
+        position: relative;
+
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          background-color: $color-black;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
         }
+
+        &::before {
+          content: "";
+          width: 2px;
+          height: 120px;
+          background-color: $color-black;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .time-outcome {
+        width: 200px;
       }
     }
   }

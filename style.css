@@ -128,15 +128,16 @@ body {
 .addition_info .addition_info__wrapper {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   align-items: unset;
-  gap: 10px;
+  flex-wrap: wrap;
 }
 .addition_info .addition-activity {
   border: 1px solid #060a1f;
-  padding: 20px;
-  width: 25%;
+  padding: 20px 5px;
+  width: 47.5%;
+  margin: 10px;
   min-height: 530px;
 }
 .addition_info .addition-activity .addition-info-title {
@@ -146,13 +147,31 @@ body {
 }
 .addition_info .addition-activity .hobbie-wrapper,
 .addition_info .addition-activity .lang-flap-wrapper,
-.addition_info .addition-activity .eduction-wrapper,
-.addition_info .addition-activity .skill-wrapper {
+.addition_info .addition-activity .eduction-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
+}
+.addition_info .addition-activity .skill-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+}
+.addition_info .addition-activity .skill-wrapper .skill-item {
+  text-align: center;
+  border: 1px solid #000000;
+  min-height: 250px;
+}
+.addition_info .addition-activity .skill-wrapper .skill-item .skill-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.addition_info .addition-activity .skill-wrapper .skill-item > p {
+  line-height: 30px;
 }
 .addition_info .addition-activity .hobbie-wrapper .hobbie-item {
   text-align: center;
@@ -172,11 +191,46 @@ body {
   display: block;
   margin-top: 5px;
 }
-.addition_info .addition-activity .education-wrapper .education-year {
-  margin-bottom: 30px;
+.addition_info .addition-activity .education-year {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 120px;
+  gap: 5px;
 }
-.addition_info .addition-activity .education-wrapper .education-year > p {
-  line-height: 25px;
+.addition_info .addition-activity .education-year .time-year {
+  width: 100px;
+}
+.addition_info .addition-activity .education-year .timeline {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #000000;
+  border-radius: 50%;
+  position: relative;
+}
+.addition_info .addition-activity .education-year .timeline::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.addition_info .addition-activity .education-year .timeline::before {
+  content: "";
+  width: 2px;
+  height: 120px;
+  background-color: #000000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.addition_info .addition-activity .education-year .time-outcome {
+  width: 200px;
 }
 
 .flight-announcement {
