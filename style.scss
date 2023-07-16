@@ -174,6 +174,7 @@ body {
         text-align: center;
         border: 1px solid $color-black;
         min-height: 250px;
+        padding: 10px;
 
         .skill-title {
           font-weight: bold;
@@ -306,6 +307,27 @@ body {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+  }
+}
+
+.contact_me {
+  text-align: center;
+
+  .contact_me_wrapper {
+    margin-top: 20px;
+    @include display_flex_center;
+    align-items: flex-start;
+    gap: 50px;
+
+    .contact_me_method {
+      @include display_flex_center;
+      flex-direction: column;
+      width: 250px;
+
+      span {
+        margin-top: 20px;
+      }
     }
   }
 }

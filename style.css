@@ -164,6 +164,7 @@ body {
   text-align: center;
   border: 1px solid #000000;
   min-height: 250px;
+  padding: 10px;
 }
 .addition_info .addition-activity .skill-wrapper .skill-item .skill-title {
   font-weight: bold;
@@ -281,6 +282,28 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.contact_me {
+  text-align: center;
+}
+.contact_me .contact_me_wrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  gap: 50px;
+}
+.contact_me .contact_me_wrapper .contact_me_method {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 250px;
+}
+.contact_me .contact_me_wrapper .contact_me_method span {
+  margin-top: 20px;
 }
 
 footer {
