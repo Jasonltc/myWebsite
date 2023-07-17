@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #4c94bc;
+  background-color: #1b1b1b;
 }
 
 .wide-dimension {
@@ -21,7 +21,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 30px 40px;
-  margin-bottom: 40px;
 }
 .main_header .main_header--logo .logo-img {
   border-radius: 50%;
@@ -38,7 +37,7 @@ body {
   list-style: none;
 }
 .main_header .section-item .links {
-  color: #000000;
+  color: #faab36;
   text-decoration: none;
 }
 .main_header .section-item .links:hover {
@@ -55,7 +54,7 @@ body {
 }
 .intro_animation .started-animation {
   font-weight: bold;
-  color: #000000;
+  color: #00b4d8;
   max-width: -moz-max-content;
   max-width: max-content;
   font-size: 75px;
@@ -73,20 +72,29 @@ body {
 .intro_animation .started-animation::after {
   background: #ffffff;
   width: 3px;
-  animation: typewitting 8s steps(41) forwards, blink 750ms steps(41) infinite;
+  animation: typewitting 4s steps(41) forwards, blink 750ms steps(41) infinite;
 }
 .intro_animation .started-animation::before {
-  background: #060a1f;
-  animation: typewitting 8s steps(41) forwards;
+  background: #1b1b1b;
+  animation: typewitting 4s steps(41) forwards;
 }
 .intro_animation .welcome-text {
   font-size: 50px;
-  color: #000000;
+  color: #faab36;
   font-weight: bold;
   padding: 20px 0;
   transform: translateY(4px);
   opacity: 0;
-  animation: fadeInUp 2s ease 8.5s forwards;
+  animation: fadeInUp 2s ease 4.5s forwards;
+}
+
+.intro-image {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeInUpImage 2s ease 6s forwards;
+}
+.intro-image img {
+  width: 70%;
 }
 
 @keyframes typewitting {
@@ -105,6 +113,12 @@ body {
     transform: translateY(0);
   }
 }
+@keyframes fadeInUpImage {
+  to {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
 .cv_section {
   margin-bottom: 20px;
   min-height: 50vh;
@@ -113,6 +127,8 @@ body {
 .cv_section .sub-title {
   text-align: center;
   font-family: "Lora", serif;
+  color: #faab36;
+  font-size: 40px;
 }
 
 .profile_summary_text {
@@ -144,6 +160,7 @@ body {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 30px;
+  color: #00b4d8;
 }
 .addition_info .addition-activity .hobbie-wrapper,
 .addition_info .addition-activity .lang-flap-wrapper,
@@ -158,6 +175,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
   gap: 20px;
 }
 .addition_info .addition-activity .skill-wrapper .skill-item {
@@ -165,6 +183,8 @@ body {
   border: 1px solid #000000;
   min-height: 250px;
   padding: 10px;
+  max-width: 200px;
+  width: 100%;
 }
 .addition_info .addition-activity .skill-wrapper .skill-item .skill-title {
   font-weight: bold;
@@ -246,6 +266,7 @@ body {
 .flight-announcement .flight-text {
   font-weight: bold;
   font-size: 40px;
+  color: #00b4d8;
 }
 
 .to-the-top {

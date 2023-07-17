@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: $bg-color;
+  background-color: $main-color;
 }
 
 .wide-dimension {
@@ -23,7 +23,6 @@ body {
 .main_header {
   @include display_flex_space_between;
   padding: 30px 40px;
-  margin-bottom: 40px;
 
   .main_header--logo {
     .logo-img {
@@ -42,7 +41,7 @@ body {
     list-style: none;
 
     .links {
-      color: $color-black;
+      color: $secondary-color-1;
       text-decoration: none;
 
       &:hover {
@@ -60,7 +59,7 @@ body {
 
   .started-animation {
     font-weight: bold;
-    color: $color-black;
+    color: $secondary-color;
     max-width: max-content;
     font-size: 75px;
     position: relative;
@@ -79,24 +78,34 @@ body {
     &::after {
       background: #ffffff;
       width: 3px;
-      animation: typewitting 8s steps(41) forwards,
+      animation: typewitting 4s steps(41) forwards,
         blink 750ms steps(41) infinite;
     }
 
     &::before {
-      background: #060a1f;
-      animation: typewitting 8s steps(41) forwards;
+      background: $main-color;
+      animation: typewitting 4s steps(41) forwards;
     }
   }
 
   .welcome-text {
     font-size: 50px;
-    color: $color-black;
+    color: $secondary-color-1;
     font-weight: bold;
     padding: 20px 0;
     transform: translateY(4px);
     opacity: 0;
-    animation: fadeInUp 2s ease 8.5s forwards;
+    animation: fadeInUp 2s ease 4.5s forwards;
+  }
+}
+
+.intro-image {
+  opacity: 0;
+  transform: translateY(80px);
+  animation: fadeInUpImage 2s ease 6s forwards;
+
+  img {
+    width: 70%;
   }
 }
 
@@ -119,6 +128,13 @@ body {
   }
 }
 
+@keyframes fadeInUpImage {
+  to {
+    opacity: 1;
+    transform: translateY(60px);
+  }
+}
+
 .cv_section {
   margin-bottom: 20px;
   min-height: 50vh;
@@ -127,6 +143,8 @@ body {
   .sub-title {
     text-align: center;
     @include font_family_lora;
+    color: #faab36;
+    font-size: 40px;
   }
 }
 
@@ -156,6 +174,7 @@ body {
       text-transform: uppercase;
       text-align: center;
       padding-bottom: 30px;
+      color: $secondary-color;
     }
 
     .hobbie-wrapper,
@@ -168,6 +187,7 @@ body {
 
     .skill-wrapper {
       @include display_flex_space_around;
+      flex-wrap: wrap;
       gap: 20px;
 
       .skill-item {
@@ -175,6 +195,8 @@ body {
         border: 1px solid $color-black;
         min-height: 250px;
         padding: 10px;
+        max-width: 200px;
+        width: 100%;
 
         .skill-title {
           font-weight: bold;
@@ -272,6 +294,7 @@ body {
   .flight-text {
     font-weight: bold;
     font-size: 40px;
+    color: $secondary-color;
   }
 }
 
