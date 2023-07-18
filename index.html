@@ -17,29 +17,31 @@
   </head>
   <body>
     <!-- main header -->
-    <div class="wide-dimension">
-      <header>
-        <div class="main_header">
-          <div class="main_header--logo">
-            <img class="logo-img" src="./image/avatar.jpg" alt="logo" />
-          </div>
-          <ul class="main_header--section-items">
-            <li class="section-item">
-              <a class="links" href="#">Who is Jason</a>
-            </li>
-            <li class="section-item">
-              <a class="links" href="#">Education</a>
-            </li>
-            <li class="section-item">
-              <a class="links" href="#">Career path</a>
-            </li>
-            <li class="section-item">
-              <a class="links" href="#">works</a>
-            </li>
-          </ul>
+
+    <header>
+      <div class="main_header">
+        <div class="main_header--logo">
+          <img class="logo-img" src="./image/avatar.jpg" alt="logo" />
         </div>
-      </header>
-      <main>
+        <ul class="main_header--section-items">
+          <li class="section-item">
+            <a class="links" href="#">Who is Jason</a>
+          </li>
+          <li class="section-item">
+            <a class="links" href="#">Education</a>
+          </li>
+          <li class="section-item">
+            <a class="links" href="#">Career path</a>
+          </li>
+          <li class="section-item">
+            <a class="links" href="#">works</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <div class="wide-dimension">
         <section id="intro_animation" class="cv_section intro_animation">
           <div class="started-animation">
             Hello, I'm Jason and I'm a web developer!
@@ -52,10 +54,12 @@
 
         <section id="profile_summary" class="cv_section profile_summary">
           <div class="profile_summary__wrapper">
+            <div class="animation-square-blue"></div>
+            <div class="animation-square-orange"></div>
             <div class="profile_picture"><img src="" alt="" /></div>
             <div class="profile_summary">
               <h2 class="sub-title">About me</h2>
-              <table>
+              <table class="about-table">
                 <tr>
                   <td>Name:</td>
                   <td>Jason</td>
@@ -210,6 +214,13 @@
                   <p>Gsap.js</p>
                   <p>Anime.js</p>
                 </div>
+
+                <div class="skill-item">
+                  <h4 class="skill-title">Other tools</h4>
+                  <p>Figma</p>
+                  <p>Photoshop</p>
+                  <p>Illustration</p>
+                </div>
               </div>
             </div>
           </div>
@@ -280,33 +291,39 @@
         </section>
         <section class="cv_section contact_me">
           <h2 class="sub-title">Contact Me</h2>
-          <p>Interested in working with me</p>
-          <p>I'm always open to discussing for opportunities</p>
           <div class="contact_me_wrapper">
-            <p class="contact_me_method">
-              start a conversation by sending me an email
-              <span><i class="fa-solid fa-mobile fa-2xl"></i></span>
-              <span><a href="#" tel="">+230 5946 00 33</a></span>
-            </p>
-            <p>or</p>
-            <p class="contact_me_method">
-              Give me a call
-              <span><i class="fa-solid fa-envelope fa-2xl"></i></span>
-              <span
-                ><a href="" mailto="jasonltc_14@hotmail.com"
-                  >Jasonltc_14@hotmail.com</a
-                ></span
-              >
-            </p>
+            <p>Interested in working with me</p>
+            <p>I'm always open to discussing for opportunities</p>
+          </div>
+          <div class="contact_me_method_wrapper">
+            <div class="contact_me_method">
+              <p class="contact_me_method_text">
+                Give me a call
+                <span><i class="fa-solid fa-mobile fa-2xl"></i></span>
+                <span><a href="#" tel="">+230 5946 00 33</a></span>
+              </p>
+            </div>
+
+            <div class="contact_me_method">
+              <p class="contact_me_method_text">
+                start a conversation by sending me an email
+                <span><i class="fa-solid fa-envelope fa-2xl"></i></span>
+                <span
+                  ><a href="" mailto="jasonltc_14@hotmail.com"
+                    >Jasonltc_14@hotmail.com</a
+                  ></span
+                >
+              </p>
+            </div>
           </div>
         </section>
 
         <div class="to-the-top">
           <a href="#" class="top">&#9650;</a>
         </div>
-      </main>
-      <footer>All rights reserved © 2023</footer>
-    </div>
+      </div>
+    </main>
+    <footer>All rights reserved © 2023</footer>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="./library/scramble.js"></script>

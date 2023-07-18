@@ -15,7 +15,7 @@ body {
 
 .wide-dimension {
   max-width: $desktop;
-  margin: 0 auto 40px;
+  margin: 0 auto;
   border: 1px solid $color-black;
 }
 
@@ -55,7 +55,7 @@ body {
   text-align: center;
   @include display_flex_center;
   flex-direction: column;
-  height: 100vh;
+  height: 985px;
 
   .started-animation {
     font-weight: bold;
@@ -131,14 +131,14 @@ body {
 @keyframes fadeInUpImage {
   to {
     opacity: 1;
-    transform: translateY(60px);
+    transform: translateY(70px);
   }
 }
 
 .cv_section {
   margin-bottom: 20px;
-  min-height: 50vh;
   border: 1px solid $color-black;
+  padding: 30px 0;
 
   .sub-title {
     text-align: center;
@@ -148,12 +148,67 @@ body {
   }
 }
 
-.profile_summary_text {
-  width: 100%;
-  max-width: 400px;
+.cv_section.profile_summary {
+  position: relative;
+  overflow: hidden;
+  height: 600px;
+
+  .profile_summary__wrapper {
+    @include display_flex_center;
+    padding: 30px 0;
+
+    .animation-square-blue {
+      width: 10px;
+      height: 60%;
+      background-color: $secondary-color;
+      position: absolute;
+      bottom: 0;
+      left: 100px;
+    }
+
+    .animation-square-orange {
+      width: 10px;
+      height: 60%;
+      background-color: $secondary-color-1;
+      position: absolute;
+      top: 0;
+      left: 120px;
+    }
+
+    .profile_picture {
+      width: 50%;
+    }
+
+    .profile_summary {
+      width: 50%;
+
+      .about-table {
+        margin-top: 30px;
+        margin-bottom: 15px;
+        width: 100%;
+        color: $secondary-color;
+
+        tr {
+          height: 20px;
+        }
+
+        td {
+          width: 200px;
+          height: 75px;
+          border: 1px solid;
+        }
+      }
+
+      .profile_summary_text {
+        color: $secondary-color;
+        padding: 10px;
+        line-height: 30px;
+      }
+    }
+  }
 }
 
-.addition_info {
+.cv_section.addition_info {
   @include display_flex_center;
 
   .addition_info__wrapper {
@@ -284,78 +339,96 @@ body {
   }
 }
 
-.flight-announcement {
-  width: 100%;
-  height: 100vh;
-  @include display_flex_center;
-  padding: 50px 30px;
-  border: 1px solid;
+.cv_section.career_path {
+  height: 1065px;
 
-  .flight-text {
-    font-weight: bold;
-    font-size: 40px;
-    color: $secondary-color;
-  }
-}
+  .flight-announcement {
+    width: 100%;
+    height: 985px;
+    @include display_flex_center;
 
-.to-the-top {
-  height: 50px;
-  width: 50px;
-  border: 1px solid;
-  @include display_flex_center;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: #060a1f;
-
-  .top {
-    font-size: 30px;
-  }
-}
-
-.swiper {
-  width: 100%;
-  height: 50vh;
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    &.img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .flight-text {
+      font-weight: bold;
+      font-size: 40px;
+      color: $secondary-color;
     }
   }
 }
 
-.contact_me {
+.to-the-top {
+  height: 60px;
+  width: 60px;
+  border: 1px solid $secondary-color-1;
+  @include display_flex_center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: $secondary-color-1;
+  z-index: 20;
+  border-radius: 50%;
+
+  .top {
+    font-size: 30px;
+    color: $secondary-color;
+  }
+}
+
+.cv_section.project_done {
+  height: auto;
+
+  .swiper {
+    width: 100%;
+    height: 50vh;
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &.img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.cv_section.contact_me {
   text-align: center;
+  height: 565px;
 
   .contact_me_wrapper {
-    margin-top: 20px;
-    @include display_flex_center;
-    align-items: flex-start;
-    gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    color: $secondary-color;
+  }
 
-    .contact_me_method {
-      @include display_flex_center;
-      flex-direction: column;
-      width: 250px;
+  .contact_me_method_wrapper {
+    @include display_flex_center;
+    gap: 100px;
+
+    .contact_me_method_text {
+      border: 1px solid;
+      padding: 20px;
 
       span {
-        margin-top: 20px;
+        display: block;
+        line-height: 50px;
       }
     }
   }
 }
 
 footer {
-  height: 300px;
+  height: 55px;
   text-align: center;
+  display: grid;
+  place-content: center;
+  color: $color-white;
+  background-color: $secondary-color;
 }
