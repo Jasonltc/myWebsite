@@ -132,7 +132,6 @@ body {
 }
 
 .cv_section.profile_summary {
-  position: relative;
   overflow: hidden;
   height: 600px;
 }
@@ -142,45 +141,31 @@ body {
   align-items: center;
   padding: 30px 0;
 }
-.cv_section.profile_summary .profile_summary__wrapper .animation-square-blue {
-  width: 10px;
-  height: 60%;
-  background-color: #00b4d8;
-  position: absolute;
-  bottom: 0;
-  left: 100px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .animation-square-orange {
-  width: 10px;
-  height: 60%;
-  background-color: #faab36;
-  position: absolute;
-  top: 0;
-  left: 120px;
-}
 .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
   width: 50%;
+  height: 100%;
+  position: relative;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_summary {
   width: 50%;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-table {
-  margin-top: 30px;
-  margin-bottom: 15px;
-  width: 100%;
+.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me {
   color: #00b4d8;
+  margin-top: 30px;
+  margin-bottom: 35px;
+  border-left: 3px solid #faab36;
+  padding-left: 10px;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-table tr {
-  height: 20px;
+.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me > span:first-child {
+  display: inline-block;
+  width: 100px;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-table td {
-  width: 200px;
-  height: 75px;
-  border: 1px solid;
+.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me > span:last-child {
+  display: inline-block;
+  width: 100px;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_summary .profile_summary_text {
   color: #00b4d8;
-  padding: 10px;
   line-height: 30px;
 }
 
@@ -229,7 +214,7 @@ body {
 .cv_section.addition_info .addition-activity .skill-wrapper .skill-item {
   text-align: center;
   border: 1px solid #000000;
-  min-height: 250px;
+  min-height: 150px;
   padding: 10px;
   max-width: 200px;
   width: 100%;
@@ -342,22 +327,18 @@ body {
 }
 .cv_section.project_done .swiper {
   width: 100%;
-  height: 50vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
-.cv_section.project_done .swiper .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.cv_section.project_done .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 400px;
 }
-.cv_section.project_done .swiper .swiper-slide.img {
+.cv_section.project_done .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .cv_section.contact_me {
@@ -369,19 +350,26 @@ body {
   margin-bottom: 40px;
   color: #00b4d8;
 }
+.cv_section.contact_me .contact_me_wrapper p {
+  font-size: 25px;
+}
 .cv_section.contact_me .contact_me_method_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
 }
-.cv_section.contact_me .contact_me_method_wrapper .contact_me_method_text {
+.cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
   border: 1px solid;
   padding: 20px;
+  max-width: 350px;
+  width: 350px;
+  height: 200px;
 }
-.cv_section.contact_me .contact_me_method_wrapper .contact_me_method_text span {
-  display: block;
-  line-height: 50px;
+.cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
+  height: 20px;
+  color: #00b4d8;
+  margin-bottom: 30px;
 }
 
 footer {
