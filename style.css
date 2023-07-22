@@ -131,10 +131,6 @@ body {
   font-size: 40px;
 }
 
-.cv_section.profile_summary {
-  overflow: hidden;
-  height: 600px;
-}
 .cv_section.profile_summary .profile_summary__wrapper {
   display: flex;
   justify-content: center;
@@ -146,35 +142,29 @@ body {
   height: 100%;
   position: relative;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary {
+.cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
   width: 50%;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me {
+.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me {
   color: #00b4d8;
   margin-top: 30px;
   margin-bottom: 35px;
   border-left: 3px solid #faab36;
   padding-left: 10px;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me > span:first-child {
+.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me > span:first-child {
   display: inline-block;
   width: 100px;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .about-me > span:last-child {
+.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me > span:last-child {
   display: inline-block;
   width: 100px;
 }
-.cv_section.profile_summary .profile_summary__wrapper .profile_summary .profile_summary_text {
+.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .profile_summary_text {
   color: #00b4d8;
   line-height: 30px;
 }
-
-.cv_section.addition_info {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cv_section.addition_info .addition_info__wrapper {
+.cv_section.profile_summary .profile_summary__wrapper .addition_info__wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -182,36 +172,42 @@ body {
   align-items: unset;
   flex-wrap: wrap;
 }
-.cv_section.addition_info .addition-activity {
+.cv_section.profile_summary .addition_info__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity {
   border: 1px solid #060a1f;
   padding: 20px 5px;
   width: 47.5%;
   margin: 10px;
   min-height: 530px;
 }
-.cv_section.addition_info .addition-activity .addition-info-title {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .addition-info-title {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 30px;
   color: #00b4d8;
 }
-.cv_section.addition_info .addition-activity .hobbie-wrapper,
-.cv_section.addition_info .addition-activity .lang-flap-wrapper,
-.cv_section.addition_info .addition-activity .eduction-wrapper {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper,
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper,
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .eduction-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 40px;
 }
-.cv_section.addition_info .addition-activity .skill-wrapper {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
 }
-.cv_section.addition_info .addition-activity .skill-wrapper .skill-item {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item {
   text-align: center;
   border: 1px solid #000000;
   min-height: 150px;
@@ -219,50 +215,50 @@ body {
   max-width: 200px;
   width: 100%;
 }
-.cv_section.addition_info .addition-activity .skill-wrapper .skill-item .skill-title {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-title {
   font-weight: bold;
   margin-bottom: 10px;
   line-height: 20px;
 }
-.cv_section.addition_info .addition-activity .skill-wrapper .skill-item > p {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item > p {
   line-height: 30px;
 }
-.cv_section.addition_info .addition-activity .hobbie-wrapper .hobbie-item {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item {
   text-align: center;
 }
-.cv_section.addition_info .addition-activity .hobbie-wrapper .hobbie-item i {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item i {
   padding-top: 18px;
 }
-.cv_section.addition_info .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
   margin-top: 10px;
   display: block;
 }
-.cv_section.addition_info .addition-activity .lang-flap-wrapper .lang-item {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item {
   text-align: center;
   width: 120px;
 }
-.cv_section.addition_info .addition-activity .lang-flap-wrapper .lang-name {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-name {
   display: block;
   margin-top: 5px;
 }
-.cv_section.addition_info .addition-activity .education-year {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 120px;
   gap: 5px;
 }
-.cv_section.addition_info .addition-activity .education-year .time-year {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .time-year {
   width: 100px;
 }
-.cv_section.addition_info .addition-activity .education-year .timeline {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline {
   width: 30px;
   height: 30px;
   border: 5px solid #000000;
   border-radius: 50%;
   position: relative;
 }
-.cv_section.addition_info .addition-activity .education-year .timeline::after {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline::after {
   content: "";
   width: 10px;
   height: 10px;
@@ -273,7 +269,7 @@ body {
   transform: translate(-50%, -50%);
   border-radius: 50%;
 }
-.cv_section.addition_info .addition-activity .education-year .timeline::before {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline::before {
   content: "";
   width: 2px;
   height: 120px;
@@ -283,7 +279,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.cv_section.addition_info .addition-activity .education-year .time-outcome {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .time-outcome {
   width: 200px;
 }
 

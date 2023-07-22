@@ -149,9 +149,6 @@ body {
 }
 
 .cv_section.profile_summary {
-  overflow: hidden;
-  height: 600px;
-
   .profile_summary__wrapper {
     @include display_flex_center;
     padding: 30px 0;
@@ -182,7 +179,7 @@ body {
       // }
     }
 
-    .profile_summary {
+    .profile_about_me {
       width: 50%;
 
       .about-me {
@@ -208,135 +205,136 @@ body {
         line-height: 30px;
       }
     }
-  }
-}
 
-.cv_section.addition_info {
-  @include display_flex_center;
+    .addition_info__wrapper {
+      width: 100%;
+      @include display_flex_center;
+      align-items: unset;
+      flex-wrap: wrap;
+    }
+  }
 
   .addition_info__wrapper {
-    width: 100%;
     @include display_flex_center;
-    align-items: unset;
     flex-wrap: wrap;
-  }
 
-  .addition-activity {
-    border: 1px solid #060a1f;
-    padding: 20px 5px;
-    width: 47.5%;
-    margin: 10px;
-    min-height: 530px;
+    .addition-activity {
+      border: 1px solid #060a1f;
+      padding: 20px 5px;
+      width: 47.5%;
+      margin: 10px;
+      min-height: 530px;
 
-    .addition-info-title {
-      text-transform: uppercase;
-      text-align: center;
-      padding-bottom: 30px;
-      color: $secondary-color;
-    }
-
-    .hobbie-wrapper,
-    .lang-flap-wrapper,
-    .eduction-wrapper {
-      @include display_flex_center;
-      flex-direction: column;
-      gap: 40px;
-    }
-
-    .skill-wrapper {
-      @include display_flex_space_around;
-      flex-wrap: wrap;
-      gap: 20px;
-
-      .skill-item {
+      .addition-info-title {
+        text-transform: uppercase;
         text-align: center;
-        border: 1px solid $color-black;
-        min-height: 150px;
-        padding: 10px;
-        max-width: 200px;
-        width: 100%;
+        padding-bottom: 30px;
+        color: $secondary-color;
+      }
 
-        .skill-title {
-          font-weight: bold;
-          margin-bottom: 10px;
-          line-height: 20px;
-        }
+      .hobbie-wrapper,
+      .lang-flap-wrapper,
+      .eduction-wrapper {
+        @include display_flex_center;
+        flex-direction: column;
+        gap: 40px;
+      }
 
-        & > p {
-          line-height: 30px;
+      .skill-wrapper {
+        @include display_flex_space_around;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .skill-item {
+          text-align: center;
+          border: 1px solid $color-black;
+          min-height: 150px;
+          padding: 10px;
+          max-width: 200px;
+          width: 100%;
+
+          .skill-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            line-height: 20px;
+          }
+
+          & > p {
+            line-height: 30px;
+          }
         }
       }
-    }
 
-    .hobbie-wrapper {
-      .hobbie-item {
-        text-align: center;
+      .hobbie-wrapper {
+        .hobbie-item {
+          text-align: center;
 
-        i {
-          padding-top: 18px;
+          i {
+            padding-top: 18px;
+          }
+
+          .hobbie-name {
+            margin-top: 10px;
+            display: block;
+          }
+        }
+      }
+
+      .lang-flap-wrapper {
+        .lang-item {
+          text-align: center;
+          width: 120px;
         }
 
-        .hobbie-name {
-          margin-top: 10px;
+        .lang-name {
           display: block;
+          margin-top: 5px;
         }
       }
-    }
 
-    .lang-flap-wrapper {
-      .lang-item {
-        text-align: center;
-        width: 120px;
-      }
+      .education-year {
+        @include display_flex_space_around;
+        height: 120px;
+        gap: 5px;
 
-      .lang-name {
-        display: block;
-        margin-top: 5px;
-      }
-    }
+        .time-year {
+          width: 100px;
+        }
 
-    .education-year {
-      @include display_flex_space_around;
-      height: 120px;
-      gap: 5px;
-
-      .time-year {
-        width: 100px;
-      }
-
-      .timeline {
-        width: 30px;
-        height: 30px;
-        border: 5px solid $color-black;
-        border-radius: 50%;
-        position: relative;
-
-        &::after {
-          content: "";
-          width: 10px;
-          height: 10px;
-          background-color: $color-black;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+        .timeline {
+          width: 30px;
+          height: 30px;
+          border: 5px solid $color-black;
           border-radius: 50%;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background-color: $color-black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+          }
+
+          &::before {
+            content: "";
+            width: 2px;
+            height: 120px;
+            background-color: $color-black;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
 
-        &::before {
-          content: "";
-          width: 2px;
-          height: 120px;
-          background-color: $color-black;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
+        .time-outcome {
+          width: 200px;
         }
-      }
-
-      .time-outcome {
-        width: 200px;
       }
     }
   }
