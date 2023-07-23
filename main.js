@@ -47,13 +47,10 @@ var swiper = new Swiper(".mySwiper", {
   },
   loop: true,
   coverflowEffect: {
-    rotate: 50,
+    rotate: 15,
     stretch: 0,
-    depth: 100,
+    depth: 300,
     modifier: 1,
     slideShadows: true,
-  },
-  pagination: {
-    el: ".swiper-pagination",
   },
 });

@@ -9,20 +9,21 @@
   box-sizing: border-box;
 }
 
+/* mobile */
+
 body {
   background-color: $main-color;
 }
 
 .wide-dimension {
-  max-width: $desktop;
-  margin: 0 auto;
-  border: 1px solid $color-black;
+  padding: 0 10px;
 }
 
 //BMS
 .main_header {
   @include display_flex_space_between;
-  padding: 30px 40px;
+  padding: 20px 10px;
+  position: relative;
 
   .main_header--logo {
     .logo-img {
@@ -33,8 +34,13 @@ body {
   }
 
   .main_header--section-items {
-    @include display_flex_center;
-    gap: 80px;
+    position: absolute;
+    top: 65px;
+    background-color: $main-color;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    display: none;
   }
 
   .section-item {
@@ -43,10 +49,19 @@ body {
     .links {
       color: $secondary-color-1;
       text-decoration: none;
+      display: block;
+      margin-bottom: 20px;
 
       &:hover {
         text-decoration: underline;
       }
+    }
+  }
+
+  .menu {
+    i {
+      font-size: 25px;
+      color: $secondary-color;
     }
   }
 }
@@ -55,13 +70,12 @@ body {
   text-align: center;
   @include display_flex_center;
   flex-direction: column;
-  height: 985px;
 
   .started-animation {
     font-weight: bold;
     color: $secondary-color;
     max-width: max-content;
-    font-size: 75px;
+    font-size: 25px;
     position: relative;
     @include font_family_oswald;
 
@@ -89,7 +103,7 @@ body {
   }
 
   .welcome-text {
-    font-size: 50px;
+    font-size: 22px;
     color: $secondary-color-1;
     font-weight: bold;
     padding: 20px 0;
@@ -101,7 +115,7 @@ body {
 
 .intro-image {
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateY(50px);
   animation: fadeInUpImage 2s ease 6s forwards;
 
   img {
@@ -131,7 +145,7 @@ body {
 @keyframes fadeInUpImage {
   to {
     opacity: 1;
-    transform: translateY(70px);
+    transform: translateY(0px);
   }
 }
 
@@ -144,19 +158,19 @@ body {
     text-align: center;
     @include font_family_lora;
     color: #faab36;
-    font-size: 40px;
+    font-size: 25px;
   }
 }
 
 .cv_section.profile_summary {
   .profile_summary__wrapper {
-    @include display_flex_center;
-    padding: 30px 0;
-
     .profile_picture {
-      width: 50%;
-      height: 100%;
       position: relative;
+      text-align: center;
+
+      img {
+        width: 70%;
+      }
 
       // .animation-square-blue {
       //   width: 10px;
@@ -180,12 +194,13 @@ body {
     }
 
     .profile_about_me {
-      width: 50%;
+      margin-bottom: 30px;
 
       .about-me {
         color: $secondary-color;
         margin-top: 30px;
         margin-bottom: 35px;
+        margin-left: 20px;
         border-left: 3px solid $secondary-color-1;
         padding-left: 10px;
 
@@ -203,137 +218,136 @@ body {
       .profile_summary_text {
         color: $secondary-color;
         line-height: 30px;
+        font-size: 15px;
+        padding: 0 20px;
       }
-    }
-
-    .addition_info__wrapper {
-      width: 100%;
-      @include display_flex_center;
-      align-items: unset;
-      flex-wrap: wrap;
     }
   }
 
   .addition_info__wrapper {
-    @include display_flex_center;
-    flex-wrap: wrap;
-
     .addition-activity {
       border: 1px solid #060a1f;
       padding: 20px 5px;
-      width: 47.5%;
       margin: 10px;
-      min-height: 530px;
 
       .addition-info-title {
         text-transform: uppercase;
         text-align: center;
         padding-bottom: 30px;
         color: $secondary-color;
-      }
-
-      .hobbie-wrapper,
-      .lang-flap-wrapper,
-      .eduction-wrapper {
-        @include display_flex_center;
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      .skill-wrapper {
-        @include display_flex_space_around;
-        flex-wrap: wrap;
-        gap: 20px;
-
-        .skill-item {
-          text-align: center;
-          border: 1px solid $color-black;
-          min-height: 150px;
-          padding: 10px;
-          max-width: 200px;
-          width: 100%;
-
-          .skill-title {
-            font-weight: bold;
-            margin-bottom: 10px;
-            line-height: 20px;
-          }
-
-          & > p {
-            line-height: 30px;
-          }
-        }
+        font-size: 15px;
       }
 
       .hobbie-wrapper {
-        .hobbie-item {
-          text-align: center;
+        @include display_flex_space_between;
+        text-align: center;
 
+        .hobbie-item {
           i {
-            padding-top: 18px;
+            font-size: 22px;
           }
 
           .hobbie-name {
-            margin-top: 10px;
+            color: $color-white;
             display: block;
+            margin-top: 12px;
+            width: 60px;
+            height: 50px;
           }
         }
       }
 
       .lang-flap-wrapper {
+        @include display_flex_space_between;
+        text-align: center;
         .lang-item {
-          text-align: center;
-          width: 120px;
-        }
+          img {
+            width: 40px;
+          }
 
-        .lang-name {
-          display: block;
-          margin-top: 5px;
+          .lang-name {
+            color: $color-white;
+            display: block;
+            width: 80px;
+            height: 50px;
+          }
         }
       }
 
-      .education-year {
-        @include display_flex_space_around;
-        height: 120px;
-        gap: 5px;
+      .education-wrapper {
+        .education-year {
+          @include display_flex_space_around;
+          height: 120px;
+          gap: 25px;
+          color: $color-white;
 
-        .time-year {
-          width: 100px;
-        }
+          .time-year {
+            width: 55px;
+          }
 
-        .timeline {
-          width: 30px;
-          height: 30px;
-          border: 5px solid $color-black;
-          border-radius: 50%;
-          position: relative;
-
-          &::after {
-            content: "";
-            width: 10px;
-            height: 10px;
-            background-color: $color-black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          .timeline {
+            width: 30px;
+            height: 30px;
+            border: 5px solid $secondary-color-1;
             border-radius: 50%;
+            position: relative;
+            background-color: $secondary-color;
+            z-index: 10;
+
+            &::after {
+              content: "";
+              width: 10px;
+              height: 10px;
+              background-color: $secondary-color-1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              border-radius: 50%;
+            }
+
+            &::before {
+              content: "";
+              width: 2px;
+              height: 120px;
+              background-color: $secondary-color-1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
           }
 
-          &::before {
-            content: "";
-            width: 2px;
-            height: 120px;
-            background-color: $color-black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          .time-outcome {
+            width: 200px;
           }
         }
+      }
 
-        .time-outcome {
-          width: 200px;
+      .skill-wrapper {
+        .skill-item {
+          text-align: center;
+          padding: 10px;
+          width: 100%;
+
+          .skill-title {
+            font-weight: bold;
+            border: 1px solid #fff;
+            height: 60px;
+            line-height: 60px;
+            color: $color-white;
+          }
+
+          .skill-build {
+            border: 1px solid #fff;
+            height: auto;
+
+            & {
+              line-height: 30px;
+              color: $color-white;
+              display: none;
+            }
+          }
         }
       }
     }
@@ -341,24 +355,14 @@ body {
 }
 
 .cv_section.career_path {
-  height: 1065px;
-
   .flight-announcement {
-    width: 100%;
-    height: 985px;
-    @include display_flex_center;
-
-    .flight-text {
-      font-weight: bold;
-      font-size: 40px;
-      color: $secondary-color;
-    }
+    display: none;
   }
 }
 
 .to-the-top {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border: 1px solid $secondary-color-1;
   @include display_flex_center;
   position: fixed;
@@ -369,7 +373,7 @@ body {
   border-radius: 50%;
 
   .top {
-    font-size: 30px;
+    font-size: 18px;
     color: $secondary-color;
   }
 }
@@ -378,27 +382,31 @@ body {
   height: auto;
 
   .swiper {
-    width: 100%;
+    width: 80%;
     padding-top: 50px;
-    padding-bottom: 50px;
+    height: 400px;
+  }
+
+  .swiper.landscape {
+    height: 250px;
   }
 
   .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
-    height: 400px;
+    width: 150px;
   }
 
   .swiper-slide img {
     display: block;
     width: 100%;
+    -webkit-box-reflect: below 1px
+      linear-gradient(transparent, transparent, #0002, #0004);
   }
 }
 
 .cv_section.contact_me {
   text-align: center;
-  height: 565px;
 
   .contact_me_wrapper {
     margin-top: 30px;
@@ -406,20 +414,14 @@ body {
     color: $secondary-color;
 
     p {
-      font-size: 25px;
+      font-size: 18px;
     }
   }
 
   .contact_me_method_wrapper {
-    @include display_flex_center;
-    gap: 100px;
-
     .contact_me_method {
       border: 1px solid;
       padding: 20px;
-      max-width: 350px;
-      width: 350px;
-      height: 200px;
 
       & > p {
         height: 20px;
@@ -437,4 +439,238 @@ footer {
   place-content: center;
   color: $color-white;
   background-color: $secondary-color;
+}
+
+/* tablet */
+@media (width >= 600px) {
+  .main_header {
+    padding: 30px 10px;
+
+    // .main_header--logo {}
+
+    .main_header--section-items {
+      @include display_flex_space_between;
+      position: unset;
+      top: unset;
+      width: unset;
+      height: unset;
+      gap: 30px;
+    }
+
+    .section-item {
+      .links {
+        display: unset;
+        margin-bottom: unset;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .menu {
+      display: none;
+    }
+  }
+
+  .intro_animation {
+    .started-animation {
+      font-size: 40px;
+    }
+
+    .welcome-text {
+      font-size: 30px;
+    }
+  }
+
+  .cv_section.contact_me {
+    text-align: center;
+
+    .contact_me_wrapper {
+      p {
+        font-size: 18px;
+      }
+    }
+
+    .contact_me_method_wrapper {
+      @include display_flex_center;
+      gap: 20px;
+
+      .contact_me_method {
+        border: 1px solid;
+        padding: 20px;
+        width: 250px;
+
+        & > p {
+          height: 20px;
+          color: $secondary-color;
+          margin-bottom: 30px;
+        }
+
+        .link-contact {
+          display: block;
+          text-decoration: underline;
+          color: $color-white;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 768px) {
+  .cv_section.profile_summary {
+    .profile_summary__wrapper {
+      @include display_flex_center;
+
+      .profile_picture {
+        width: 50%;
+      }
+
+      .profile_about_me {
+        width: 50%;
+      }
+    }
+
+    .addition_info__wrapper {
+      @include display_flex_center;
+      flex-wrap: wrap;
+
+      .addition-activity {
+        width: 45%;
+
+        &.interest,
+        &.language {
+          min-height: 160px;
+        }
+
+        &.education,
+        &.technology-used {
+          min-height: 600px;
+        }
+      }
+    }
+  }
+
+  .cv_section.project_done {
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 200px;
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .intro_animation {
+    height: 985px;
+  }
+
+  .cv_section.profile_summary {
+    .addition_info__wrapper {
+      .addition-activity {
+        .hobbie-wrapper,
+        .lang-flap-wrapper {
+          @include display_flex_space_around;
+        }
+      }
+    }
+  }
+
+  .cv_section.project_done {
+    .swiper {
+      height: 575px;
+    }
+
+    .swiper.landscape {
+      height: 475px;
+    }
+
+    .swiper-slide {
+      width: 300px;
+    }
+  }
+}
+
+@media (width >= 1224px) {
+  .cv_section {
+    .sub-title {
+      font-size: 30px;
+    }
+  }
+
+  .intro_animation {
+    .started-animation {
+      font-size: 65px;
+    }
+
+    .welcome-text {
+      font-size: 45px;
+    }
+  }
+
+  .intro-image {
+    transform: translateY(50px);
+  }
+
+  @keyframes fadeInUpImage {
+    to {
+      opacity: 1;
+      transform: translateY(35px);
+    }
+  }
+
+  .cv_section.profile_summary {
+    .addition_info__wrapper {
+      .addition-activity {
+        &.education,
+        &.technology-used {
+          min-height: 455px;
+        }
+
+        .skill-wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    }
+  }
+
+  .cv_section.career_path {
+    .flight-announcement {
+      @include display_flex_center;
+      width: 100%;
+      height: 985px;
+
+      .flight-text {
+        font-weight: bold;
+        font-size: 40px;
+        color: $secondary-color;
+      }
+    }
+  }
+
+  .cv_section.project_done {
+    .swiper,
+    .swiper.landscape {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      width: 400px;
+    }
+  }
+}
+
+@media (width >= 1800px) {
+  .main_header {
+    padding: 30px 185px;
+  }
+
+  .wide-dimension {
+    max-width: $desktop;
+    margin: 0 auto;
+    border: 1px solid $color-black;
+    padding: unset;
+  }
 }

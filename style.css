@@ -6,21 +6,21 @@
   box-sizing: border-box;
 }
 
+/* mobile */
 body {
   background-color: #1b1b1b;
 }
 
 .wide-dimension {
-  max-width: 1600px;
-  margin: 0 auto;
-  border: 1px solid #000000;
+  padding: 0 10px;
 }
 
 .main_header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  padding: 20px 10px;
+  position: relative;
 }
 .main_header .main_header--logo .logo-img {
   border-radius: 50%;
@@ -28,10 +28,13 @@ body {
   height: 70px;
 }
 .main_header .main_header--section-items {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 80px;
+  position: absolute;
+  top: 65px;
+  background-color: #1b1b1b;
+  width: 100%;
+  height: 100%;
+  padding-left: 20px;
+  display: none;
 }
 .main_header .section-item {
   list-style: none;
@@ -39,9 +42,15 @@ body {
 .main_header .section-item .links {
   color: #faab36;
   text-decoration: none;
+  display: block;
+  margin-bottom: 20px;
 }
 .main_header .section-item .links:hover {
   text-decoration: underline;
+}
+.main_header .menu i {
+  font-size: 25px;
+  color: #00b4d8;
 }
 
 .intro_animation {
@@ -50,14 +59,13 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 985px;
 }
 .intro_animation .started-animation {
   font-weight: bold;
   color: #00b4d8;
   max-width: -moz-max-content;
   max-width: max-content;
-  font-size: 75px;
+  font-size: 25px;
   position: relative;
   font-family: "Oswald", sans-serif;
 }
@@ -79,7 +87,7 @@ body {
   animation: typewitting 4s steps(41) forwards;
 }
 .intro_animation .welcome-text {
-  font-size: 50px;
+  font-size: 22px;
   color: #faab36;
   font-weight: bold;
   padding: 20px 0;
@@ -90,7 +98,7 @@ body {
 
 .intro-image {
   opacity: 0;
-  transform: translateY(80px);
+  transform: translateY(50px);
   animation: fadeInUpImage 2s ease 6s forwards;
 }
 .intro-image img {
@@ -116,7 +124,7 @@ body {
 @keyframes fadeInUpImage {
   to {
     opacity: 1;
-    transform: translateY(70px);
+    transform: translateY(0px);
   }
 }
 .cv_section {
@@ -128,27 +136,24 @@ body {
   text-align: center;
   font-family: "Lora", serif;
   color: #faab36;
-  font-size: 40px;
+  font-size: 25px;
 }
 
-.cv_section.profile_summary .profile_summary__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 30px 0;
-}
 .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
-  width: 50%;
-  height: 100%;
   position: relative;
+  text-align: center;
+}
+.cv_section.profile_summary .profile_summary__wrapper .profile_picture img {
+  width: 70%;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
-  width: 50%;
+  margin-bottom: 30px;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me {
   color: #00b4d8;
   margin-top: 30px;
   margin-bottom: 35px;
+  margin-left: 20px;
   border-left: 3px solid #faab36;
   padding-left: 10px;
 }
@@ -163,145 +168,125 @@ body {
 .cv_section.profile_summary .profile_summary__wrapper .profile_about_me .profile_summary_text {
   color: #00b4d8;
   line-height: 30px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .addition_info__wrapper {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  align-items: unset;
-  flex-wrap: wrap;
-}
-.cv_section.profile_summary .addition_info__wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  font-size: 15px;
+  padding: 0 20px;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity {
   border: 1px solid #060a1f;
   padding: 20px 5px;
-  width: 47.5%;
   margin: 10px;
-  min-height: 530px;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .addition-info-title {
   text-transform: uppercase;
   text-align: center;
   padding-bottom: 30px;
   color: #00b4d8;
+  font-size: 15px;
 }
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper,
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper,
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .eduction-wrapper {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  flex-direction: column;
-  gap: 40px;
+  text-align: center;
 }
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item i {
+  font-size: 22px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
+  color: #ffffff;
+  display: block;
+  margin-top: 12px;
+  width: 60px;
+  height: 50px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item img {
+  width: 40px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item .lang-name {
+  color: #ffffff;
+  display: block;
+  width: 80px;
+  height: 50px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
+  height: 120px;
+  gap: 25px;
+  color: #ffffff;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .time-year {
+  width: 55px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline {
+  width: 30px;
+  height: 30px;
+  border: 5px solid #faab36;
+  border-radius: 50%;
+  position: relative;
+  background-color: #00b4d8;
+  z-index: 10;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: #faab36;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline::before {
+  content: "";
+  width: 2px;
+  height: 120px;
+  background-color: #faab36;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .time-outcome {
+  width: 200px;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item {
   text-align: center;
-  border: 1px solid #000000;
-  min-height: 150px;
   padding: 10px;
-  max-width: 200px;
   width: 100%;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-title {
   font-weight: bold;
-  margin-bottom: 10px;
-  line-height: 20px;
+  border: 1px solid #fff;
+  height: 60px;
+  line-height: 60px;
+  color: #ffffff;
 }
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item > p {
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build {
+  border: 1px solid #fff;
+  height: auto;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build {
   line-height: 30px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item {
-  text-align: center;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item i {
-  padding-top: 18px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
-  margin-top: 10px;
-  display: block;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item {
-  text-align: center;
-  width: 120px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-name {
-  display: block;
-  margin-top: 5px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 120px;
-  gap: 5px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .time-year {
-  width: 100px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline {
-  width: 30px;
-  height: 30px;
-  border: 5px solid #000000;
-  border-radius: 50%;
-  position: relative;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #000000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .timeline::before {
-  content: "";
-  width: 2px;
-  height: 120px;
-  background-color: #000000;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-year .time-outcome {
-  width: 200px;
+  color: #ffffff;
+  display: none;
 }
 
-.cv_section.career_path {
-  height: 1065px;
-}
 .cv_section.career_path .flight-announcement {
-  width: 100%;
-  height: 985px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.cv_section.career_path .flight-announcement .flight-text {
-  font-weight: bold;
-  font-size: 40px;
-  color: #00b4d8;
+  display: none;
 }
 
 .to-the-top {
-  height: 60px;
-  width: 60px;
+  height: 40px;
+  width: 40px;
   border: 1px solid #faab36;
   display: flex;
   justify-content: center;
@@ -314,7 +299,7 @@ body {
   border-radius: 50%;
 }
 .to-the-top .top {
-  font-size: 30px;
+  font-size: 18px;
   color: #00b4d8;
 }
 
@@ -322,24 +307,26 @@ body {
   height: auto;
 }
 .cv_section.project_done .swiper {
-  width: 100%;
+  width: 80%;
   padding-top: 50px;
-  padding-bottom: 50px;
+  height: 400px;
+}
+.cv_section.project_done .swiper.landscape {
+  height: 250px;
 }
 .cv_section.project_done .swiper-slide {
   background-position: center;
   background-size: cover;
-  width: 300px;
-  height: 400px;
+  width: 150px;
 }
 .cv_section.project_done .swiper-slide img {
   display: block;
   width: 100%;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333), rgba(0, 0, 0, 0.2666666667));
 }
 
 .cv_section.contact_me {
   text-align: center;
-  height: 565px;
 }
 .cv_section.contact_me .contact_me_wrapper {
   margin-top: 30px;
@@ -347,20 +334,11 @@ body {
   color: #00b4d8;
 }
 .cv_section.contact_me .contact_me_wrapper p {
-  font-size: 25px;
-}
-.cv_section.contact_me .contact_me_method_wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
+  font-size: 18px;
 }
 .cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
   border: 1px solid;
   padding: 20px;
-  max-width: 350px;
-  width: 350px;
-  height: 200px;
 }
 .cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
   height: 20px;
@@ -375,4 +353,175 @@ footer {
   place-content: center;
   color: #ffffff;
   background-color: #00b4d8;
+}
+
+/* tablet */
+@media (width >= 600px) {
+  .main_header {
+    padding: 30px 10px;
+  }
+  .main_header .main_header--section-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: unset;
+    top: unset;
+    width: unset;
+    height: unset;
+    gap: 30px;
+  }
+  .main_header .section-item .links {
+    display: unset;
+    margin-bottom: unset;
+  }
+  .main_header .section-item .links:hover {
+    text-decoration: underline;
+  }
+  .main_header .menu {
+    display: none;
+  }
+  .intro_animation .started-animation {
+    font-size: 40px;
+  }
+  .intro_animation .welcome-text {
+    font-size: 30px;
+  }
+  .cv_section.contact_me {
+    text-align: center;
+  }
+  .cv_section.contact_me .contact_me_wrapper p {
+    font-size: 18px;
+  }
+  .cv_section.contact_me .contact_me_method_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
+    border: 1px solid;
+    padding: 20px;
+    width: 250px;
+  }
+  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
+    height: 20px;
+    color: #00b4d8;
+    margin-bottom: 30px;
+  }
+  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method .link-contact {
+    display: block;
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 15px;
+  }
+}
+@media (width >= 768px) {
+  .cv_section.profile_summary .profile_summary__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
+    width: 50%;
+  }
+  .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
+    width: 50%;
+  }
+  .cv_section.profile_summary .addition_info__wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity {
+    width: 45%;
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity.interest, .cv_section.profile_summary .addition_info__wrapper .addition-activity.language {
+    min-height: 160px;
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity.education, .cv_section.profile_summary .addition_info__wrapper .addition-activity.technology-used {
+    min-height: 600px;
+  }
+  .cv_section.project_done .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 200px;
+  }
+}
+@media (width >= 1024px) {
+  .intro_animation {
+    height: 985px;
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper,
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .cv_section.project_done .swiper {
+    height: 575px;
+  }
+  .cv_section.project_done .swiper.landscape {
+    height: 475px;
+  }
+  .cv_section.project_done .swiper-slide {
+    width: 300px;
+  }
+}
+@media (width >= 1224px) {
+  .cv_section .sub-title {
+    font-size: 30px;
+  }
+  .intro_animation .started-animation {
+    font-size: 65px;
+  }
+  .intro_animation .welcome-text {
+    font-size: 45px;
+  }
+  .intro-image {
+    transform: translateY(50px);
+  }
+  @keyframes fadeInUpImage {
+    to {
+      opacity: 1;
+      transform: translateY(35px);
+    }
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity.education, .cv_section.profile_summary .addition_info__wrapper .addition-activity.technology-used {
+    min-height: 455px;
+  }
+  .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .cv_section.career_path .flight-announcement {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 985px;
+  }
+  .cv_section.career_path .flight-announcement .flight-text {
+    font-weight: bold;
+    font-size: 40px;
+    color: #00b4d8;
+  }
+  .cv_section.project_done .swiper,
+  .cv_section.project_done .swiper.landscape {
+    height: 100%;
+  }
+  .cv_section.project_done .swiper-slide {
+    width: 400px;
+  }
+}
+@media (width >= 1800px) {
+  .main_header {
+    padding: 30px 185px;
+  }
+  .wide-dimension {
+    max-width: 1600px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    padding: unset;
+  }
 }/*# sourceMappingURL=style.css.map */
