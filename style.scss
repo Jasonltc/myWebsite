@@ -7,6 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* mobile */
@@ -35,12 +36,18 @@ body {
 
   .main_header--section-items {
     position: absolute;
+    text-align: center;
     top: 65px;
-    background-color: $main-color;
-    width: 100%;
-    height: 100%;
-    padding-left: 20px;
-    display: none;
+    background-color: $secondary-color;
+    width: 0;
+    right: 0;
+    z-index: 50;
+    padding: 30px 0;
+    transition: all 0.233s ease-in;
+  }
+
+  .main_header--section-items.active {
+    width: 50%;
   }
 
   .section-item {
@@ -51,10 +58,6 @@ body {
       text-decoration: none;
       display: block;
       margin-bottom: 20px;
-
-      &:hover {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -167,9 +170,10 @@ body {
     .profile_picture {
       position: relative;
       text-align: center;
+      margin-bottom: 30px;
 
       img {
-        width: 70%;
+        width: 90%;
       }
 
       // .animation-square-blue {
@@ -326,7 +330,6 @@ body {
 
       .skill-wrapper {
         .skill-item {
-          text-align: center;
           padding: 10px;
           width: 100%;
 
@@ -336,17 +339,44 @@ body {
             height: 60px;
             line-height: 60px;
             color: $color-white;
+            text-align: left;
+            position: relative;
+            padding: 0 20px;
+
+            &::before {
+              content: "+";
+              position: absolute;
+              right: 20px;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: 20px;
+              transition: all 0.23s ease-in;
+            }
           }
 
           .skill-build {
-            border: 1px solid #fff;
-            height: auto;
+            text-align: center;
+            height: 0;
+            line-height: 30px;
+            color: $color-white;
+            overflow: hidden;
+            transition: all 0.233s ease-in;
 
-            & {
-              line-height: 30px;
-              color: $color-white;
-              display: none;
+            & > p:first-child {
+              margin-top: 15px;
             }
+          }
+        }
+
+        .skill-item.active {
+          .skill-title {
+            &::before {
+              content: "-";
+            }
+          }
+
+          .skill-build {
+            height: 120px;
           }
         }
       }
@@ -384,7 +414,7 @@ body {
   .swiper {
     width: 80%;
     padding-top: 50px;
-    height: 400px;
+    height: 325px;
   }
 
   .swiper.landscape {
@@ -444,17 +474,18 @@ footer {
 /* tablet */
 @media (width >= 600px) {
   .main_header {
-    padding: 30px 10px;
+    padding: 30px 20px;
 
     // .main_header--logo {}
 
     .main_header--section-items {
       @include display_flex_space_between;
       position: unset;
-      top: unset;
       width: unset;
       height: unset;
-      gap: 30px;
+      background-color: unset;
+      padding: unset;
+      gap: 45px;
     }
 
     .section-item {
@@ -522,9 +553,11 @@ footer {
   .cv_section.profile_summary {
     .profile_summary__wrapper {
       @include display_flex_center;
+      margin-bottom: 40px;
 
       .profile_picture {
         width: 50%;
+        margin-bottom: unset;
       }
 
       .profile_about_me {
@@ -535,6 +568,7 @@ footer {
     .addition_info__wrapper {
       @include display_flex_center;
       flex-wrap: wrap;
+      align-items: self-start;
 
       .addition-activity {
         width: 45%;
@@ -562,6 +596,36 @@ footer {
 }
 
 @media (width >= 1024px) {
+  .main_header {
+    .section-item {
+      .links {
+        position: relative;
+        opacity: 0.5;
+        transition: all 0.233s ease-in;
+
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 3px;
+          background-color: $secondary-color-1;
+          transition: all 0.233s ease-in;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .intro_animation {
     height: 985px;
   }

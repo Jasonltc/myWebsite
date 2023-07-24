@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 /* mobile */
@@ -29,12 +30,17 @@ body {
 }
 .main_header .main_header--section-items {
   position: absolute;
+  text-align: center;
   top: 65px;
-  background-color: #1b1b1b;
-  width: 100%;
-  height: 100%;
-  padding-left: 20px;
-  display: none;
+  background-color: #00b4d8;
+  width: 0;
+  right: 0;
+  z-index: 50;
+  padding: 30px 0;
+  transition: all 0.233s ease-in;
+}
+.main_header .main_header--section-items.active {
+  width: 50%;
 }
 .main_header .section-item {
   list-style: none;
@@ -44,9 +50,6 @@ body {
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
-}
-.main_header .section-item .links:hover {
-  text-decoration: underline;
 }
 .main_header .menu i {
   font-size: 25px;
@@ -142,9 +145,10 @@ body {
 .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
   position: relative;
   text-align: center;
+  margin-bottom: 30px;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_picture img {
-  width: 70%;
+  width: 90%;
 }
 .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
   margin-bottom: 30px;
@@ -259,7 +263,6 @@ body {
   width: 200px;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item {
-  text-align: center;
   padding: 10px;
   width: 100%;
 }
@@ -269,15 +272,35 @@ body {
   height: 60px;
   line-height: 60px;
   color: #ffffff;
+  text-align: left;
+  position: relative;
+  padding: 0 20px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-title::before {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  transition: all 0.23s ease-in;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build {
-  border: 1px solid #fff;
-  height: auto;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build {
+  text-align: center;
+  height: 0;
   line-height: 30px;
   color: #ffffff;
-  display: none;
+  overflow: hidden;
+  transition: all 0.233s ease-in;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build > p:first-child {
+  margin-top: 15px;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item.active .skill-title::before {
+  content: "-";
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item.active .skill-build {
+  height: 120px;
 }
 
 .cv_section.career_path .flight-announcement {
@@ -309,7 +332,7 @@ body {
 .cv_section.project_done .swiper {
   width: 80%;
   padding-top: 50px;
-  height: 400px;
+  height: 325px;
 }
 .cv_section.project_done .swiper.landscape {
   height: 250px;
@@ -358,17 +381,18 @@ footer {
 /* tablet */
 @media (width >= 600px) {
   .main_header {
-    padding: 30px 10px;
+    padding: 30px 20px;
   }
   .main_header .main_header--section-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: unset;
-    top: unset;
     width: unset;
     height: unset;
-    gap: 30px;
+    background-color: unset;
+    padding: unset;
+    gap: 45px;
   }
   .main_header .section-item .links {
     display: unset;
@@ -420,9 +444,11 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
   }
   .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
     width: 50%;
+    margin-bottom: unset;
   }
   .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
     width: 50%;
@@ -432,6 +458,7 @@ footer {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    align-items: self-start;
   }
   .cv_section.profile_summary .addition_info__wrapper .addition-activity {
     width: 45%;
@@ -449,6 +476,28 @@ footer {
   }
 }
 @media (width >= 1024px) {
+  .main_header .section-item .links {
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.233s ease-in;
+  }
+  .main_header .section-item .links:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+  .main_header .section-item .links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #faab36;
+    transition: all 0.233s ease-in;
+  }
+  .main_header .section-item .links:hover::after {
+    width: 100%;
+  }
   .intro_animation {
     height: 985px;
   }
