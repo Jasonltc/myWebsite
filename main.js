@@ -75,6 +75,23 @@ var swiper = new Swiper(".mySwiper", {
   },
 });
 
+// gsap animation
+gsap.registerPlugin(ScrollTrigger);
+
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".career_path",
+    start: "top center",
+    end: "bottom center",
+    scrub: true,
+    markers: false,
+  },
+});
+
+tl.to(".flight-announcement", {
+  opacity: 0,
+});
+
 menuMobileActive();
 addButtonUp();
 scramble();

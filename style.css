@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-family: "Oswald", sans-serif;
 }
 
 /* mobile */
@@ -33,6 +34,7 @@ body {
   text-align: center;
   top: 65px;
   background-color: #00b4d8;
+  overflow: hidden;
   width: 0;
   right: 0;
   z-index: 50;
@@ -186,6 +188,7 @@ body {
   padding-bottom: 30px;
   color: #00b4d8;
   font-size: 15px;
+  font-family: "Lora", serif;
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper {
   display: flex;
@@ -336,6 +339,7 @@ body {
 }
 .cv_section.project_done .swiper.landscape {
   height: 250px;
+  margin-bottom: 30px;
 }
 .cv_section.project_done .swiper-slide {
   background-position: center;
@@ -346,6 +350,17 @@ body {
   display: block;
   width: 100%;
   -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333), rgba(0, 0, 0, 0.2666666667));
+}
+.cv_section.project_done .project {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+.cv_section.project_done .project .project-item {
+  width: 90%;
+  margin: 0 auto;
+  height: 300px;
+  border: 1px solid #060a1f;
+  margin-bottom: 20px;
 }
 
 .cv_section.contact_me {
@@ -367,6 +382,12 @@ body {
   height: 20px;
   color: #00b4d8;
   margin-bottom: 30px;
+}
+.cv_section.contact_me .contact_me_method_wrapper .link-contact {
+  display: block;
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 15px;
 }
 
 footer {
@@ -392,6 +413,7 @@ footer {
     height: unset;
     background-color: unset;
     padding: unset;
+    overflow: unset;
     gap: 45px;
   }
   .main_header .section-item .links {
@@ -410,6 +432,9 @@ footer {
   .intro_animation .welcome-text {
     font-size: 30px;
   }
+  .cv_section.project_done .project {
+    grid-template-columns: repeat(2, 1fr);
+  }
   .cv_section.contact_me {
     text-align: center;
   }
@@ -425,18 +450,12 @@ footer {
   .cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
     border: 1px solid;
     padding: 20px;
-    width: 250px;
+    width: 45%;
   }
   .cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
     height: 20px;
     color: #00b4d8;
     margin-bottom: 30px;
-  }
-  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method .link-contact {
-    display: block;
-    text-decoration: underline;
-    color: #ffffff;
-    font-size: 15px;
   }
 }
 @media (width >= 768px) {
@@ -473,6 +492,9 @@ footer {
     background-position: center;
     background-size: cover;
     width: 200px;
+  }
+  .cv_section.project_done .project {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (width >= 1024px) {
@@ -543,12 +565,18 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+  .cv_section.career_path {
+    height: 985px;
+    overflow: hidden;
+    position: relative;
+  }
   .cv_section.career_path .flight-announcement {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 985px;
+    position: absolute;
   }
   .cv_section.career_path .flight-announcement .flight-text {
     font-weight: bold;
@@ -561,6 +589,12 @@ footer {
   }
   .cv_section.project_done .swiper-slide {
     width: 400px;
+  }
+  .cv_section.project_done .swiper.landscape {
+    margin-bottom: 100px;
+  }
+  .cv_section.project_done .project {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (width >= 1800px) {

@@ -8,6 +8,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  @include font_family_oswald;
 }
 
 /* mobile */
@@ -39,6 +40,7 @@ body {
     text-align: center;
     top: 65px;
     background-color: $secondary-color;
+    overflow: hidden;
     width: 0;
     right: 0;
     z-index: 50;
@@ -240,6 +242,7 @@ body {
         padding-bottom: 30px;
         color: $secondary-color;
         font-size: 15px;
+        @include font_family_lora;
       }
 
       .hobbie-wrapper {
@@ -419,6 +422,7 @@ body {
 
   .swiper.landscape {
     height: 250px;
+    margin-bottom: 30px;
   }
 
   .swiper-slide {
@@ -432,6 +436,19 @@ body {
     width: 100%;
     -webkit-box-reflect: below 1px
       linear-gradient(transparent, transparent, #0002, #0004);
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    .project-item {
+      width: 90%;
+      margin: 0 auto;
+      height: 300px;
+      border: 1px solid #060a1f;
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -459,6 +476,13 @@ body {
         margin-bottom: 30px;
       }
     }
+
+    .link-contact {
+      display: block;
+      text-decoration: underline;
+      color: $color-white;
+      font-size: 15px;
+    }
   }
 }
 
@@ -485,6 +509,7 @@ footer {
       height: unset;
       background-color: unset;
       padding: unset;
+      overflow: unset;
       gap: 45px;
     }
 
@@ -514,6 +539,20 @@ footer {
     }
   }
 
+  .cv_section.project_done {
+    .project {
+      grid-template-columns: repeat(2, 1fr);
+
+      // .project-item {
+      //   width: 90%;
+      //   margin: 0 auto;
+      //   height: 300px;
+      //   border: 1px solid #060a1f;
+      //   margin-bottom: 20px;
+      // }
+    }
+  }
+
   .cv_section.contact_me {
     text-align: center;
 
@@ -530,19 +569,12 @@ footer {
       .contact_me_method {
         border: 1px solid;
         padding: 20px;
-        width: 250px;
+        width: 45%;
 
         & > p {
           height: 20px;
           color: $secondary-color;
           margin-bottom: 30px;
-        }
-
-        .link-contact {
-          display: block;
-          text-decoration: underline;
-          color: $color-white;
-          font-size: 15px;
         }
       }
     }
@@ -591,6 +623,14 @@ footer {
       background-position: center;
       background-size: cover;
       width: 200px;
+    }
+
+    .project {
+      grid-template-columns: repeat(3, 1fr);
+
+      // .project-item {
+      //   width: 100%;
+      // }
     }
   }
 }
@@ -701,10 +741,15 @@ footer {
   }
 
   .cv_section.career_path {
+    height: 985px;
+    overflow: hidden;
+    position: relative;
+
     .flight-announcement {
       @include display_flex_center;
       width: 100%;
       height: 985px;
+      position: absolute;
 
       .flight-text {
         font-weight: bold;
@@ -722,6 +767,14 @@ footer {
 
     .swiper-slide {
       width: 400px;
+    }
+
+    .swiper.landscape {
+      margin-bottom: 100px;
+    }
+
+    .project {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }
