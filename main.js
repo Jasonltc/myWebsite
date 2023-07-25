@@ -77,19 +77,34 @@ var swiper = new Swiper(".mySwiper", {
 
 // gsap animation
 gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin);
 
 let tl = gsap.timeline({
   scrollTrigger: {
-    trigger: ".career_path",
-    start: "top center",
-    end: "bottom center",
-    scrub: true,
-    markers: false,
+    trigger: "#career-path",
+    start: "top 80%",
+    end: "top 20%",
+    scrub: 4,
+    markers: true,
   },
 });
 
-tl.to(".flight-announcement", {
-  opacity: 0,
+// tl.to(".flight-announcement", {
+//   opacity: 0,
+//   duration: 5,
+// })
+
+tl.to(".plane", {
+  motionPath: {
+    path: [
+      { x: 100, y: -20 },
+      { x: 200, y: -110 },
+      { x: 500, y: -220 },
+    ],
+    curviness: 2,
+    autoRotate: true,
+    duration: 5,
+  },
 });
 
 menuMobileActive();

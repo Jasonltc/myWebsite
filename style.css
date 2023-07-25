@@ -570,7 +570,7 @@ footer {
     overflow: hidden;
     position: relative;
   }
-  .cv_section.career_path .flight-announcement {
+  .cv_section.career_path .career_path__wrapper .flight-announcement {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -578,10 +578,21 @@ footer {
     height: 985px;
     position: absolute;
   }
-  .cv_section.career_path .flight-announcement .flight-text {
+  .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
     font-weight: bold;
     font-size: 40px;
     color: #00b4d8;
+  }
+  .cv_section.career_path .career_path__wrapper .paper-filght {
+    position: relative;
+  }
+  .cv_section.career_path .career_path__wrapper .paper-filght .plane {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 40px;
+    height: 40px;
+    background-color: rebeccapurple;
   }
   .cv_section.project_done .swiper,
   .cv_section.project_done .swiper.landscape {
