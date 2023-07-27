@@ -741,7 +741,7 @@ footer {
   }
 
   .cv_section.career_path {
-    height: 985px;
+    height: 750px;
     overflow: hidden;
     position: relative;
 
@@ -749,8 +749,10 @@ footer {
       .flight-announcement {
         @include display_flex_center;
         width: 100%;
-        height: 985px;
+        height: 679px;
         position: absolute;
+        background-color: $main-color;
+        z-index: 10;
 
         .flight-text {
           font-weight: bold;
@@ -759,15 +761,15 @@ footer {
         }
       }
 
-      .paper-filght {
-        position: relative;
+      .paper-flight {
         .plane {
           position: absolute;
-          top: 40px;
+          bottom: 200px;
           left: 40px;
           width: 40px;
           height: 40px;
           background-color: rebeccapurple;
+          z-index: 5;
         }
       }
     }

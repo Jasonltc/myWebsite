@@ -76,36 +76,49 @@ var swiper = new Swiper(".mySwiper", {
 });
 
 // gsap animation
-gsap.registerPlugin(ScrollTrigger);
-gsap.registerPlugin(MotionPathPlugin);
+gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#career-path",
-    start: "top 80%",
-    end: "top 20%",
-    scrub: 4,
-    markers: true,
-  },
+const planePath = [
+  { x: 100, y: -20 },
+  { x: 300, y: 10 },
+  { x: 500, y: 100 },
+  { x: 750, y: -100 },
+  { x: 350, y: -50 },
+  { x: 600, y: 100 },
+  { x: 800, y: 0 },
+  { x: window.innerWidth, y: -250 },
+];
+
+const mainOp = gsap.timeline().to(".flight-announcement", { opacity: 0 }, 1);
+
+let tl = gsap
+  .timeline({
+    scrollTrigger: {
+      trigger: ".flight-announcement",
+      start: "top 80%",
+      end: "bottom 30%",
+      scrub: true,
+      pin: "#career-path",
+      markers: true,
+    },
+  })
+  .add(mainOp)
+  .to(".plane", {
+    motionPath: {
+      path: planePath,
+      curviness: 2,
+      autoRotate: true,
+      duration: 3000,
+    },
+  });
+
+const pilon = ScrollTrigger.create({
+  trigger: ".trigger",
+  pin: ".pin",
+  start: "top center",
+  end: "+=500",
 });
-
-// tl.to(".flight-announcement", {
-//   opacity: 0,
-//   duration: 5,
-// })
-
-tl.to(".plane", {
-  motionPath: {
-    path: [
-      { x: 100, y: -20 },
-      { x: 200, y: -110 },
-      { x: 500, y: -220 },
-    ],
-    curviness: 2,
-    autoRotate: true,
-    duration: 5,
-  },
-});
+console.log(pilon.pin);
 
 menuMobileActive();
 addButtonUp();
