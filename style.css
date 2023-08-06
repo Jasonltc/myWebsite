@@ -307,8 +307,7 @@ body {
 }
 
 .cv_section.career_path {
-  overflow: hidden;
-  position: relative;
+  height: 750px;
 }
 .cv_section.career_path .career_path__wrapper .flight-announcement {
   display: flex;
@@ -322,8 +321,12 @@ body {
   color: #00b4d8;
   margin-top: 25px;
 }
+.cv_section.career_path .career_path__wrapper .pin-target {
+  border: 1px solid red;
+}
 .cv_section.career_path .career_path__wrapper .paper-flight {
-  height: 679px;
+  height: 200px;
+  margin-top: 40px;
 }
 
 .to-the-top {
@@ -583,8 +586,6 @@ footer {
   }
   .cv_section.career_path {
     height: 750px;
-    overflow: hidden;
-    position: relative;
   }
   .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
     font-weight: bold;

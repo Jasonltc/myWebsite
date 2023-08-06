@@ -388,9 +388,7 @@ body {
 }
 
 .cv_section.career_path {
-  // height: 750px;
-  overflow: hidden;
-  position: relative;
+  height: 750px;
 
   .career_path__wrapper {
     .flight-announcement {
@@ -409,8 +407,13 @@ body {
       }
     }
 
+    .pin-target {
+      border: 1px solid red;
+    }
+
     .paper-flight {
-      height: 679px;
+      height: 200px;
+      margin-top: 40px;
       // .plane {
       //   position: absolute;
       //   bottom: 200px;
@@ -773,8 +776,6 @@ footer {
 
   .cv_section.career_path {
     height: 750px;
-    overflow: hidden;
-    position: relative;
 
     .career_path__wrapper {
       .flight-announcement {

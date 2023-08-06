@@ -91,20 +91,22 @@ const planePath = [
 
 // const mainOp = gsap.timeline().to(".flight-announcement", { opacity: 0 }, 1);
 
-let tl = gsap.timeline();
-tl.to(".plane", { xPercent: 1000 });
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: "#career-path",
+    start: "top top",
+    end: "bottom top",
+    scrub: true,
+    markers: true,
+    pin: true,
+  },
+});
 
-ScrollTrigger.create({
-  animation: tl,
-  trigger: ".flight-announcement",
-  start: "top center",
-  end: "bottom center",
-  scrub: 1,
-  markers: true,
-  pinSpacing: false,
-  pin: true,
-  anticipatePin: 1,
-  stagger: 1,
+tl.to(".plane", {
+  motionPath: {
+    path: planePath,
+    curviness: 2,
+  },
 });
 
 menuMobileActive();
