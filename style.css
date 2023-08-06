@@ -306,8 +306,24 @@ body {
   height: 120px;
 }
 
-.cv_section.career_path .flight-announcement {
-  display: none;
+.cv_section.career_path {
+  overflow: hidden;
+  position: relative;
+}
+.cv_section.career_path .career_path__wrapper .flight-announcement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
+  font-weight: bold;
+  font-size: 20px;
+  color: #00b4d8;
+  margin-top: 25px;
+}
+.cv_section.career_path .career_path__wrapper .paper-flight {
+  height: 679px;
 }
 
 .to-the-top {
@@ -570,25 +586,17 @@ footer {
     overflow: hidden;
     position: relative;
   }
-  .cv_section.career_path .career_path__wrapper .flight-announcement {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 679px;
-    position: absolute;
-    background-color: #1b1b1b;
-    z-index: 10;
-  }
   .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
     font-weight: bold;
     font-size: 40px;
     color: #00b4d8;
+    margin-top: 50px;
+  }
+  .cv_section.career_path .career_path__wrapper .paper-flight {
+    border: 1px solid;
   }
   .cv_section.career_path .career_path__wrapper .paper-flight .plane {
-    position: absolute;
-    bottom: 200px;
-    left: 40px;
+    position: relative;
     width: 40px;
     height: 40px;
     background-color: rebeccapurple;

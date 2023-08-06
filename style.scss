@@ -388,8 +388,39 @@ body {
 }
 
 .cv_section.career_path {
-  .flight-announcement {
-    display: none;
+  // height: 750px;
+  overflow: hidden;
+  position: relative;
+
+  .career_path__wrapper {
+    .flight-announcement {
+      @include display_flex_center;
+      width: 100%;
+      // height: 679px;
+      // position: absolute;
+      // background-color: $main-color;
+      // z-index: 10;
+
+      .flight-text {
+        font-weight: bold;
+        font-size: 20px;
+        color: $secondary-color;
+        margin-top: 25px;
+      }
+    }
+
+    .paper-flight {
+      height: 679px;
+      // .plane {
+      //   position: absolute;
+      //   bottom: 200px;
+      //   left: 40px;
+      //   width: 40px;
+      //   height: 40px;
+      //   background-color: rebeccapurple;
+      //   z-index: 5;
+      // }
+    }
   }
 }
 
@@ -747,25 +778,20 @@ footer {
 
     .career_path__wrapper {
       .flight-announcement {
-        @include display_flex_center;
-        width: 100%;
-        height: 679px;
-        position: absolute;
-        background-color: $main-color;
-        z-index: 10;
-
         .flight-text {
           font-weight: bold;
           font-size: 40px;
           color: $secondary-color;
+          margin-top: 50px;
         }
       }
 
       .paper-flight {
+        border: 1px solid;
         .plane {
-          position: absolute;
-          bottom: 200px;
-          left: 40px;
+          position: relative;
+          // bottom: 200px;
+          // left: 40px;
           width: 40px;
           height: 40px;
           background-color: rebeccapurple;
