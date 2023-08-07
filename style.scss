@@ -19,6 +19,7 @@ body {
 
 .wide-dimension {
   padding: 0 10px;
+  overflow: hidden;
 }
 
 //BMS
@@ -243,6 +244,23 @@ body {
         color: $secondary-color;
         font-size: 15px;
         @include font_family_lora;
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+        z-index: 4;
+        // text-shadow: 10px 5px 5px $color-black;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 5px;
+          background-color: $secondary-color-1;
+          position: absolute;
+          top: 18px;
+          left: 3px;
+          z-index: -1;
+          transform: skewX(25deg);
+        }
       }
 
       .hobbie-wrapper {
@@ -388,12 +406,13 @@ body {
 }
 
 .cv_section.career_path {
-  height: 750px;
+  // height: 750px;
 
   .career_path__wrapper {
     .flight-announcement {
       @include display_flex_center;
       width: 100%;
+      margin: 50px 0;
       // height: 679px;
       // position: absolute;
       // background-color: $main-color;
@@ -403,26 +422,25 @@ body {
         font-weight: bold;
         font-size: 20px;
         color: $secondary-color;
-        margin-top: 25px;
       }
     }
 
     .pin-target {
-      border: 1px solid red;
+      // border: 1px solid red;
+      width: 100%;
     }
 
     .paper-flight {
-      height: 200px;
-      margin-top: 40px;
-      // .plane {
-      //   position: absolute;
-      //   bottom: 200px;
-      //   left: 40px;
-      //   width: 40px;
-      //   height: 40px;
-      //   background-color: rebeccapurple;
-      //   z-index: 5;
-      // }
+      height: 557px;
+      position: relative;
+      .plane {
+        width: 40px;
+        height: 40px;
+        background-color: rebeccapurple;
+        z-index: 5;
+        position: absolute;
+        bottom: 0;
+      }
     }
   }
 }
@@ -624,6 +642,18 @@ footer {
       .profile_picture {
         width: 50%;
         margin-bottom: unset;
+
+        &::after {
+          content: "";
+          background: $secondary-color;
+          position: absolute;
+          width: 90%;
+          height: 100%;
+          left: 10px;
+          top: -10px;
+          z-index: -1;
+          opacity: 0.5;
+        }
       }
 
       .profile_about_me {
@@ -775,7 +805,7 @@ footer {
   }
 
   .cv_section.career_path {
-    height: 750px;
+    // height: 750px;
 
     .career_path__wrapper {
       .flight-announcement {
@@ -788,15 +818,15 @@ footer {
       }
 
       .paper-flight {
-        border: 1px solid;
+        overflow: hidden;
+        height: 472px;
         .plane {
-          position: relative;
-          // bottom: 200px;
-          // left: 40px;
           width: 40px;
           height: 40px;
           background-color: rebeccapurple;
-          z-index: 5;
+          z-index: -1;
+          position: absolute;
+          bottom: 0;
         }
       }
     }

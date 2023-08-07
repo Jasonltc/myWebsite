@@ -15,6 +15,7 @@ body {
 
 .wide-dimension {
   padding: 0 10px;
+  overflow: hidden;
 }
 
 .main_header {
@@ -189,6 +190,22 @@ body {
   color: #00b4d8;
   font-size: 15px;
   font-family: "Lora", serif;
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  z-index: 4;
+}
+.cv_section.profile_summary .addition_info__wrapper .addition-activity .addition-info-title::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background-color: #faab36;
+  position: absolute;
+  top: 18px;
+  left: 3px;
+  z-index: -1;
+  transform: skewX(25deg);
 }
 .cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper {
   display: flex;
@@ -306,27 +323,32 @@ body {
   height: 120px;
 }
 
-.cv_section.career_path {
-  height: 750px;
-}
 .cv_section.career_path .career_path__wrapper .flight-announcement {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
+  margin: 50px 0;
 }
 .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
   font-weight: bold;
   font-size: 20px;
   color: #00b4d8;
-  margin-top: 25px;
 }
 .cv_section.career_path .career_path__wrapper .pin-target {
-  border: 1px solid red;
+  width: 100%;
 }
 .cv_section.career_path .career_path__wrapper .paper-flight {
-  height: 200px;
-  margin-top: 40px;
+  height: 557px;
+  position: relative;
+}
+.cv_section.career_path .career_path__wrapper .paper-flight .plane {
+  width: 40px;
+  height: 40px;
+  background-color: rebeccapurple;
+  z-index: 5;
+  position: absolute;
+  bottom: 0;
 }
 
 .to-the-top {
@@ -488,6 +510,17 @@ footer {
     width: 50%;
     margin-bottom: unset;
   }
+  .cv_section.profile_summary .profile_summary__wrapper .profile_picture::after {
+    content: "";
+    background: #00b4d8;
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    left: 10px;
+    top: -10px;
+    z-index: -1;
+    opacity: 0.5;
+  }
   .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
     width: 50%;
   }
@@ -584,9 +617,6 @@ footer {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .cv_section.career_path {
-    height: 750px;
-  }
   .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
     font-weight: bold;
     font-size: 40px;
@@ -594,14 +624,16 @@ footer {
     margin-top: 50px;
   }
   .cv_section.career_path .career_path__wrapper .paper-flight {
-    border: 1px solid;
+    overflow: hidden;
+    height: 472px;
   }
   .cv_section.career_path .career_path__wrapper .paper-flight .plane {
-    position: relative;
     width: 40px;
     height: 40px;
     background-color: rebeccapurple;
-    z-index: 5;
+    z-index: -1;
+    position: absolute;
+    bottom: 0;
   }
   .cv_section.project_done .swiper,
   .cv_section.project_done .swiper.landscape {

@@ -95,7 +95,7 @@ let tl = gsap.timeline({
   scrollTrigger: {
     trigger: "#career-path",
     start: "top top",
-    end: "bottom top",
+    end: "bottom 200px",
     scrub: true,
     markers: true,
     pin: true,
