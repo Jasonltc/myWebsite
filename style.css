@@ -337,18 +337,15 @@ body {
 }
 .cv_section.career_path .career_path__wrapper .pin-target {
   width: 100%;
-}
-.cv_section.career_path .career_path__wrapper .paper-flight {
-  height: 557px;
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-items: flex-start;
 }
 .cv_section.career_path .career_path__wrapper .paper-flight .plane {
   width: 40px;
   height: 40px;
   background-color: rebeccapurple;
-  z-index: 5;
-  position: absolute;
-  bottom: 0;
 }
 
 .to-the-top {
@@ -622,18 +619,6 @@ footer {
     font-size: 40px;
     color: #00b4d8;
     margin-top: 50px;
-  }
-  .cv_section.career_path .career_path__wrapper .paper-flight {
-    overflow: hidden;
-    height: 472px;
-  }
-  .cv_section.career_path .career_path__wrapper .paper-flight .plane {
-    width: 40px;
-    height: 40px;
-    background-color: rebeccapurple;
-    z-index: -1;
-    position: absolute;
-    bottom: 0;
   }
   .cv_section.project_done .swiper,
   .cv_section.project_done .swiper.landscape {

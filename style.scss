@@ -428,18 +428,22 @@ body {
     .pin-target {
       // border: 1px solid red;
       width: 100%;
+      @include display_flex_space_between;
+      align-items: flex-start;
     }
 
     .paper-flight {
-      height: 557px;
-      position: relative;
+      // height: 557px;
+      // position: relative;
+
       .plane {
         width: 40px;
         height: 40px;
         background-color: rebeccapurple;
-        z-index: 5;
-        position: absolute;
-        bottom: 0;
+        // z-index: 5;
+        // position: absolute;
+        // top: 10px;
+        // right: 50px;
       }
     }
   }
@@ -817,18 +821,10 @@ footer {
         }
       }
 
-      .paper-flight {
-        overflow: hidden;
-        height: 472px;
-        .plane {
-          width: 40px;
-          height: 40px;
-          background-color: rebeccapurple;
-          z-index: -1;
-          position: absolute;
-          bottom: 0;
-        }
-      }
+      // .paper-flight {
+      //   overflow: hidden;
+      //   height: 472px;
+      // }
     }
   }
 

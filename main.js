@@ -78,16 +78,16 @@ var swiper = new Swiper(".mySwiper", {
 // gsap animation
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-const planePath = [
-  { x: 100, y: -20 },
-  { x: 300, y: 10 },
-  { x: 500, y: 100 },
-  { x: 750, y: -100 },
-  { x: 350, y: -50 },
-  { x: 600, y: 100 },
-  { x: 800, y: 0 },
-  { x: window.innerWidth, y: -250 },
-];
+// const planePath = [
+//   { x: 100, y: -20 },
+//   { x: 300, y: 10 },
+//   { x: 500, y: 100 },
+//   { x: 750, y: -100 },
+//   { x: 350, y: -50 },
+//   { x: 600, y: 100 },
+//   { x: 800, y: 0 },
+//   { x: window.innerWidth, y: -250 },
+// ];
 
 // const mainOp = gsap.timeline().to(".flight-announcement", { opacity: 0 }, 1);
 
@@ -102,12 +102,7 @@ let tl = gsap.timeline({
   },
 });
 
-tl.to(".plane", {
-  motionPath: {
-    path: planePath,
-    curviness: 2,
-  },
-});
+tl.to(".plane", { y: 100 });
 
 menuMobileActive();
 addButtonUp();
