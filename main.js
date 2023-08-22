@@ -1,7 +1,7 @@
 //mobile menu active
 const menuMobileActive = function () {
   const menuButton = document.querySelector(".menu");
-  const menu = document.querySelector(".main_header--section-items");
+  const menu = document.querySelector(".menu-item");
   menuButton.addEventListener("click", function () {
     menu.classList.toggle("active");
   });
@@ -91,22 +91,22 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
 // const mainOp = gsap.timeline().to(".flight-announcement", { opacity: 0 }, 1);
 
-let tl = gsap.timeline({
-  scrollTrigger: {
-    trigger: "#career-path",
-    start: "top top",
-    end: "bottom 200px",
-    scrub: true,
-    markers: true,
-    pin: true,
-  },
-});
+// let tl = gsap.timeline({
+//   scrollTrigger: {
+//     trigger: "#career-path",
+//     start: "top top",
+//     end: "bottom 200px",
+//     scrub: true,
+//     markers: true,
+//     pin: true,
+//   },
+// });
 
-tl.to(".plane", { y: 100 });
+// tl.to(".plane", { y: 100 });
 
 menuMobileActive();
-addButtonUp();
-scramble();
+// addButtonUp();
+// scramble();
 
 // motionPath: {
 //   path: planePath,

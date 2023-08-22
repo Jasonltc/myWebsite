@@ -10,7 +10,7 @@
 
 /* mobile */
 body {
-  background-color: #1b1b1b;
+  background-color: #292a2e;
 }
 
 .wide-dimension {
@@ -18,23 +18,28 @@ body {
   overflow: hidden;
 }
 
-.main_header {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 10px;
   position: relative;
 }
-.main_header .main_header--logo .logo-img {
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
+.header .logo {
+  color: #ffffff;
+  letter-spacing: 1px;
 }
-.main_header .main_header--section-items {
+.header .logo span {
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  color: #ee4036;
+}
+.header .menu-items {
   position: absolute;
   text-align: center;
   top: 65px;
-  background-color: #00b4d8;
+  background-color: #242528;
   overflow: hidden;
   width: 0;
   right: 0;
@@ -42,40 +47,41 @@ body {
   padding: 30px 0;
   transition: all 0.233s ease-in;
 }
-.main_header .main_header--section-items.active {
+.header .menu-items.active {
   width: 50%;
 }
-.main_header .section-item {
+.header .menu-items .section-item {
   list-style: none;
 }
-.main_header .section-item .links {
-  color: #faab36;
+.header .menu-items .section-item .links {
+  color: #ffffff;
   text-decoration: none;
   display: block;
   margin-bottom: 20px;
 }
-.main_header .menu i {
+.header .menu i {
   font-size: 25px;
-  color: #00b4d8;
+  color: #ffffff;
 }
 
-.intro_animation {
+.intro .intro_animation {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-.intro_animation .started-animation {
+.intro .intro_animation .started-animation {
   font-weight: bold;
-  color: #00b4d8;
+  color: #ffffff;
   max-width: -moz-max-content;
   max-width: max-content;
   font-size: 25px;
   position: relative;
   font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
 }
-.intro_animation .started-animation::after, .intro_animation .started-animation::before {
+.intro .intro_animation .started-animation::after, .intro .intro_animation .started-animation::before {
   content: "";
   position: absolute;
   top: 0;
@@ -83,34 +89,25 @@ body {
   right: 0;
   bottom: 0;
 }
-.intro_animation .started-animation::after {
+.intro .intro_animation .started-animation::after {
   background: #ffffff;
   width: 3px;
   animation: typewitting 4s steps(41) forwards, blink 750ms steps(41) infinite;
 }
-.intro_animation .started-animation::before {
-  background: #1b1b1b;
+.intro .intro_animation .started-animation::before {
+  background: #292a2e;
   animation: typewitting 4s steps(41) forwards;
 }
-.intro_animation .welcome-text {
+.intro .intro_animation .welcome-text {
   font-size: 22px;
-  color: #faab36;
+  color: #ee4036;
   font-weight: bold;
   padding: 20px 0;
   transform: translateY(4px);
   opacity: 0;
   animation: fadeInUp 2s ease 4.5s forwards;
+  letter-spacing: 2px;
 }
-
-.intro-image {
-  opacity: 0;
-  transform: translateY(50px);
-  animation: fadeInUpImage 2s ease 6s forwards;
-}
-.intro-image img {
-  width: 70%;
-}
-
 @keyframes typewitting {
   to {
     left: 100%;
@@ -133,316 +130,22 @@ body {
     transform: translateY(0px);
   }
 }
-.cv_section {
-  margin-bottom: 20px;
-  border: 1px solid #000000;
-  padding: 30px 0;
-}
-.cv_section .sub-title {
-  text-align: center;
-  font-family: "Lora", serif;
-  color: #faab36;
-  font-size: 25px;
-}
-
-.cv_section.profile_summary .profile_summary__wrapper .profile_picture {
-  position: relative;
-  text-align: center;
-  margin-bottom: 30px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_picture img {
-  width: 90%;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
-  margin-bottom: 30px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me {
-  color: #00b4d8;
-  margin-top: 30px;
-  margin-bottom: 35px;
-  margin-left: 20px;
-  border-left: 3px solid #faab36;
-  padding-left: 10px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me > span:first-child {
-  display: inline-block;
-  width: 100px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .about-me > span:last-child {
-  display: inline-block;
-  width: 100px;
-}
-.cv_section.profile_summary .profile_summary__wrapper .profile_about_me .profile_summary_text {
-  color: #00b4d8;
-  line-height: 30px;
-  font-size: 15px;
-  padding: 0 20px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity {
-  border: 1px solid #060a1f;
-  padding: 20px 5px;
-  margin: 10px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .addition-info-title {
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 30px;
-  color: #00b4d8;
-  font-size: 15px;
-  font-family: "Lora", serif;
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  z-index: 4;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .addition-info-title::after {
-  content: "";
-  width: 100%;
-  height: 5px;
-  background-color: #faab36;
-  position: absolute;
-  top: 18px;
-  left: 3px;
-  z-index: -1;
-  transform: skewX(25deg);
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item i {
-  font-size: 22px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper .hobbie-item .hobbie-name {
-  color: #ffffff;
-  display: block;
-  margin-top: 12px;
-  width: 60px;
-  height: 50px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item img {
-  width: 40px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper .lang-item .lang-name {
-  color: #ffffff;
-  display: block;
-  width: 80px;
-  height: 50px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 120px;
-  gap: 25px;
-  color: #ffffff;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .time-year {
-  width: 55px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline {
-  width: 30px;
-  height: 30px;
-  border: 5px solid #faab36;
-  border-radius: 50%;
-  position: relative;
-  background-color: #00b4d8;
-  z-index: 10;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline::after {
-  content: "";
-  width: 10px;
-  height: 10px;
-  background-color: #faab36;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50%;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .timeline::before {
-  content: "";
-  width: 2px;
-  height: 120px;
-  background-color: #faab36;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .education-wrapper .education-year .time-outcome {
-  width: 200px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item {
-  padding: 10px;
-  width: 100%;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-title {
-  font-weight: bold;
-  border: 1px solid #fff;
-  height: 60px;
-  line-height: 60px;
-  color: #ffffff;
-  text-align: left;
-  position: relative;
-  padding: 0 20px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-title::before {
-  content: "+";
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-  transition: all 0.23s ease-in;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build {
-  text-align: center;
-  height: 0;
-  line-height: 30px;
-  color: #ffffff;
-  overflow: hidden;
-  transition: all 0.233s ease-in;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item .skill-build > p:first-child {
-  margin-top: 15px;
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item.active .skill-title::before {
-  content: "-";
-}
-.cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper .skill-item.active .skill-build {
-  height: 120px;
-}
-
-.cv_section.career_path .career_path__wrapper .flight-announcement {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin: 50px 0;
-}
-.cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
-  font-weight: bold;
-  font-size: 20px;
-  color: #00b4d8;
-}
-.cv_section.career_path .career_path__wrapper .pin-target {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  align-items: flex-start;
-}
-.cv_section.career_path .career_path__wrapper .paper-flight .plane {
-  width: 40px;
-  height: 40px;
-  background-color: rebeccapurple;
-}
-
-.to-the-top {
-  height: 40px;
-  width: 40px;
-  border: 1px solid #faab36;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background-color: #faab36;
-  z-index: 20;
-  border-radius: 50%;
-}
-.to-the-top .top {
-  font-size: 18px;
-  color: #00b4d8;
-}
-
-.cv_section.project_done {
-  height: auto;
-}
-.cv_section.project_done .swiper {
-  width: 80%;
-  padding-top: 50px;
-  height: 325px;
-}
-.cv_section.project_done .swiper.landscape {
-  height: 250px;
-  margin-bottom: 30px;
-}
-.cv_section.project_done .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 150px;
-}
-.cv_section.project_done .swiper-slide img {
-  display: block;
-  width: 100%;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333), rgba(0, 0, 0, 0.2666666667));
-}
-.cv_section.project_done .project {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-}
-.cv_section.project_done .project .project-item {
-  width: 90%;
-  margin: 0 auto;
-  height: 300px;
-  border: 1px solid #060a1f;
-  margin-bottom: 20px;
-}
-
-.cv_section.contact_me {
-  text-align: center;
-}
-.cv_section.contact_me .contact_me_wrapper {
-  margin-top: 30px;
-  margin-bottom: 40px;
-  color: #00b4d8;
-}
-.cv_section.contact_me .contact_me_wrapper p {
-  font-size: 18px;
-}
-.cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
-  border: 1px solid;
+.intro .profile_picture {
   padding: 20px;
 }
-.cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
-  height: 20px;
-  color: #00b4d8;
-  margin-bottom: 30px;
-}
-.cv_section.contact_me .contact_me_method_wrapper .link-contact {
-  display: block;
-  text-decoration: underline;
-  color: #ffffff;
-  font-size: 15px;
+.intro .profile_picture img {
+  width: 100%;
+  border-radius: 69% 31% 27% 73%/48% 46% 54% 52%;
 }
 
-footer {
-  height: 55px;
-  text-align: center;
-  display: grid;
-  place-content: center;
-  color: #ffffff;
-  background-color: #00b4d8;
+.cv_section {
+  margin-bottom: 20px;
+  border: 1px solid #1b1b1b;
+  padding: 30px 0;
 }
 
-/* tablet */
-@media (width >= 600px) {
-  .main_header {
-    padding: 30px 20px;
-  }
-  .main_header .main_header--section-items {
+@media (width >= 768px) {
+  .header .menu-items {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -454,194 +157,33 @@ footer {
     overflow: unset;
     gap: 45px;
   }
-  .main_header .section-item .links {
-    display: unset;
+  .header .menu-items .section-item .links {
     margin-bottom: unset;
   }
-  .main_header .section-item .links:hover {
-    text-decoration: underline;
-  }
-  .main_header .menu {
+  .header .menu {
     display: none;
   }
-  .intro_animation .started-animation {
-    font-size: 40px;
-  }
-  .intro_animation .welcome-text {
-    font-size: 30px;
-  }
-  .cv_section.project_done .project {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cv_section.contact_me {
-    text-align: center;
-  }
-  .cv_section.contact_me .contact_me_wrapper p {
-    font-size: 18px;
-  }
-  .cv_section.contact_me .contact_me_method_wrapper {
+  .intro {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 20px;
+    gap: 5px;
   }
-  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method {
-    border: 1px solid;
-    padding: 20px;
-    width: 45%;
-  }
-  .cv_section.contact_me .contact_me_method_wrapper .contact_me_method > p {
-    height: 20px;
-    color: #00b4d8;
-    margin-bottom: 30px;
-  }
-}
-@media (width >= 768px) {
-  .cv_section.profile_summary .profile_summary__wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-  .cv_section.profile_summary .profile_summary__wrapper .profile_picture {
-    width: 50%;
-    margin-bottom: unset;
-  }
-  .cv_section.profile_summary .profile_summary__wrapper .profile_picture::after {
-    content: "";
-    background: #00b4d8;
-    position: absolute;
-    width: 90%;
-    height: 100%;
-    left: 10px;
-    top: -10px;
-    z-index: -1;
-    opacity: 0.5;
-  }
-  .cv_section.profile_summary .profile_summary__wrapper .profile_about_me {
+  .intro .intro_animation {
     width: 50%;
   }
-  .cv_section.profile_summary .addition_info__wrapper {
+  .intro .profile_picture {
+    width: 50%;
+    background-color: #262261;
+    border-radius: 46% 54% 57% 43%/50% 35% 65% 50%;
+  }
+  .brief {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    align-items: self-start;
+    gap: 5px;
   }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity {
-    width: 45%;
-  }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity.interest, .cv_section.profile_summary .addition_info__wrapper .addition-activity.language {
-    min-height: 160px;
-  }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity.education, .cv_section.profile_summary .addition_info__wrapper .addition-activity.technology-used {
-    min-height: 600px;
-  }
-  .cv_section.project_done .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 200px;
-  }
-  .cv_section.project_done .project {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-@media (width >= 1024px) {
-  .main_header .section-item .links {
-    position: relative;
-    opacity: 0.5;
-    transition: all 0.233s ease-in;
-  }
-  .main_header .section-item .links:hover {
-    opacity: 1;
-    text-decoration: none;
-  }
-  .main_header .section-item .links::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -5px;
-    width: 0;
-    height: 3px;
-    background-color: #faab36;
-    transition: all 0.233s ease-in;
-  }
-  .main_header .section-item .links:hover::after {
-    width: 100%;
-  }
-  .intro_animation {
-    height: 985px;
-  }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity .hobbie-wrapper,
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity .lang-flap-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .cv_section.project_done .swiper {
-    height: 575px;
-  }
-  .cv_section.project_done .swiper.landscape {
-    height: 475px;
-  }
-  .cv_section.project_done .swiper-slide {
-    width: 300px;
-  }
-}
-@media (width >= 1224px) {
-  .cv_section .sub-title {
-    font-size: 30px;
-  }
-  .intro_animation .started-animation {
-    font-size: 65px;
-  }
-  .intro_animation .welcome-text {
-    font-size: 45px;
-  }
-  .intro-image {
-    transform: translateY(50px);
-  }
-  @keyframes fadeInUpImage {
-    to {
-      opacity: 1;
-      transform: translateY(35px);
-    }
-  }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity.education, .cv_section.profile_summary .addition_info__wrapper .addition-activity.technology-used {
-    min-height: 455px;
-  }
-  .cv_section.profile_summary .addition_info__wrapper .addition-activity .skill-wrapper {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .cv_section.career_path .career_path__wrapper .flight-announcement .flight-text {
-    font-weight: bold;
-    font-size: 40px;
-    color: #00b4d8;
-    margin-top: 50px;
-  }
-  .cv_section.project_done .swiper,
-  .cv_section.project_done .swiper.landscape {
-    height: 100%;
-  }
-  .cv_section.project_done .swiper-slide {
-    width: 400px;
-  }
-  .cv_section.project_done .swiper.landscape {
-    margin-bottom: 100px;
-  }
-  .cv_section.project_done .project {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (width >= 1800px) {
-  .main_header {
-    padding: 30px 185px;
-  }
-  .wide-dimension {
-    max-width: 1600px;
-    margin: 0 auto;
-    border: 1px solid #000000;
-    padding: unset;
+  .brief .about {
+    width: 50%;
   }
 }/*# sourceMappingURL=style.css.map */
