@@ -13,9 +13,18 @@ body {
   background-color: #292a2e;
 }
 
-.wide-dimension {
+.wide-dimension-header,
+.wide-dimension-main {
   padding: 0 10px;
   overflow: hidden;
+}
+
+.wide-dimension-header {
+  background-color: #292a2e;
+}
+
+.wide-dimension-main {
+  background-color: #242528;
 }
 
 .header {
@@ -24,6 +33,7 @@ body {
   align-items: center;
   padding: 20px 10px;
   position: relative;
+  background-color: #292a2e;
 }
 .header .logo {
   color: #ffffff;
@@ -132,6 +142,8 @@ body {
 }
 .intro .profile_picture {
   padding: 20px;
+  background-color: #262261;
+  border-radius: 46% 54% 57% 43%/50% 35% 65% 50%;
 }
 .intro .profile_picture img {
   width: 100%;
@@ -142,6 +154,78 @@ body {
   margin-bottom: 20px;
   border: 1px solid #1b1b1b;
   padding: 30px 0;
+}
+.cv_section .sub-title {
+  text-align: center;
+  font-family: "Lora", serif;
+  color: #ee4036;
+  font-size: 25px;
+  text-transform: uppercase;
+}
+
+.cv_section.brief {
+  background-color: #242528;
+}
+
+.brief-wrapper .about-me-information {
+  order: 1;
+}
+.brief-wrapper .about-me-information .about-name {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
+}
+.brief-wrapper .about-me-information .about-name span {
+  color: #ee4036;
+}
+.brief-wrapper .about-me-information .about-me {
+  color: #ffffff;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  padding: 0 10px;
+  font-size: 1rem;
+}
+.brief-wrapper .about-me-information .summary {
+  color: #ffffff;
+  line-height: 25px;
+  padding: 0 10px;
+  letter-spacing: 2px;
+  font-size: 1rem;
+}
+.brief-wrapper .interest-wrapper {
+  margin-top: 20px;
+}
+.brief-wrapper .interest-wrapper .interest-box {
+  border: 1px solid #ffffff;
+  padding: 15px 20px;
+}
+.brief-wrapper .interest-wrapper .interest-box .intrest-title {
+  color: #e2f516;
+}
+.brief-wrapper .interest-wrapper .interest-box .intrest-title .return {
+  margin-left: 20px;
+}
+.brief-wrapper .interest-wrapper .interest-box .intrest-title .value {
+  color: #ee4036;
+}
+.brief-wrapper .interest-wrapper .interest-box .success {
+  color: #31cc31;
+  margin-bottom: 20px;
+}
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item {
+  text-align: center;
+}
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item .hobbie-name {
+  margin-top: 10px;
+  color: #ffffff;
 }
 
 @media (width >= 768px) {
@@ -174,16 +258,25 @@ body {
   }
   .intro .profile_picture {
     width: 50%;
-    background-color: #262261;
-    border-radius: 46% 54% 57% 43%/50% 35% 65% 50%;
   }
-  .brief {
+  .brief-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 5px;
+    gap: 35px;
   }
-  .brief .about {
+  .brief-wrapper .about-me-information,
+  .brief-wrapper .interest {
     width: 50%;
+  }
+  .brief-wrapper .interest {
+    order: 0;
+    padding: unset;
+  }
+  .brief-wrapper .about-me-information {
+    order: 1;
+  }
+  .brief-wrapper .summary {
+    padding: unset;
   }
 }/*# sourceMappingURL=style.css.map */
