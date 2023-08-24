@@ -200,32 +200,126 @@ body {
 .brief-wrapper .interest-wrapper .interest-box {
   border: 1px solid #ffffff;
   padding: 15px 20px;
+  margin-bottom: 20px;
 }
-.brief-wrapper .interest-wrapper .interest-box .intrest-title {
+.brief-wrapper .interest-wrapper .interest-box .interest-title {
   color: #e2f516;
 }
-.brief-wrapper .interest-wrapper .interest-box .intrest-title .return {
+.brief-wrapper .interest-wrapper .interest-box .interest-title .return {
   margin-left: 20px;
 }
-.brief-wrapper .interest-wrapper .interest-box .intrest-title .value {
+.brief-wrapper .interest-wrapper .interest-box .interest-title .value {
   color: #ee4036;
+}
+.brief-wrapper .interest-wrapper .interest-box .interest-title .foreach {
+  margin-left: 20px;
+  color: #ee4036;
+}
+.brief-wrapper .interest-wrapper .interest-box .interest-title .console {
+  margin-left: 40px;
+  color: #e2f516;
 }
 .brief-wrapper .interest-wrapper .interest-box .success {
   color: #31cc31;
   margin-bottom: 20px;
 }
-.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper {
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper,
+.brief-wrapper .interest-wrapper .interest-box .lang-flap-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 10px;
 }
-.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item {
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item,
+.brief-wrapper .interest-wrapper .interest-box .lang-flap-wrapper .hobbie-item {
   text-align: center;
 }
-.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item .hobbie-name {
+.brief-wrapper .interest-wrapper .interest-box .hobbie-wrapper .hobbie-item .hobbie-name,
+.brief-wrapper .interest-wrapper .interest-box .lang-flap-wrapper .hobbie-item .hobbie-name {
   margin-top: 10px;
   color: #ffffff;
+}
+
+.my_journey .flight-announcement {
+  text-align: center;
+  margin-top: 40px;
+  color: #ffffff;
+}
+.my_journey .education_journey {
+  margin-top: 40px;
+}
+.my_journey .education_journey .timeline {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.my_journey .education_journey .timeline .line {
+  width: 2px;
+  height: 30px;
+  background-color: #ee4036;
+}
+.my_journey .education_journey .time-stop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 30px;
+  position: relative;
+}
+.my_journey .education_journey .time-stop .year,
+.my_journey .education_journey .time-stop .outcome {
+  width: 100%;
+  color: #ffffff;
+  max-width: 300px;
+}
+.my_journey .education_journey .time-stop .year {
+  text-align: right;
+  border: 1px solid red;
+}
+.my_journey .education_journey .time-stop .year span {
+  border: 1px solid blue;
+  padding: 10px;
+  width: 200px;
+  display: inline-block;
+  text-align: right;
+}
+.my_journey .education_journey .time-stop .outcome {
+  text-align: left;
+  border: 1px solid red;
+  padding: 10px;
+}
+.my_journey .education_journey .time-stop .point {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ee4036;
+  border-radius: 50%;
+  position: relative;
+}
+.my_journey .education_journey .time-stop .point::before, .my_journey .education_journey .time-stop .point::after {
+  content: "";
+  width: 2px;
+  height: 50px;
+  background-color: #ee4036;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.my_journey .education_journey .time-stop .point::before {
+  top: 18px;
+}
+.my_journey .education_journey .time-stop .point::after {
+  bottom: 18px;
+}
+.my_journey .education_journey .time-stop .point .center-point {
+  width: 7px;
+  height: 7px;
+  background-color: #ee4036;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (width >= 768px) {
@@ -276,7 +370,10 @@ body {
   .brief-wrapper .about-me-information {
     order: 1;
   }
-  .brief-wrapper .summary {
+  .brief-wrapper .about-me-information .about-me {
+    padding: unset;
+  }
+  .brief-wrapper .about-me-information .summary {
     padding: unset;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -105,8 +105,8 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 // tl.to(".plane", { y: 100 });
 
 menuMobileActive();
-// addButtonUp();
-// scramble();
+addButtonUp();
+scramble();
 
 // motionPath: {
 //   path: planePath,

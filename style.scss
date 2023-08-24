@@ -239,8 +239,9 @@ body {
     .interest-box {
       border: 1px solid $color-white;
       padding: 15px 20px;
+      margin-bottom: 20px;
 
-      .intrest-title {
+      .interest-title {
         color: $yellow-color;
 
         .return {
@@ -250,6 +251,16 @@ body {
         .value {
           color: $orange-color;
         }
+
+        .foreach {
+          margin-left: 20px;
+          color: $orange-color;
+        }
+
+        .console {
+          margin-left: 40px;
+          color: $yellow-color;
+        }
       }
 
       .success {
@@ -257,7 +268,8 @@ body {
         margin-bottom: 20px;
       }
 
-      .hobbie-wrapper {
+      .hobbie-wrapper,
+      .lang-flap-wrapper {
         @include display_flex_space_between;
         gap: 10px;
 
@@ -274,6 +286,98 @@ body {
   }
 }
 
+.my_journey {
+  .flight-announcement {
+    text-align: center;
+    margin-top: 40px;
+    color: $color-white;
+  }
+
+  .education_journey {
+    margin-top: 40px;
+
+    .timeline {
+      @include display_flex_center;
+      gap: 20px;
+
+      .line {
+        width: 2px;
+        height: 30px;
+        background-color: $orange-color;
+      }
+    }
+
+    .time-stop {
+      @include display_flex_center;
+      gap: 0 30px;
+      position: relative;
+
+      .year,
+      .outcome {
+        width: 100%;
+        color: $color-white;
+        max-width: 300px;
+      }
+
+      .year {
+        text-align: right;
+        border: 1px solid red;
+        span {
+          border: 1px solid blue;
+          padding: 10px;
+          width: 200px;
+          display: inline-block;
+          text-align: right;
+        }
+      }
+
+      .outcome {
+        text-align: left;
+        border: 1px solid red;
+        padding: 10px;
+      }
+
+      .point {
+        width: 20px;
+        height: 20px;
+        border: 2px solid $orange-color;
+        border-radius: 50%;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          width: 2px;
+          height: 50px;
+          background-color: $orange-color;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &::before {
+          top: 18px;
+        }
+
+        &::after {
+          bottom: 18px;
+        }
+
+        .center-point {
+          width: 7px;
+          height: 7px;
+          background-color: $orange-color;
+          border-radius: 50%;
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}
 //tablet
 @media (width >= 768px) {
   .header {
@@ -328,10 +432,13 @@ body {
 
     .about-me-information {
       order: 1;
-    }
+      .about-me {
+        padding: unset;
+      }
 
-    .summary {
-      padding: unset;
+      .summary {
+        padding: unset;
+      }
     }
   }
 }
