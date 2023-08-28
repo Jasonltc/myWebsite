@@ -10,7 +10,7 @@
 
 /* mobile */
 body {
-  background-color: #292a2e;
+  background-color: #252525;
 }
 
 .wide-dimension-header,
@@ -570,6 +570,9 @@ body {
     top: 50%;
     transform: translate(-50%, -50%);
   }
+  .my_journey .education_journey .still-going-wrapper {
+    text-align: center;
+  }
   .skill-learn .technology-wrapper {
     padding: 0 10px;
   }
@@ -608,6 +611,28 @@ body {
   }
 }
 @media (width >= 1024px) {
+  .header .section-item .links {
+    position: relative;
+    opacity: 0.5;
+    transition: all 0.233s ease-in;
+  }
+  .header .section-item .links:hover {
+    opacity: 1;
+    text-decoration: none;
+  }
+  .header .section-item .links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background-color: #ee4036;
+    transition: all 0.233s ease-in;
+  }
+  .header .section-item .links:hover::after {
+    width: 100%;
+  }
   .cv_section.project_done .swiper {
     height: 575px;
   }
@@ -619,6 +644,7 @@ body {
   }
 }
 @media (width >= 1600px) {
+  .header,
   .wide-dimension-header,
   .wide-dimension-main {
     max-width: 1600px;

@@ -13,7 +13,7 @@
 
 /* mobile */
 body {
-  background-color: $main-color;
+  background-color: #252525;
 }
 
 .wide-dimension-header,
@@ -669,6 +669,10 @@ body {
           }
         }
       }
+
+      .still-going-wrapper {
+        text-align: center;
+      }
     }
   }
 
@@ -714,6 +718,36 @@ body {
 }
 
 @media (width >= 1024px) {
+  .header {
+    .section-item {
+      .links {
+        position: relative;
+        opacity: 0.5;
+        transition: all 0.233s ease-in;
+
+        &:hover {
+          opacity: 1;
+          text-decoration: none;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: -5px;
+          width: 0;
+          height: 3px;
+          background-color: $orange-color;
+          transition: all 0.233s ease-in;
+        }
+
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   .cv_section.project_done {
     .swiper {
       height: 575px;
@@ -731,6 +765,7 @@ body {
 
 //desktop
 @media (width >=1600px) {
+  .header,
   .wide-dimension-header,
   .wide-dimension-main {
     max-width: $desktop;
