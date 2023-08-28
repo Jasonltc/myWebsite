@@ -151,9 +151,8 @@ body {
 }
 
 .cv_section {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   border: 1px solid #1b1b1b;
-  padding: 30px 0;
 }
 .cv_section .sub-title {
   text-align: center;
@@ -200,7 +199,8 @@ body {
 .brief-wrapper .interest-wrapper .interest-box {
   border: 1px solid #ffffff;
   padding: 15px 20px;
-  margin-bottom: 20px;
+  max-width: 600px;
+  margin: 0 auto 20px;
 }
 .brief-wrapper .interest-wrapper .interest-box .interest-title {
   color: #e2f516;
@@ -243,42 +243,43 @@ body {
 .my_journey .flight-announcement {
   text-align: center;
   margin-top: 40px;
-  margin-bottom: 70px;
+  margin-bottom: 50px;
   color: #ffffff;
   font-size: 20px;
 }
 .my_journey .education_journey {
-  margin-top: 40px;
+  position: relative;
+}
+.my_journey .education_journey i.airplane {
+  rotate: 90deg;
+  right: 0;
+  font-size: 45px;
+  position: absolute;
 }
 .my_journey .education_journey .timeline {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  justify-content: flex-end;
 }
 .my_journey .education_journey .timeline .line {
-  width: 2px;
-  height: 30px;
-  background-color: #ee4036;
+  display: none;
 }
 .my_journey .education_journey .time-stop {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0 30px;
+  flex-direction: column;
   position: relative;
-}
-.my_journey .education_journey .time-stop .align-right {
-  text-align: right;
-}
-.my_journey .education_journey .time-stop .align-left {
-  text-align: left;
+  gap: 10px;
+  margin-bottom: 40px;
 }
 .my_journey .education_journey .time-stop .year,
 .my_journey .education_journey .time-stop .outcome {
   width: 100%;
   color: #ffffff;
   max-width: 320px;
+}
+.my_journey .education_journey .time-stop .year {
+  order: 1;
 }
 .my_journey .education_journey .time-stop .year .work-year {
   border: 1px solid #292a2e;
@@ -290,12 +291,6 @@ body {
   line-height: 50px;
   background-color: #292a2e;
   box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
-}
-.my_journey .education_journey .time-stop .year .work-year.left-pos {
-  margin-right: auto;
-}
-.my_journey .education_journey .time-stop .year .work-year.right-pos {
-  margin-left: auto;
 }
 .my_journey .education_journey .time-stop .year .year-one {
   transform: translateY(-5px);
@@ -311,46 +306,18 @@ body {
   padding: 10px;
   background-color: #292a2e;
   box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+  order: 2;
 }
 .my_journey .education_journey .time-stop .outcome .timeline-text {
   line-height: 25px;
   letter-spacing: 1.5px;
+  max-width: 250px;
 }
 .my_journey .education_journey .time-stop .outcome .timeline-text:not(:last-child) {
   margin-bottom: 10px;
 }
 .my_journey .education_journey .time-stop .point {
-  width: 25px;
-  height: 25px;
-  border: 2px solid #ee4036;
-  border-radius: 50%;
-  position: relative;
-}
-.my_journey .education_journey .time-stop .point::before, .my_journey .education_journey .time-stop .point::after {
-  content: "";
-  width: 2px;
-  height: 105px;
-  background-color: #ee4036;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.my_journey .education_journey .time-stop .point::before {
-  top: 24px;
-}
-.my_journey .education_journey .time-stop .point::after {
-  bottom: 24px;
-}
-.my_journey .education_journey .time-stop .point .center-point {
-  width: 7px;
-  height: 7px;
-  background-color: #ee4036;
-  border-radius: 50%;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  display: none;
 }
 
 .skill-learn .technology-wrapper {
@@ -361,7 +328,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 10px 50px;
 }
 .skill-learn .technology-wrapper .technology-used .category {
   text-align: center;
@@ -477,5 +444,193 @@ body {
   }
   .brief-wrapper .about-me-information .summary {
     padding: unset;
+  }
+  .my_journey .flight-announcement {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    color: #ffffff;
+    font-size: 20px;
+  }
+  .my_journey .education_journey {
+    margin-top: 40px;
+  }
+  .my_journey .education_journey i.airplane {
+    font-size: 45px;
+    position: relative;
+    z-index: 10;
+    transform: translate(-10px, 2px);
+  }
+  .my_journey .education_journey .timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .my_journey .education_journey .timeline .line {
+    width: 2px;
+    height: 30px;
+    background-color: #ee4036;
+    display: block;
+  }
+  .my_journey .education_journey .time-stop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: unset;
+    gap: 0 30px;
+    position: relative;
+    margin-bottom: 15px;
+  }
+  .my_journey .education_journey .time-stop .align-right {
+    text-align: right;
+  }
+  .my_journey .education_journey .time-stop .align-left {
+    text-align: left;
+  }
+  .my_journey .education_journey .time-stop .year,
+  .my_journey .education_journey .time-stop .outcome {
+    width: 100%;
+    color: #ffffff;
+    max-width: 320px;
+    order: unset;
+  }
+  .my_journey .education_journey .time-stop .year .work-year {
+    border: 1px solid #292a2e;
+    padding: 10px;
+    min-width: 120px;
+    max-width: 200px;
+    text-align: center;
+    height: 70px;
+    line-height: 50px;
+    background-color: #292a2e;
+    box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+  }
+  .my_journey .education_journey .time-stop .year .work-year.left-pos {
+    margin-right: auto;
+  }
+  .my_journey .education_journey .time-stop .year .work-year.right-pos {
+    margin-left: auto;
+  }
+  .my_journey .education_journey .time-stop .year .year-one {
+    transform: translateY(-5px);
+    display: inline-block;
+    color: #31cc31;
+  }
+  .my_journey .education_journey .time-stop .year .year-two {
+    transform: translateY(5px);
+    display: inline-block;
+  }
+  .my_journey .education_journey .time-stop .outcome {
+    border: 1px solid #292a2e;
+    padding: 10px;
+    background-color: #292a2e;
+    box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+  }
+  .my_journey .education_journey .time-stop .outcome .timeline-text {
+    line-height: 25px;
+    letter-spacing: 1.5px;
+    max-width: unset;
+  }
+  .my_journey .education_journey .time-stop .outcome .timeline-text:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .my_journey .education_journey .time-stop .point {
+    width: 25px;
+    height: 25px;
+    border: 2px solid #ee4036;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+  }
+  .my_journey .education_journey .time-stop .point::before, .my_journey .education_journey .time-stop .point::after {
+    content: "";
+    width: 2px;
+    height: 105px;
+    background-color: #ee4036;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .my_journey .education_journey .time-stop .point::before {
+    top: 24px;
+  }
+  .my_journey .education_journey .time-stop .point::after {
+    bottom: 24px;
+  }
+  .my_journey .education_journey .time-stop .point .center-point {
+    width: 7px;
+    height: 7px;
+    background-color: #ee4036;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .skill-learn .technology-wrapper {
+    padding: 0 10px;
+  }
+  .skill-learn .technology-wrapper .technology-used {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .skill-learn .technology-wrapper .technology-used .category {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  }
+  .skill-learn .technology-wrapper .technology-used .category .logo-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    gap: 30px;
+    height: 90px;
+  }
+  .skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo {
+    text-align: center;
+    border-radius: 58% 42% 45% 55%/51% 38% 62% 49%;
+  }
+  .skill-learn .technology-wrapper .technology-used .category .cat {
+    color: #ffffff;
+    font-size: 13px;
+    text-transform: uppercase;
+    max-width: 100px;
+    margin: 5px auto 10px;
+    order: 1;
+    height: 40px;
+  }
+}
+@media (width >= 1024px) {
+  .cv_section.project_done .swiper {
+    height: 575px;
+  }
+  .cv_section.project_done .swiper.landscape {
+    height: 475px;
+  }
+  .cv_section.project_done .swiper-slide {
+    width: 300px;
+  }
+}
+@media (width >= 1600px) {
+  .wide-dimension-header,
+  .wide-dimension-main {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+  .cv_section.project_done .swiper,
+  .cv_section.project_done .swiper.landscape {
+    height: 100%;
+  }
+  .cv_section.project_done .swiper-slide {
+    width: 400px;
+  }
+  .cv_section.project_done .swiper.landscape {
+    margin-bottom: 100px;
   }
 }/*# sourceMappingURL=style.css.map */

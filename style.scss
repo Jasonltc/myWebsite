@@ -183,9 +183,8 @@ body {
 }
 
 .cv_section {
-  margin-bottom: 20px;
+  margin-bottom: 35px;
   border: 1px solid $color-black;
-  padding: 30px 0;
 
   .sub-title {
     text-align: center;
@@ -239,7 +238,8 @@ body {
     .interest-box {
       border: 1px solid $color-white;
       padding: 15px 20px;
-      margin-bottom: 20px;
+      max-width: 600px;
+      margin: 0 auto 20px;
 
       .interest-title {
         color: $yellow-color;
@@ -290,37 +290,36 @@ body {
   .flight-announcement {
     text-align: center;
     margin-top: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 50px;
     color: $color-white;
     font-size: 20px;
   }
 
   .education_journey {
-    margin-top: 40px;
+    position: relative;
+
+    i.airplane {
+      rotate: 90deg;
+      right: 0;
+      font-size: 45px;
+      position: absolute;
+    }
 
     .timeline {
-      @include display_flex_center;
-      gap: 20px;
+      display: flex;
+      justify-content: flex-end;
 
       .line {
-        width: 2px;
-        height: 30px;
-        background-color: $orange-color;
+        display: none;
       }
     }
 
     .time-stop {
       @include display_flex_center;
-      gap: 0 30px;
+      flex-direction: column;
       position: relative;
-
-      .align-right {
-        text-align: right;
-      }
-
-      .align-left {
-        text-align: left;
-      }
+      gap: 10px;
+      margin-bottom: 40px;
 
       .year,
       .outcome {
@@ -330,6 +329,7 @@ body {
       }
 
       .year {
+        order: 1;
         .work-year {
           border: 1px solid $main-color;
           padding: 10px;
@@ -340,14 +340,6 @@ body {
           line-height: 50px;
           background-color: $main-color;
           box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
-        }
-
-        .work-year.left-pos {
-          margin-right: auto;
-        }
-
-        .work-year.right-pos {
-          margin-left: auto;
         }
 
         .year-one {
@@ -367,10 +359,12 @@ body {
         padding: 10px;
         background-color: $main-color;
         box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+        order: 2;
 
         .timeline-text {
           line-height: 25px;
           letter-spacing: 1.5px;
+          max-width: 250px;
         }
 
         .timeline-text:not(:last-child) {
@@ -379,42 +373,7 @@ body {
       }
 
       .point {
-        width: 25px;
-        height: 25px;
-        border: 2px solid $orange-color;
-        border-radius: 50%;
-        position: relative;
-
-        &::before,
-        &::after {
-          content: "";
-          width: 2px;
-          height: 105px;
-          background-color: $orange-color;
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
-        &::before {
-          top: 24px;
-        }
-
-        &::after {
-          bottom: 24px;
-        }
-
-        .center-point {
-          width: 7px;
-          height: 7px;
-          background-color: $orange-color;
-          border-radius: 50%;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
+        display: none;
       }
     }
   }
@@ -427,7 +386,7 @@ body {
     .technology-used {
       @include display_flex_center;
       flex-wrap: wrap;
-      gap: 50px;
+      gap: 10px 50px;
 
       .category {
         text-align: center;
@@ -562,6 +521,233 @@ body {
       .summary {
         padding: unset;
       }
+    }
+  }
+
+  .my_journey {
+    .flight-announcement {
+      text-align: center;
+      margin-top: 40px;
+      margin-bottom: 50px;
+      color: $color-white;
+      font-size: 20px;
+    }
+
+    .education_journey {
+      margin-top: 40px;
+
+      i.airplane {
+        font-size: 45px;
+        position: relative;
+        z-index: 10;
+        transform: translate(-10px, 2px);
+      }
+
+      .timeline {
+        @include display_flex_center;
+        gap: 20px;
+
+        .line {
+          width: 2px;
+          height: 30px;
+          background-color: $orange-color;
+          display: block;
+        }
+      }
+
+      .time-stop {
+        @include display_flex_center;
+        flex-direction: unset;
+        gap: 0 30px;
+        position: relative;
+        margin-bottom: 15px;
+
+        .align-right {
+          text-align: right;
+        }
+
+        .align-left {
+          text-align: left;
+        }
+
+        .year,
+        .outcome {
+          width: 100%;
+          color: $color-white;
+          max-width: 320px;
+          order: unset;
+        }
+
+        .year {
+          .work-year {
+            border: 1px solid $main-color;
+            padding: 10px;
+            min-width: 120px;
+            max-width: 200px;
+            text-align: center;
+            height: 70px;
+            line-height: 50px;
+            background-color: $main-color;
+            box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+          }
+
+          .work-year.left-pos {
+            margin-right: auto;
+          }
+
+          .work-year.right-pos {
+            margin-left: auto;
+          }
+
+          .year-one {
+            transform: translateY(-5px);
+            display: inline-block;
+            color: $green-color;
+          }
+
+          .year-two {
+            transform: translateY(5px);
+            display: inline-block;
+          }
+        }
+
+        .outcome {
+          border: 1px solid $main-color;
+          padding: 10px;
+          background-color: $main-color;
+          box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+
+          .timeline-text {
+            line-height: 25px;
+            letter-spacing: 1.5px;
+            max-width: unset;
+          }
+
+          .timeline-text:not(:last-child) {
+            margin-bottom: 10px;
+          }
+        }
+
+        .point {
+          width: 25px;
+          height: 25px;
+          border: 2px solid $orange-color;
+          border-radius: 50%;
+          position: relative;
+          display: block;
+
+          &::before,
+          &::after {
+            content: "";
+            width: 2px;
+            height: 105px;
+            background-color: $orange-color;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &::before {
+            top: 24px;
+          }
+
+          &::after {
+            bottom: 24px;
+          }
+
+          .center-point {
+            width: 7px;
+            height: 7px;
+            background-color: $orange-color;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+
+  .skill-learn {
+    .technology-wrapper {
+      padding: 0 10px;
+
+      .technology-used {
+        @include display_flex_center;
+        flex-wrap: wrap;
+        gap: 50px;
+
+        .category {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          .logo-wrapper {
+            @include display_flex_center;
+            padding: 10px;
+            gap: 30px;
+            height: 90px;
+
+            .logo {
+              text-align: center;
+              border-radius: 58% 42% 45% 55% / 51% 38% 62% 49%;
+            }
+          }
+
+          .cat {
+            color: $color-white;
+            font-size: 13px;
+            text-transform: uppercase;
+            max-width: 100px;
+            margin: 5px auto 10px;
+            order: 1;
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (width >= 1024px) {
+  .cv_section.project_done {
+    .swiper {
+      height: 575px;
+    }
+
+    .swiper.landscape {
+      height: 475px;
+    }
+
+    .swiper-slide {
+      width: 300px;
+    }
+  }
+}
+
+//desktop
+@media (width >=1600px) {
+  .wide-dimension-header,
+  .wide-dimension-main {
+    max-width: $desktop;
+    margin: 0 auto;
+  }
+
+  .cv_section.project_done {
+    .swiper,
+    .swiper.landscape {
+      height: 100%;
+    }
+
+    .swiper-slide {
+      width: 400px;
+    }
+
+    .swiper.landscape {
+      margin-bottom: 100px;
     }
   }
 }
