@@ -290,7 +290,9 @@ body {
   .flight-announcement {
     text-align: center;
     margin-top: 40px;
+    margin-bottom: 70px;
     color: $color-white;
+    font-size: 20px;
   }
 
   .education_journey {
@@ -312,34 +314,73 @@ body {
       gap: 0 30px;
       position: relative;
 
+      .align-right {
+        text-align: right;
+      }
+
+      .align-left {
+        text-align: left;
+      }
+
       .year,
       .outcome {
         width: 100%;
         color: $color-white;
-        max-width: 300px;
+        max-width: 320px;
       }
 
       .year {
-        text-align: right;
-        border: 1px solid red;
-        span {
-          border: 1px solid blue;
+        .work-year {
+          border: 1px solid $main-color;
           padding: 10px;
-          width: 200px;
+          min-width: 120px;
+          max-width: 200px;
+          text-align: center;
+          height: 70px;
+          line-height: 50px;
+          background-color: $main-color;
+          box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+        }
+
+        .work-year.left-pos {
+          margin-right: auto;
+        }
+
+        .work-year.right-pos {
+          margin-left: auto;
+        }
+
+        .year-one {
+          transform: translateY(-5px);
           display: inline-block;
-          text-align: right;
+          color: $green-color;
+        }
+
+        .year-two {
+          transform: translateY(5px);
+          display: inline-block;
         }
       }
 
       .outcome {
-        text-align: left;
-        border: 1px solid red;
+        border: 1px solid $main-color;
         padding: 10px;
+        background-color: $main-color;
+        box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+
+        .timeline-text {
+          line-height: 25px;
+          letter-spacing: 1.5px;
+        }
+
+        .timeline-text:not(:last-child) {
+          margin-bottom: 10px;
+        }
       }
 
       .point {
-        width: 20px;
-        height: 20px;
+        width: 25px;
+        height: 25px;
         border: 2px solid $orange-color;
         border-radius: 50%;
         position: relative;
@@ -348,7 +389,7 @@ body {
         &::after {
           content: "";
           width: 2px;
-          height: 50px;
+          height: 105px;
           background-color: $orange-color;
           border-radius: 50%;
           position: absolute;
@@ -357,11 +398,11 @@ body {
         }
 
         &::before {
-          top: 18px;
+          top: 24px;
         }
 
         &::after {
-          bottom: 18px;
+          bottom: 24px;
         }
 
         .center-point {
@@ -378,6 +419,88 @@ body {
     }
   }
 }
+
+.skill-learn {
+  .technology-wrapper {
+    padding: 0 10px;
+
+    .technology-used {
+      @include display_flex_center;
+      flex-wrap: wrap;
+      gap: 50px;
+
+      .category {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+
+        .logo-wrapper {
+          @include display_flex_center;
+          padding: 10px;
+          gap: 30px;
+          height: 90px;
+
+          .logo {
+            text-align: center;
+            border-radius: 58% 42% 45% 55% / 51% 38% 62% 49%;
+          }
+        }
+
+        .cat {
+          color: $color-white;
+          font-size: 13px;
+          text-transform: uppercase;
+          max-width: 100px;
+          margin: 5px auto 10px;
+          order: 1;
+          height: 40px;
+        }
+      }
+    }
+  }
+}
+
+.cv_section.project_done {
+  height: auto;
+
+  .swiper {
+    width: 80%;
+    padding-top: 50px;
+    height: 325px;
+  }
+
+  .swiper.landscape {
+    height: 250px;
+    margin-bottom: 30px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 150px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    -webkit-box-reflect: below 1px
+      linear-gradient(transparent, transparent, #0002, #0004);
+  }
+
+  .project {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
+    .project-item {
+      width: 90%;
+      margin: 0 auto;
+      height: 300px;
+      border: 1px solid #060a1f;
+      margin-bottom: 20px;
+    }
+  }
+}
+
 //tablet
 @media (width >= 768px) {
   .header {
