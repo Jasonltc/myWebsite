@@ -153,6 +153,7 @@ body {
 .cv_section {
   margin-bottom: 35px;
   border: 1px solid #1b1b1b;
+  padding: 20px 0px;
 }
 .cv_section .sub-title {
   text-align: center;
