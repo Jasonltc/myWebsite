@@ -10,7 +10,6 @@ const menuMobileActive = function () {
 // scramble.js
 function scramble() {
   const phrases = [
-    "Hola,",
     "Welcome Abort",
     "Enjoy your flight",
     "Have a safe flight and seat your belt",
@@ -29,14 +28,6 @@ function scramble() {
     counter = (counter + 1) % phrases.length;
   };
   next();
-}
-
-//accordion for skill
-const accordion = document.querySelectorAll(".skill-item");
-for (i = 0; i < accordion.length; i++) {
-  accordion[i].addEventListener("click", function () {
-    this.classList.toggle("active");
-  });
 }
 
 function addButtonUp() {
