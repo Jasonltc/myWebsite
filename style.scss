@@ -31,23 +31,63 @@ body {
   position: relative;
 }
 
+.logo {
+  color: $white-color;
+  letter-spacing: 1px;
+
+  span {
+    text-transform: uppercase;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: $orange-color;
+  }
+}
+
+.see-all-btn {
+  width: 160px;
+  color: $orange-color;
+  padding: 15px 20px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: transparent;
+  text-transform: uppercase;
+
+  font-size: 15px;
+  position: relative;
+  text-align: left;
+
+  .icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .fa-arrow-right {
+      color: $green-color;
+      font-size: 15px;
+    }
+  }
+
+  @keyframes arrow {
+    to {
+      left: 100px;
+    }
+  }
+}
+
+.high-light-orange {
+  color: $orange-color;
+}
+
+.high-light-green {
+  color: $green-color;
+}
+
 .header {
   @include display_flex_space_between;
   padding: 20px 10px;
   position: relative;
   background-color: $main-color;
-
-  .logo {
-    color: $color-white;
-    letter-spacing: 1px;
-
-    span {
-      text-transform: uppercase;
-      font-weight: bolder;
-      letter-spacing: 2px;
-      color: $orange-color;
-    }
-  }
 
   .menu-items {
     position: absolute;
@@ -80,7 +120,7 @@ body {
       list-style: none;
 
       .links {
-        color: $color-white;
+        color: $white-color;
         text-decoration: none;
         display: block;
         margin-bottom: 20px;
@@ -121,7 +161,7 @@ body {
   .menu {
     i {
       font-size: 25px;
-      color: $color-white;
+      color: $white-color;
     }
 
     @media (width >= 768px) {
@@ -133,7 +173,7 @@ body {
 .intro {
   @media (width >= 768px) {
     @include display_flex_space_between;
-    gap: 5px;
+    gap: 23px;
   }
 
   .intro_animation {
@@ -147,7 +187,7 @@ body {
 
     .started-animation {
       font-weight: bold;
-      color: $color-white;
+      color: $white-color;
       max-width: max-content;
       font-size: 25px;
       position: relative;
@@ -169,7 +209,7 @@ body {
       }
 
       &::after {
-        background: $color-white;
+        background: $white-color;
         width: 3px;
         animation: typewitting 4s steps(41) forwards,
           blink 750ms steps(41) infinite;
@@ -240,8 +280,7 @@ body {
 }
 
 .cv_section {
-  margin-bottom: 35px;
-  padding: 20px 0px;
+  margin-bottom: 70px;
 
   .sub-title {
     text-align: center;
@@ -271,7 +310,7 @@ body {
     .about-name {
       margin-top: 20px;
       margin-bottom: 20px;
-      color: $color-white;
+      color: $white-color;
       font-size: 1.2rem;
       letter-spacing: 3px;
 
@@ -281,7 +320,7 @@ body {
     }
 
     .about-me {
-      color: $color-white;
+      color: $white-color;
       margin-bottom: 10px;
       letter-spacing: 2px;
       padding: 0 10px;
@@ -293,7 +332,7 @@ body {
     }
 
     .summary {
-      color: $color-white;
+      color: $white-color;
       line-height: 25px;
       padding: 0 10px;
       letter-spacing: 2px;
@@ -314,7 +353,7 @@ body {
       margin-top: 20px;
 
       .interest-box {
-        border: 1px solid $color-white;
+        border: 1px solid $white-color;
         padding: 15px 20px;
         max-width: 600px;
         margin: 0 auto 20px;
@@ -356,7 +395,7 @@ body {
 
             .hobbie-name {
               margin-top: 10px;
-              color: $color-white;
+              color: $white-color;
             }
           }
         }
@@ -370,7 +409,7 @@ body {
     text-align: center;
     margin-top: 40px;
     margin-bottom: 50px;
-    color: $color-white;
+    color: $white-color;
     font-size: 20px;
 
     @media (width >= 1224px) {
@@ -436,7 +475,7 @@ body {
       .year,
       .outcome {
         width: 100%;
-        color: $color-white;
+        color: $white-color;
         max-width: 420px;
       }
 
@@ -486,7 +525,6 @@ body {
         background-color: $main-color;
         box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
         order: 2;
-        border: 1px solid #272626;
 
         @media (width >= 768px) {
           order: unset;
@@ -552,7 +590,7 @@ body {
       padding-top: 10px;
 
       .still-going {
-        color: $color-white;
+        color: $white-color;
         font-size: 20px;
       }
     }
@@ -590,7 +628,7 @@ body {
         }
 
         .cat {
-          color: $color-white;
+          color: $white-color;
           font-size: 13px;
           text-transform: uppercase;
           max-width: 100px;
@@ -603,8 +641,16 @@ body {
   }
 }
 
-.cv_section.project_done {
+.cv_section.Portfolio {
   height: auto;
+
+  .btn-wrapper {
+    text-align: center;
+
+    .see-all-btn {
+      margin-top: 40px;
+    }
+  }
 
   .swiper {
     width: 80%;
@@ -618,7 +664,6 @@ body {
 
   .swiper.landscape {
     height: 250px;
-    margin-bottom: 30px;
 
     @media (width >= 1024px) {
       height: 475px;
@@ -650,16 +695,152 @@ body {
       linear-gradient(transparent, transparent, #0002, #0004);
   }
 
-  .project {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  .no-active-swiper {
+    display: none;
+  }
+}
 
-    .project-item {
-      width: 90%;
-      margin: 0 auto;
-      height: 300px;
-      border: 1px solid #060a1f;
-      margin-bottom: 20px;
+.cv_section.project-done {
+  .project {
+    @include display_flex_center;
+    align-items: flex-start;
+    gap: 30px;
+
+    .left-path {
+      width: 100%;
+
+      @media (width >= 768px) {
+        padding: 100px 20px 0;
+        width: 45%;
+      }
+
+      .project-text {
+        color: $white-color;
+        font-size: 20px;
+        letter-spacing: 5px;
+        padding-left: 15px;
+        width: fit-content;
+        margin: auto;
+      }
+
+      .small-description {
+        margin-top: 50px;
+        padding-left: 20px;
+
+        li {
+          color: $white-color;
+          font-size: 13px;
+          letter-spacing: 3px;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    .right-path {
+      padding: 0 20px 0;
+      display: none;
+      width: 100%;
+
+      @media (width >= 768px) {
+        display: block;
+        width: 45%;
+      }
+
+      .filter {
+        text-align: center;
+
+        .project-item {
+          border: 1px solid $main-color;
+          padding: 10px 20px;
+          height: 75px;
+          margin: auto;
+          box-shadow: 2px 4px 4px 0px rgb(28, 28, 28);
+          cursor: pointer;
+
+          .project-dec {
+            text-align: left;
+            color: $white-color;
+            font-size: 15px;
+          }
+        }
+
+        .project-item:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .project-square-l {
+      height: 400px;
+      border: 1px solid blue;
+      margin: 40px auto;
+    }
+  }
+
+  .project-box {
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid red;
+
+    .project-wrapper {
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (width >= 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media (width >= 1224px) {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      @media (width >= 1440px) {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .indiv-project {
+        border: 1px solid blue;
+        height: 100px;
+      }
+    }
+  }
+}
+
+.cv_section.contact-me {
+  .contact-wrapper {
+    @include display_flex_space_between;
+
+    .contact_text {
+      margin-top: 70px;
+      padding-left: 30px;
+
+      p {
+        color: $white-color;
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
+
+      p:last-child {
+        margin-top: 50px;
+
+        a {
+          color: $green-color;
+          font-size: 22px;
+          text-decoration: none;
+          position: relative;
+
+          &::after {
+            content: "";
+            width: 50%;
+            height: 2px;
+            background-color: $green-color;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+          }
+        }
+      }
     }
   }
 }
@@ -672,20 +853,12 @@ body {
     margin: 0 auto;
   }
 
-  .cv_section.project_done {
+  .cv_section.Portfolio {
     .swiper,
     .swiper.landscape {
       height: 100%;
     }
   }
-}
-
-.high-light-orange {
-  color: $orange-color;
-}
-
-.green-color {
-  color: $green-color;
 }
 
 .to-the-top {
@@ -699,4 +872,24 @@ body {
   bottom: 35px;
   right: 60px;
   z-index: 60;
+}
+
+footer {
+  height: 75px;
+  background-color: $main-color;
+
+  .footer-wrapper {
+    @include display_flex_space_between;
+    width: 100%;
+    height: 100%;
+    padding: 0 40px;
+
+    .left-side {
+      .all-rights {
+        color: $white-color;
+        font-size: 11px;
+        padding-left: 30px;
+      }
+    }
+  }
 }
