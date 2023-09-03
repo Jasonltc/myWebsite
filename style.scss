@@ -241,7 +241,6 @@ body {
 
 .cv_section {
   margin-bottom: 35px;
-  border: 1px solid $color-black;
   padding: 20px 0px;
 
   .sub-title {
@@ -550,7 +549,7 @@ body {
 
     .still-going-wrapper {
       text-align: center;
-      margin-top: 10px;
+      padding-top: 10px;
 
       .still-going {
         color: $color-white;

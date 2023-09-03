@@ -229,7 +229,6 @@ body {
 
 .cv_section {
   margin-bottom: 35px;
-  border: 1px solid #1b1b1b;
   padding: 20px 0px;
 }
 .cv_section .sub-title {
@@ -519,7 +518,7 @@ body {
 }
 .my_journey .education_journey .still-going-wrapper {
   text-align: center;
-  margin-top: 10px;
+  padding-top: 10px;
 }
 .my_journey .education_journey .still-going-wrapper .still-going {
   color: #ffffff;
