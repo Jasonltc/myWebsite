@@ -411,6 +411,11 @@ body {
     margin-bottom: 50px;
     color: $white-color;
     font-size: 20px;
+    display: none;
+
+    @media (width >= 1024px) {
+      display: block;
+    }
 
     @media (width >= 1224px) {
       font-size: 25px;
@@ -419,9 +424,10 @@ body {
 
   .education_journey {
     position: relative;
+    margin-top: 25px;
 
     @media (width >= 768px) {
-      margin-top: 40px;
+      margin-top: 90px;
     }
 
     i.airplane {
@@ -429,9 +435,11 @@ body {
       right: 0;
       font-size: 45px;
       position: absolute;
+      display: none;
 
-      @media (width >= 768px) {
-        transform: translate(-20px, 2px);
+      @media (width >= 1024px) {
+        display: block;
+        transform: translate(-30px, 2px);
         position: relative;
         z-index: 10;
       }
@@ -476,7 +484,15 @@ body {
       .outcome {
         width: 100%;
         color: $white-color;
-        max-width: 420px;
+        max-width: 575px;
+
+        @media (width >= 768px) {
+          max-width: 320px;
+        }
+
+        @media (width >= 1024px) {
+          max-width: 450px;
+        }
       }
 
       .year {

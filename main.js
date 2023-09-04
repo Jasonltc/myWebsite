@@ -69,39 +69,21 @@ var swiper = new Swiper(".mySwiper", {
 // gsap animation
 gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 
-// const planePath = [
-//   { x: 100, y: -20 },
-//   { x: 300, y: 10 },
-//   { x: 500, y: 100 },
-//   { x: 750, y: -100 },
-//   { x: 350, y: -50 },
-//   { x: 600, y: 100 },
-//   { x: 800, y: 0 },
-//   { x: window.innerWidth, y: -250 },
-// ];
+if (window.innerWidth >= 1024) {
+  let tl = gsap.timeline({
+    scrollTrigger: {
+      trigger: ".my_journey",
+      start: "top top",
+      end: "bottom 300",
+      scrub: "true",
+      markers: "true",
+      pin: "true",
+    },
+  });
 
-// const mainOp = gsap.timeline().to(".flight-announcement", { opacity: 0 }, 1);
-
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#career-path",
-//     start: "top top",
-//     end: "bottom 200px",
-//     scrub: true,
-//     markers: true,
-//     pin: true,
-//   },
-// });
-
-// tl.to(".plane", { y: 100 });
+  tl.to(".airplane", { y: 1020, color: "#31cc31" });
+}
 
 menuMobileActive();
 addButtonUp();
 scramble();
-
-// motionPath: {
-//   path: planePath,
-//   curviness: 2,
-//   autoRotate: true,
-//   duration: 3000,
-// },
