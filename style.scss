@@ -282,17 +282,34 @@ body {
 .cv_section {
   margin-bottom: 70px;
 
-  .sub-title {
-    text-align: center;
-    @include font_family_lora;
-    color: $orange-color;
-    font-size: 25px;
-    text-transform: uppercase;
+  .sub-title-wrapper {
+    position: relative;
+
+    .square {
+      width: 50px;
+      height: 100px;
+      background-color: $orange-color;
+    }
+
+    .sub-title {
+      @include font_family_lora;
+      color: $white-color;
+      font-size: 25px;
+      text-transform: uppercase;
+      text-align: left;
+      width: 100%;
+      max-width: 350px;
+      margin: 0 auto;
+      position: absolute;
+      top: 16px;
+      left: 27px;
+    }
   }
 }
 
 .cv_section.brief {
   background-color: $secondary-color;
+  padding-top: 70px;
 }
 
 .brief-wrapper {
@@ -660,21 +677,46 @@ body {
 .cv_section.Portfolio {
   height: auto;
 
-  .btn-wrapper {
+  .switch-btn-wrapper {
+    margin-top: 20px;
     text-align: center;
 
-    .see-all-btn {
+    @media (width >= 1024px) {
       margin-top: 40px;
+    }
+
+    .switch-btn-box {
+      @include display_flex_center;
+      gap: 10px;
+
+      .switch-btn {
+        background-color: unset;
+        padding: 5px 20px;
+        outline: none;
+        color: $white-color;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 400;
+        @include font_family_oswald;
+
+        @media (width >= 1024px) {
+          width: 150px;
+          padding: 15px 25px;
+          font-size: 15px;
+        }
+      }
     }
   }
 
   .swiper {
     width: 80%;
-    padding-top: 50px;
+    padding-top: 35px;
     height: 325px;
 
     @media (width >= 1024px) {
       height: 575px;
+      padding-top: 70px;
     }
   }
 
@@ -863,6 +905,7 @@ body {
 
 @media (width >=1600px) {
   .header,
+  .footer,
   .wide-dimension-header,
   .wide-dimension-main {
     max-width: $desktop;
