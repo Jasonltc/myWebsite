@@ -270,10 +270,18 @@ body {
 .cv_section .sub-title-wrapper {
   position: relative;
 }
+.cv_section .sub-title-wrapper.center-middle {
+  max-width: 350px;
+  margin: 0 auto 50px;
+}
 .cv_section .sub-title-wrapper .square {
   width: 50px;
   height: 100px;
   background-color: #ee4036;
+  position: relative;
+}
+.cv_section .sub-title-wrapper .square.small-one {
+  height: 70px;
 }
 .cv_section .sub-title-wrapper .sub-title {
   font-family: "Lora", serif;
@@ -300,6 +308,7 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 35px;
+    align-items: flex-start;
   }
 }
 .brief-wrapper .about-me-information {
@@ -342,6 +351,7 @@ body {
 @media (width >= 768px) {
   .brief-wrapper .about-me-information .summary {
     padding: unset;
+    max-width: 600px;
   }
 }
 @media (width >= 768px) {
@@ -352,11 +362,19 @@ body {
 .brief-wrapper .interest .interest-wrapper {
   margin-top: 20px;
 }
+@media (width >= 768px) {
+  .brief-wrapper .interest .interest-wrapper {
+    margin-top: unset;
+  }
+}
 .brief-wrapper .interest .interest-wrapper .interest-box {
   border: 1px solid #ffffff;
   padding: 15px 20px;
   max-width: 600px;
-  margin: 0 auto 20px;
+  margin-left: auto;
+}
+.brief-wrapper .interest .interest-wrapper .interest-box:first-child {
+  margin-bottom: 20px;
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .interest-title {
   color: #e2f516;
@@ -398,7 +416,6 @@ body {
 
 .my_journey .flight-announcement {
   text-align: center;
-  margin-top: 40px;
   margin-bottom: 50px;
   color: #ffffff;
   font-size: 20px;
@@ -642,13 +659,7 @@ body {
   height: auto;
 }
 .cv_section.Portfolio .switch-btn-wrapper {
-  margin-top: 20px;
   text-align: center;
-}
-@media (width >= 1024px) {
-  .cv_section.Portfolio .switch-btn-wrapper {
-    margin-top: 40px;
-  }
 }
 .cv_section.Portfolio .switch-btn-wrapper .switch-btn-box {
   display: flex;
@@ -665,11 +676,16 @@ body {
   text-transform: uppercase;
   border: none;
   font-weight: 400;
+  transition: all 0.2333s ease-in;
   font-family: "Oswald", sans-serif;
+}
+.cv_section.Portfolio .switch-btn-wrapper .switch-btn-box .switch-btn:hover {
+  color: #ee4036;
 }
 @media (width >= 1024px) {
   .cv_section.Portfolio .switch-btn-wrapper .switch-btn-box .switch-btn {
-    width: 150px;
+    width: -moz-max-content;
+    width: max-content;
     padding: 15px 25px;
     font-size: 15px;
   }
@@ -677,46 +693,13 @@ body {
 .cv_section.Portfolio .swiper {
   width: 80%;
   padding-top: 35px;
-  height: 325px;
-}
-@media (width >= 1024px) {
-  .cv_section.Portfolio .swiper {
-    height: 575px;
-    padding-top: 70px;
-  }
 }
 .cv_section.Portfolio .swiper.landscape {
   height: 250px;
 }
-@media (width >= 1024px) {
-  .cv_section.Portfolio .swiper.landscape {
-    height: 475px;
-  }
-}
-@media (width >= 1600px) {
-  .cv_section.Portfolio .swiper.landscape {
-    height: 100px;
-  }
-}
-.cv_section.Portfolio .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 150px;
-}
-@media (width >= 1024px) {
-  .cv_section.Portfolio .swiper-slide {
-    width: 300px;
-  }
-}
-@media (width >= 1600px) {
-  .cv_section.Portfolio .swiper-slide {
-    height: 400px;
-  }
-}
 .cv_section.Portfolio .swiper-slide img {
   display: block;
   width: 100%;
-  -webkit-box-reflect: below 1px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.1333333333), rgba(0, 0, 0, 0.2666666667));
 }
 .cv_section.Portfolio .no-active-swiper {
   display: none;
@@ -828,8 +811,12 @@ body {
   align-items: center;
 }
 .cv_section.contact-me .contact-wrapper .contact_text {
-  margin-top: 70px;
   padding-left: 30px;
+}
+@media (width >= 768px) {
+  .cv_section.contact-me .contact-wrapper .contact_text {
+    margin-top: 70px;
+  }
 }
 .cv_section.contact-me .contact-wrapper .contact_text p {
   color: #ffffff;
@@ -855,7 +842,7 @@ body {
   bottom: -5px;
 }
 
-@media (width >= 1600px) {
+@media (width >= 2200px) {
   .header,
   .footer,
   .wide-dimension-header,

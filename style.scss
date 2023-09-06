@@ -285,10 +285,39 @@ body {
   .sub-title-wrapper {
     position: relative;
 
+    &.center-middle {
+      max-width: 350px;
+      margin: 0 auto 50px;
+    }
+
     .square {
       width: 50px;
       height: 100px;
       background-color: $orange-color;
+      position: relative;
+
+      &.small-one {
+        height: 70px;
+      }
+
+      // &::before,
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 20px;
+      //   height: 20px;
+      //   background-color: $green-color;
+      // }
+
+      // &::before {
+      //   top: -10px;
+      //   right: -10px;
+      // }
+
+      // &::after {
+      //   bottom: -10px;
+      //   left: -5px;
+      // }
     }
 
     .sub-title {
@@ -316,6 +345,7 @@ body {
   @media (width >= 768px) {
     @include display_flex_space_between;
     gap: 35px;
+    align-items: flex-start;
   }
 
   .about-me-information {
@@ -357,6 +387,7 @@ body {
 
       @media (width >= 768px) {
         padding: unset;
+        max-width: 600px;
       }
     }
   }
@@ -369,11 +400,19 @@ body {
     .interest-wrapper {
       margin-top: 20px;
 
+      @media (width >= 768px) {
+        margin-top: unset;
+      }
+
       .interest-box {
         border: 1px solid $white-color;
         padding: 15px 20px;
         max-width: 600px;
-        margin: 0 auto 20px;
+        margin-left: auto;
+
+        &:first-child {
+          margin-bottom: 20px;
+        }
 
         .interest-title {
           color: $yellow-color;
@@ -424,7 +463,6 @@ body {
 .my_journey {
   .flight-announcement {
     text-align: center;
-    margin-top: 40px;
     margin-bottom: 50px;
     color: $white-color;
     font-size: 20px;
@@ -678,12 +716,7 @@ body {
   height: auto;
 
   .switch-btn-wrapper {
-    margin-top: 20px;
     text-align: center;
-
-    @media (width >= 1024px) {
-      margin-top: 40px;
-    }
 
     .switch-btn-box {
       @include display_flex_center;
@@ -698,10 +731,15 @@ body {
         text-transform: uppercase;
         border: none;
         font-weight: 400;
+        transition: all 0.2333s ease-in;
         @include font_family_oswald;
 
+        &:hover {
+          color: $orange-color;
+        }
+
         @media (width >= 1024px) {
-          width: 150px;
+          width: max-content;
           padding: 15px 25px;
           font-size: 15px;
         }
@@ -712,45 +750,15 @@ body {
   .swiper {
     width: 80%;
     padding-top: 35px;
-    height: 325px;
-
-    @media (width >= 1024px) {
-      height: 575px;
-      padding-top: 70px;
-    }
   }
 
   .swiper.landscape {
     height: 250px;
-
-    @media (width >= 1024px) {
-      height: 475px;
-    }
-
-    @media (width >= 1600px) {
-      height: 100px;
-    }
-  }
-
-  .swiper-slide {
-    background-position: center;
-    background-size: cover;
-    width: 150px;
-
-    @media (width >= 1024px) {
-      width: 300px;
-    }
-
-    @media (width >= 1600px) {
-      height: 400px;
-    }
   }
 
   .swiper-slide img {
     display: block;
     width: 100%;
-    -webkit-box-reflect: below 1px
-      linear-gradient(transparent, transparent, #0002, #0004);
   }
 
   .no-active-swiper {
@@ -870,8 +878,11 @@ body {
     @include display_flex_space_between;
 
     .contact_text {
-      margin-top: 70px;
       padding-left: 30px;
+
+      @media (width >= 768px) {
+        margin-top: 70px;
+      }
 
       p {
         color: $white-color;
@@ -903,7 +914,7 @@ body {
   }
 }
 
-@media (width >=1600px) {
+@media (width >=2200px) {
   .header,
   .footer,
   .wide-dimension-header,

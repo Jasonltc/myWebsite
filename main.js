@@ -48,22 +48,26 @@ function addButtonUp() {
 
 //swiper
 var swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
   centeredSlides: true,
-  slidesPerView: "auto",
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
-  loop: true,
-  coverflowEffect: {
-    rotate: 15,
-    stretch: 0,
-    depth: 300,
-    modifier: 1,
-    slideShadows: true,
+  breakpoints: {
+    640: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
   },
+  loop: true,
 });
 
 // gsap animation
