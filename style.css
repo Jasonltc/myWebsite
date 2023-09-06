@@ -58,7 +58,7 @@ body {
   transform: translateY(-50%);
 }
 .see-all-btn .icon .fa-arrow-right {
-  color: #31cc31;
+  color: #228f22;
   font-size: 15px;
 }
 @keyframes arrow {
@@ -72,7 +72,7 @@ body {
 }
 
 .high-light-green {
-  color: #31cc31;
+  color: #228f22;
 }
 
 .header {
@@ -294,7 +294,7 @@ body {
   margin: 0 auto;
   position: absolute;
   top: 16px;
-  left: 27px;
+  left: 30px;
 }
 
 .cv_section.brief {
@@ -377,7 +377,7 @@ body {
   margin-bottom: 20px;
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .interest-title {
-  color: #e2f516;
+  color: #becd13;
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .interest-title .return {
   margin-left: 20px;
@@ -391,10 +391,10 @@ body {
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .interest-title .console {
   margin-left: 40px;
-  color: #e2f516;
+  color: #becd13;
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .success {
-  color: #31cc31;
+  color: #228f22;
   margin-bottom: 20px;
 }
 .brief-wrapper .interest .interest-wrapper .interest-box .hobbie-wrapper,
@@ -540,7 +540,7 @@ body {
 .my_journey .education_journey .time-stop .year .year-one {
   transform: translateY(-5px);
   display: inline-block;
-  color: #31cc31;
+  color: #228f22;
 }
 .my_journey .education_journey .time-stop .year .year-two {
   transform: translateY(5px);
@@ -827,7 +827,7 @@ body {
   margin-top: 50px;
 }
 .cv_section.contact-me .contact-wrapper .contact_text p:last-child a {
-  color: #31cc31;
+  color: #228f22;
   font-size: 22px;
   text-decoration: none;
   position: relative;
@@ -836,7 +836,7 @@ body {
   content: "";
   width: 50%;
   height: 2px;
-  background-color: #31cc31;
+  background-color: #228f22;
   position: absolute;
   left: 0;
   bottom: -5px;
