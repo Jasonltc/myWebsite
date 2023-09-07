@@ -20,7 +20,7 @@ body {
 }
 
 .wide-dimension-header {
-  background-color: #292a2e;
+  background-color: #27292b;
 }
 
 .wide-dimension-main {
@@ -81,7 +81,7 @@ body {
   align-items: center;
   padding: 20px 10px;
   position: relative;
-  background-color: #292a2e;
+  background-color: #27292b;
 }
 .header .menu-items {
   position: absolute;
@@ -209,7 +209,7 @@ body {
   animation: typewitting 4s steps(41) forwards, blink 750ms steps(41) infinite;
 }
 .intro .intro_animation .started-animation::before {
-  background: #292a2e;
+  background: #27292b;
   animation: typewitting 4s steps(41) forwards;
 }
 .intro .intro_animation .welcome-text {
@@ -521,14 +521,14 @@ body {
   }
 }
 .my_journey .education_journey .time-stop .year .work-year {
-  border: 1px solid #292a2e;
+  border: 1px solid #27292b;
   padding: 10px;
   min-width: 120px;
   max-width: 200px;
   text-align: center;
   height: 70px;
   line-height: 50px;
-  background-color: #292a2e;
+  background-color: #27292b;
   box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
   border: 1px solid #272626;
 }
@@ -548,9 +548,9 @@ body {
   display: inline-block;
 }
 .my_journey .education_journey .time-stop .outcome {
-  border: 1px solid #292a2e;
+  border: 1px solid #27292b;
   padding: 10px;
-  background-color: #292a2e;
+  background-color: #27292b;
   box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
   order: 2;
 }
@@ -756,7 +756,7 @@ body {
   text-align: center;
 }
 .cv_section.project-done .project .right-path .filter .project-item {
-  border: 1px solid #292a2e;
+  border: 1px solid #27292b;
   padding: 10px 20px;
   height: 75px;
   margin: auto;
@@ -871,7 +871,7 @@ body {
 
 footer {
   height: 75px;
-  background-color: #292a2e;
+  background-color: #27292b;
 }
 footer .footer-wrapper {
   display: flex;
