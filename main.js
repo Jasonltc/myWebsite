@@ -80,12 +80,11 @@ if (window.innerWidth >= 1024) {
       start: "top top",
       end: "bottom 300",
       scrub: "true",
-      markers: "true",
       pin: "true",
     },
   });
 
-  tl.to(".airplane", { y: 1020 });
+  tl.to(".airplane", { y: 1020, color: "#ee4036" });
 }
 
 menuMobileActive();

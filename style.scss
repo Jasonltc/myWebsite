@@ -491,10 +491,11 @@ body {
       font-size: 45px;
       position: absolute;
       display: none;
+      color: #bab8b8;
 
       @media (width >= 1024px) {
         display: block;
-        transform: translate(-30px, 2px);
+        transform: translate(-30px, 1px);
         position: relative;
         z-index: 10;
       }
@@ -655,15 +656,15 @@ body {
         }
       }
     }
+  }
 
-    .still-going-wrapper {
-      text-align: center;
-      padding-top: 10px;
+  .still-going-wrapper {
+    text-align: center;
+    margin-top: 85px;
 
-      .still-going {
-        color: $white-color;
-        font-size: 20px;
-      }
+    .still-going {
+      color: $white-color;
+      font-size: 20px;
     }
   }
 }

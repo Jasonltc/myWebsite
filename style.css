@@ -446,11 +446,12 @@ body {
   font-size: 45px;
   position: absolute;
   display: none;
+  color: #bab8b8;
 }
 @media (width >= 1024px) {
   .my_journey .education_journey i.airplane {
     display: block;
-    transform: translate(-30px, 2px);
+    transform: translate(-30px, 1px);
     position: relative;
     z-index: 10;
   }
@@ -604,11 +605,11 @@ body {
     transform: translate(-50%, -50%);
   }
 }
-.my_journey .education_journey .still-going-wrapper {
+.my_journey .still-going-wrapper {
   text-align: center;
-  padding-top: 10px;
+  margin-top: 85px;
 }
-.my_journey .education_journey .still-going-wrapper .still-going {
+.my_journey .still-going-wrapper .still-going {
   color: #ffffff;
   font-size: 20px;
 }
