@@ -45,16 +45,18 @@ body {
 
 .see-all-btn {
   width: 160px;
-  color: $orange-color;
+  color: $white-color;
   padding: 15px 20px;
-  border: 1px solid black;
+  border: 1px solid $white-color;
   border-radius: 2px;
-  background-color: transparent;
+  background-color: $main-color;
   text-transform: uppercase;
-
+  cursor: pointer;
   font-size: 15px;
   position: relative;
   text-align: left;
+  transition: all 0.233s ease-in;
+  border-radius: 3px;
 
   .icon {
     position: absolute;
@@ -63,8 +65,22 @@ body {
     transform: translateY(-50%);
 
     .fa-arrow-right {
-      color: $green-color;
+      color: $white-color;
       font-size: 15px;
+      transition: all 0.233s ease-in;
+    }
+  }
+
+  &:hover {
+    color: $main-color;
+    border-color: $main-color;
+    background-color: $white-color;
+
+    .icon {
+      .fa-arrow-right {
+        color: $main-color;
+        transform: translateX(10px);
+      }
     }
   }
 
@@ -566,7 +582,7 @@ body {
           text-align: center;
           height: 70px;
           line-height: 50px;
-          background-color: $main-color;
+          background-color: $light-black;
           box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
           border: 1px solid #272626;
         }
@@ -593,8 +609,8 @@ body {
 
       .outcome {
         border: 1px solid $main-color;
-        padding: 10px;
-        background-color: $main-color;
+        padding: 30px 25px;
+        background-color: $light-black;
         box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
         order: 2;
 
@@ -823,16 +839,26 @@ body {
           margin: auto;
           box-shadow: 2px 4px 4px 0px rgb(28, 28, 28);
           cursor: pointer;
+          transition: all 0.233s ease-in;
 
           .project-dec {
             text-align: left;
             color: $white-color;
             font-size: 15px;
+            transition: all 0.233s ease-in;
+          }
+
+          &:hover {
+            transform: translate(10px, -10px);
+
+            .project-dec {
+              color: $orange-color;
+            }
           }
         }
 
         .project-item:not(:last-child) {
-          margin-bottom: 10px;
+          margin-bottom: 15px;
         }
       }
     }
@@ -908,6 +934,13 @@ body {
             position: absolute;
             left: 0;
             bottom: -5px;
+            transition: all 0.233s ease-in;
+          }
+
+          &:hover {
+            &::after {
+              width: 100%;
+            }
           }
         }
       }

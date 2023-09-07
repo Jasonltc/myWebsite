@@ -84,7 +84,7 @@ if (window.innerWidth >= 1024) {
     },
   });
 
-  tl.to(".airplane", { y: 1020, color: "#ee4036" });
+  tl.to(".airplane", { y: 1270, color: "#ee4036" });
 }
 
 menuMobileActive();
