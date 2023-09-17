@@ -40,7 +40,7 @@ function addButtonUp() {
     }
   });
 
-  $(".top").on("click", function (e) {
+  $(".to-the-top").on("click", function (e) {
     e.preventDefault();
     $("html,body").animate({ scrollTop: 0 }, 300);
   });

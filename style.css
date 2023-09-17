@@ -28,9 +28,27 @@ body {
   position: relative;
 }
 
+/* scollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ee4036;
+  border-radius: 10px;
+}
+
 .logo {
   color: #ffffff;
   letter-spacing: 1px;
+  text-align: center;
 }
 .logo span {
   text-transform: uppercase;
@@ -89,10 +107,7 @@ body {
 }
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10px;
+  padding: 20px 40px 50px;
   position: relative;
   background-color: #27292b;
 }
@@ -111,7 +126,7 @@ body {
 @media (width >= 768px) {
   .header .menu-items {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     position: unset;
     width: unset;
@@ -120,6 +135,7 @@ body {
     padding: unset;
     overflow: unset;
     gap: 45px;
+    margin-top: 20px;
   }
 }
 .header .menu-items.active {
@@ -829,15 +845,19 @@ body {
 
 .cv_section.contact-me .contact-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: auto;
 }
 .cv_section.contact-me .contact-wrapper .contact_text {
   padding-left: 30px;
+  width: 100%;
 }
 @media (width >= 768px) {
   .cv_section.contact-me .contact-wrapper .contact_text {
-    margin-top: 70px;
+    width: 50%;
   }
 }
 .cv_section.contact-me .contact-wrapper .contact_text p {
@@ -867,6 +887,33 @@ body {
 .cv_section.contact-me .contact-wrapper .contact_text p:last-child a:hover::after {
   width: 100%;
 }
+.cv_section.contact-me .contact-wrapper .phone-contact {
+  width: 100%;
+  margin-left: 30px;
+}
+@media (width >= 768px) {
+  .cv_section.contact-me .contact-wrapper .phone-contact {
+    width: 50%;
+  }
+}
+.cv_section.contact-me .contact-wrapper .phone-contact address {
+  max-width: 200px;
+  margin: auto;
+}
+.cv_section.contact-me .contact-wrapper .phone-contact address .call-me {
+  color: #ffffff;
+  letter-spacing: 3px;
+  font-size: 20px;
+  font-style: none;
+  margin-bottom: 10px;
+}
+.cv_section.contact-me .contact-wrapper .phone-contact address .phone-number .link-contact {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  display: block;
+}
 
 @media (width >= 2200px) {
   .header,
@@ -885,13 +932,17 @@ body {
   width: 50px;
   height: 50px;
   padding: 10px;
-  border: 1px solid;
+  border: 1px solid #ee4036;
   text-align: center;
   border-radius: 58% 42% 45% 55%/51% 38% 62% 49%;
   position: fixed;
-  bottom: 35px;
-  right: 60px;
+  bottom: 60px;
+  right: 35px;
   z-index: 60;
+  background-color: #27292b;
+}
+.to-the-top .top {
+  color: #ee4036;
 }
 
 footer {
@@ -910,4 +961,10 @@ footer .footer-wrapper .left-side .all-rights {
   color: #ffffff;
   font-size: 11px;
   padding-left: 30px;
+}
+footer .footer-wrapper .right-side .link .social-link {
+  color: #ffffff;
+  font-size: 15px;
+  margin-left: 15px;
+  cursor: pointer;
 }/*# sourceMappingURL=style.css.map */

@@ -31,9 +31,27 @@ body {
   position: relative;
 }
 
+/* scollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $orange-color;
+  border-radius: 10px;
+}
+
 .logo {
   color: $white-color;
   letter-spacing: 1px;
+  text-align: center;
 
   span {
     text-transform: uppercase;
@@ -100,8 +118,7 @@ body {
 }
 
 .header {
-  @include display_flex_space_between;
-  padding: 20px 10px;
+  padding: 20px 40px 50px;
   position: relative;
   background-color: $main-color;
 
@@ -118,7 +135,7 @@ body {
     transition: all 0.233s ease-in;
 
     @media (width >= 768px) {
-      @include display_flex_space_between;
+      @include display_flex_center;
       position: unset;
       width: unset;
       height: unset;
@@ -126,6 +143,7 @@ body {
       padding: unset;
       overflow: unset;
       gap: 45px;
+      margin-top: 20px;
     }
 
     &.active {
@@ -902,13 +920,17 @@ body {
 
 .cv_section.contact-me {
   .contact-wrapper {
-    @include display_flex_space_between;
+    @include display_flex_center;
+    align-items: flex-start;
+    max-width: 90%;
+    margin: auto;
 
     .contact_text {
       padding-left: 30px;
+      width: 100%;
 
       @media (width >= 768px) {
-        margin-top: 70px;
+        width: 50%;
       }
 
       p {
@@ -945,6 +967,38 @@ body {
         }
       }
     }
+
+    .phone-contact {
+      width: 100%;
+      margin-left: 30px;
+
+      @media (width >= 768px) {
+        width: 50%;
+      }
+
+      address {
+        max-width: 200px;
+        margin: auto;
+
+        .call-me {
+          color: $white-color;
+          letter-spacing: 3px;
+          font-size: 20px;
+          font-style: none;
+          margin-bottom: 10px;
+        }
+
+        .phone-number {
+          .link-contact {
+            color: $white-color;
+            text-decoration: none;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -969,13 +1023,18 @@ body {
   width: 50px;
   height: 50px;
   padding: 10px;
-  border: 1px solid;
+  border: 1px solid $orange-color;
   text-align: center;
   border-radius: 58% 42% 45% 55% / 51% 38% 62% 49%;
   position: fixed;
-  bottom: 35px;
-  right: 60px;
+  bottom: 60px;
+  right: 35px;
   z-index: 60;
+  background-color: $main-color;
+
+  .top {
+    color: $orange-color;
+  }
 }
 
 footer {
@@ -993,6 +1052,17 @@ footer {
         color: $white-color;
         font-size: 11px;
         padding-left: 30px;
+      }
+    }
+
+    .right-side {
+      .link {
+        .social-link {
+          color: $white-color;
+          font-size: 15px;
+          margin-left: 15px;
+          cursor: pointer;
+        }
       }
     }
   }
