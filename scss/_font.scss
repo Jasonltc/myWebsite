@@ -2,10 +2,5 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Oswald:wght@200;300;400;500;600;700&display=swap");
 
-@mixin font_family_lora {
-  font-family: "Lora", serif;
-}
-
-@mixin font_family_oswald {
-  font-family: "Oswald", sans-serif;
-}
+$primaryFont: "Lora", serif;
+$secondaryFont: "Oswald", sans-serif;
