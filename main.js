@@ -14,19 +14,19 @@ function scramble() {
 }
 
 function sliderPort() {
-  $(".btn-switch").each(function () {
+  $(".switch-btn").each(function () {
     $(this).on("click touch tap", function () {
       if (!$(this).hasClass("active")) {
-        $(".btn-switch").removeClass("active");
+        $(".switch-btn").removeClass("active");
         $(this).addClass("active");
 
         let getBlocName = $(this).attr("data-filter");
 
-        $(".switch-slider").each(function () {
+        $(".portfolio").each(function () {
           let getFilterName = $(this).attr("data-filter");
 
           if (getBlocName == getFilterName) {
-            $(".switch-slider").removeClass("active");
+            $(".portfolio").removeClass("active");
             $(this).addClass("active");
           }
         });
@@ -36,10 +36,10 @@ function sliderPort() {
 }
 
 //swiper
-var swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper(".mySwiper", {
   centeredSlides: true,
   autoplay: {
-    delay: 2500,
+    delay: 1500,
     disableOnInteraction: false,
   },
   breakpoints: {
@@ -95,4 +95,5 @@ function addButtonUp() {
 window.addEventListener("load", () => {
   addButtonUp();
   scramble();
+  sliderPort();
 });

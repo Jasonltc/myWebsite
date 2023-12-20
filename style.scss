@@ -52,54 +52,6 @@ body {
   }
 }
 
-// .see-all-btn {
-//   width: 160px;
-//   color: $white-color;
-//   padding: 15px 20px;
-//   border: 1px solid $white-color;
-//   border-radius: 2px;
-//   background-color: $main-color;
-//   text-transform: uppercase;
-//   cursor: pointer;
-//   font-size: 15px;
-//   position: relative;
-//   text-align: left;
-//   transition: all 0.233s ease-in;
-//   border-radius: 3px;
-
-//   .icon {
-//     position: absolute;
-//     right: 20px;
-//     top: 50%;
-//     transform: translateY(-50%);
-
-//     .fa-arrow-right {
-//       color: $white-color;
-//       font-size: 15px;
-//       transition: all 0.233s ease-in;
-//     }
-//   }
-
-//   &:hover {
-//     color: $main-color;
-//     border-color: $main-color;
-//     background-color: $white-color;
-
-//     .icon {
-//       .fa-arrow-right {
-//         color: $main-color;
-//         transform: translateX(10px);
-//       }
-//     }
-//   }
-
-//   @keyframes arrow {
-//     to {
-//       left: 100px;
-//     }
-//   }
-// }
-
 .high-light-orange {
   color: $orange-color;
 }
@@ -723,7 +675,7 @@ header {
   }
 }
 
-.skill-learn {
+.cv_section.skill-learn {
   .technology-wrapper {
     padding: 0 10px;
 
@@ -748,8 +700,11 @@ header {
           height: 90px;
 
           .logo {
-            text-align: center;
-            border-radius: 58% 42% 45% 55% / 51% 38% 62% 49%;
+            width: 80px;
+            height: 80px;
+            border: 1px solid #bab8b8;
+            display: grid;
+            place-items: center;
           }
         }
 
@@ -759,7 +714,6 @@ header {
           text-transform: uppercase;
           max-width: 100px;
           margin: 5px auto 10px;
-          order: 1;
           height: 40px;
         }
       }
@@ -773,13 +727,8 @@ header {
     align-items: flex-start;
     gap: 30px;
 
-    .left-path {
-      width: 100%;
-
-      @media (width >= 768px) {
-        padding: 100px 20px 0;
-        width: 45%;
-      }
+    .latest-work {
+      width: 45%;
 
       .project-text {
         color: $white-color;
@@ -787,70 +736,68 @@ header {
         letter-spacing: 5px;
         padding-left: 15px;
         width: fit-content;
-        margin: auto;
+        margin: 0 auto 40px;
       }
 
-      .small-description {
-        margin-top: 50px;
-        padding-left: 20px;
+      .project-square-l {
+        height: 400px;
+        border: 1px solid blue;
+        margin-bottom: 30px;
+      }
+    }
+  }
 
-        li {
+  .projet-filter {
+    .filter-work {
+      width: 160px;
+      color: $white-color;
+      padding: 15px 20px;
+      border: 1px solid $white-color;
+      border-radius: 2px;
+      background-color: $main-color;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-size: 15px;
+      position: relative;
+      text-align: left;
+      transition: all 0.233s ease-in;
+      border-radius: 3px;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      .icon {
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        .fa-arrow-right {
           color: $white-color;
-          font-size: 13px;
-          letter-spacing: 3px;
-          text-transform: uppercase;
-        }
-      }
-    }
-
-    .right-path {
-      padding: 0 20px 0;
-      display: none;
-      width: 100%;
-
-      @media (width >= 768px) {
-        display: block;
-        width: 45%;
-      }
-
-      .filter {
-        text-align: center;
-
-        .project-item {
-          border: 1px solid $main-color;
-          padding: 10px 20px;
-          height: 75px;
-          margin: auto;
-          box-shadow: 2px 4px 4px 0px rgb(28, 28, 28);
-          cursor: pointer;
+          font-size: 15px;
           transition: all 0.233s ease-in;
-
-          .project-dec {
-            text-align: left;
-            color: $white-color;
-            font-size: 15px;
-            transition: all 0.233s ease-in;
-          }
-
-          &:hover {
-            transform: translate(10px, -10px);
-
-            .project-dec {
-              color: $orange-color;
-            }
-          }
-        }
-
-        .project-item:not(:last-child) {
-          margin-bottom: 15px;
         }
       }
-    }
 
-    .project-square-l {
-      height: 400px;
-      border: 1px solid blue;
-      margin: 40px auto;
+      &:hover {
+        color: $main-color;
+        border-color: $main-color;
+        background-color: $white-color;
+
+        .icon {
+          .fa-arrow-right {
+            color: $main-color;
+            transform: translateX(10px);
+          }
+        }
+      }
+
+      @keyframes arrow {
+        to {
+          left: 100px;
+        }
+      }
     }
   }
 
@@ -882,6 +829,41 @@ header {
       }
     }
   }
+
+  // .filter {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+
+  //   .project-item {
+  //     border: 1px solid $main-color;
+  //     padding: 10px 20px;
+  //     height: 75px;
+  //     width: 300px;
+  //     margin: auto;
+  //     box-shadow: 2px 4px 4px 0px rgb(28, 28, 28);
+  //     cursor: pointer;
+  //     transition: all 0.233s ease-in;
+
+  //     .project-dec {
+  //       text-align: left;
+  //       color: $white-color;
+  //       font-size: 15px;
+  //       transition: all 0.233s ease-in;
+  //     }
+
+  //     &:hover {
+  //       transform: translate(10px, -10px);
+
+  //       .project-dec {
+  //         color: $orange-color;
+  //       }
+  //     }
+  //   }
+
+  //   .project-item:not(:last-child) {
+  //     margin-bottom: 15px;
+  //   }
 }
 
 .cv_section.contact-me {
