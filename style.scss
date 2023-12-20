@@ -72,6 +72,7 @@ header {
       gap: 15px;
       flex-wrap: wrap;
       margin-top: 20px;
+      text-align: center;
 
       @media (width >= 768px) {
         max-width: 600px;
@@ -239,7 +240,11 @@ header {
 }
 
 .cv_section {
-  padding: 50px 20px;
+  padding: 30px 20px;
+
+  @media (width >= 768px) {
+    padding: 50px;
+  }
 
   .sub-title-wrapper {
     position: relative;
@@ -272,6 +277,7 @@ header {
       position: absolute;
       top: 16px;
       left: 30px;
+      text-wrap: balance;
     }
   }
 }
@@ -598,7 +604,10 @@ header {
 
   .still-going-wrapper {
     text-align: center;
-    margin-top: 85px;
+
+    @media (width >= 768px) {
+      margin-top: 85px;
+    }
 
     .still-going {
       color: $white-color;
@@ -692,10 +701,14 @@ header {
         text-align: center;
         display: flex;
         flex-direction: column;
+        margin-bottom: 25px;
+
+        @media (width >= 768px) {
+          margin-bottom: unset;
+        }
 
         .logo-wrapper {
           @include display_flex_center;
-          padding: 10px;
           gap: 30px;
           height: 90px;
 
@@ -714,7 +727,6 @@ header {
           text-transform: uppercase;
           max-width: 100px;
           margin: 5px auto 10px;
-          height: 40px;
         }
       }
     }
@@ -728,28 +740,53 @@ header {
     gap: 30px;
 
     .latest-work {
-      width: 45%;
+      width: 50%;
 
       .project-text {
         color: $white-color;
-        font-size: 20px;
+        font-size: 15px;
         letter-spacing: 5px;
-        padding-left: 15px;
         width: fit-content;
-        margin: 0 auto 40px;
+        margin: 0 auto 20px;
+
+        @media (width >= 768px) {
+          font-size: 20px;
+          padding-left: 15px;
+          margin: 0 auto 40px;
+        }
       }
 
       .project-square-l {
-        height: 400px;
+        height: 150px;
         border: 1px solid blue;
-        margin-bottom: 30px;
+
+        @media (width >= 768px) {
+          height: 400px;
+        }
       }
     }
   }
 
-  .projet-filter {
+  .project-filter {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+
+    @media (width >= 768px) {
+      justify-content: flex-start;
+      gap: 10px;
+    }
+
+    @media (width >= 1224px) {
+      justify-content: center;
+      gap: 10px;
+    }
+
     .filter-work {
-      width: 160px;
+      width: 48%;
       color: $white-color;
       padding: 15px 20px;
       border: 1px solid $white-color;
@@ -763,8 +800,12 @@ header {
       transition: all 0.233s ease-in;
       border-radius: 3px;
 
-      &:not(:last-child) {
-        margin-right: 30px;
+      @media (width >= 768px) {
+        width: 150px;
+      }
+
+      @media (width >= 1224px) {
+        width: 160px;
       }
 
       .icon {
@@ -777,6 +818,19 @@ header {
           color: $white-color;
           font-size: 15px;
           transition: all 0.233s ease-in;
+        }
+      }
+
+      &.active {
+        color: $main-color;
+        border-color: $main-color;
+        background-color: $white-color;
+
+        .icon {
+          .fa-arrow-right {
+            color: $main-color;
+            transform: translateX(10px);
+          }
         }
       }
 
@@ -803,8 +857,7 @@ header {
 
   .project-box {
     width: 100%;
-    margin-top: 30px;
-    border: 1px solid red;
+    margin-top: 50px;
 
     .project-wrapper {
       display: grid;
@@ -825,7 +878,11 @@ header {
 
       .indiv-project {
         border: 1px solid blue;
-        height: 100px;
+        height: 150px;
+
+        @media (width >= 768px) {
+          height: 300px;
+        }
       }
     }
   }
@@ -868,16 +925,18 @@ header {
 
 .cv_section.contact-me {
   .contact-wrapper {
-    @include display_flex_center;
-    align-items: flex-start;
-    max-width: 90%;
-    margin: auto;
+    @media (width >= 768px) {
+      @include display_flex_center;
+      align-items: flex-start;
+      max-width: 90%;
+      margin: auto;
+    }
 
     .contact_text {
-      padding-left: 30px;
       width: 100%;
 
       @media (width >= 768px) {
+        padding-left: 30px;
         width: 50%;
       }
 
@@ -888,7 +947,11 @@ header {
       }
 
       p:last-child {
-        margin-top: 50px;
+        margin-top: 30px;
+
+        @media (width >= 768px) {
+          margin-top: 50px;
+        }
 
         a {
           color: $green-color;
@@ -918,21 +981,24 @@ header {
 
     .phone-contact {
       width: 100%;
-      margin-left: 30px;
+      margin-top: 30px;
 
       @media (width >= 768px) {
         width: 50%;
+        margin-left: 30px;
+        margin-top: unset;
       }
 
       address {
-        max-width: 200px;
-        margin: auto;
+        @media (width >= 768px) {
+          max-width: 200px;
+          margin: auto;
+        }
 
         .call-me {
           color: $white-color;
           letter-spacing: 3px;
           font-size: 20px;
-          font-style: none;
           margin-bottom: 10px;
         }
 
@@ -941,7 +1007,7 @@ header {
             color: $white-color;
             text-decoration: none;
             letter-spacing: 2px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             display: block;
           }
         }
@@ -954,7 +1020,7 @@ header {
   .header,
   .footer-wrapper,
   .cv_section {
-    max-width: 1600px;
+    max-width: 1370px;
     margin: 0 auto;
   }
 
@@ -985,14 +1051,16 @@ header {
 }
 
 footer {
-  height: 75px;
   background-color: $main-color;
 
   .footer-wrapper {
-    @include display_flex_space_between;
-    width: 100%;
-    height: 100%;
-    padding: 0 40px;
+    padding: 10px;
+    @media (width >= 768px) {
+      @include display_flex_space_between;
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+    }
 
     .left-side {
       .all-rights {
@@ -1003,6 +1071,14 @@ footer {
     }
 
     .right-side {
+      margin-top: 10px;
+      text-align: center;
+
+      @media (width >= 768px) {
+        margin-top: unset;
+        text-align: unset;
+      }
+
       .link {
         .social-link {
           color: $white-color;

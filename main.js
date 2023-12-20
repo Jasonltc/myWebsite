@@ -92,8 +92,17 @@ function addButtonUp() {
   });
 }
 
+function updateDate() {
+  let date = new Date();
+  let copyRight = document.querySelector(".all-rights");
+  year = date.getFullYear();
+  copyRight.innerHTML = `All rights reserved © ${year}`;
+  console.log(copyRight);
+}
+
 window.addEventListener("load", () => {
   addButtonUp();
   scramble();
   sliderPort();
+  updateDate();
 });
