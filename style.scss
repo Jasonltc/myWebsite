@@ -15,23 +15,15 @@ body {
   background-color: #252525;
 }
 
-.wide-dimension-header,
-.wide-dimension-main {
-  padding: 0 10px;
-  overflow: hidden;
-}
-
 .wide-dimension-header {
   background-color: $main-color;
 }
 
 .wide-dimension-main {
   background-color: $secondary-color;
-  position: relative;
 }
 
 /* scollbar */
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -117,11 +109,12 @@ body {
 }
 
 header {
-  background-color: $main-color;
+  background-color: $secondary-color;
 
   .header {
     padding: 20px 10px;
     position: relative;
+
     .menu-items {
       @include display_flex_space_around;
       gap: 15px;
@@ -268,13 +261,6 @@ header {
     }
   }
 
-  @keyframes fadeInUpImage {
-    to {
-      opacity: 1;
-      transform: translateY(0px);
-    }
-  }
-
   .profile_picture {
     padding: 20px;
     background-color: $blue-color;
@@ -301,7 +287,7 @@ header {
 }
 
 .cv_section {
-  margin-bottom: 70px;
+  padding: 50px 20px;
 
   .sub-title-wrapper {
     position: relative;
@@ -320,25 +306,6 @@ header {
       &.small-one {
         height: 70px;
       }
-
-      // &::before,
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   width: 20px;
-      //   height: 20px;
-      //   background-color: $green-color;
-      // }
-
-      // &::before {
-      //   top: -10px;
-      //   right: -10px;
-      // }
-
-      // &::after {
-      //   bottom: -10px;
-      //   left: -5px;
-      // }
     }
 
     .sub-title {
@@ -358,121 +325,119 @@ header {
 }
 
 .cv_section.brief {
-  background-color: $secondary-color;
-  padding-top: 70px;
-}
-
-.brief-wrapper {
-  @media (width >= 768px) {
-    @include display_flex_space_between;
-    gap: 35px;
-    align-items: flex-start;
-  }
-
-  .about-me-information {
-    order: 1;
+  .brief-wrapper {
     @media (width >= 768px) {
-      width: 50%;
+      @include display_flex_space_between;
+      gap: 35px;
+      align-items: flex-start;
     }
 
-    .about-name {
-      margin-top: 20px;
-      margin-bottom: 20px;
-      color: $white-color;
-      font-size: 1.2rem;
-      letter-spacing: 3px;
-
-      span {
-        color: $orange-color;
-      }
-    }
-
-    .about-me {
-      color: $white-color;
-      margin-bottom: 10px;
-      letter-spacing: 2px;
-      padding: 0 10px;
-      font-size: 1rem;
+    .about-me-information {
+      order: 1;
 
       @media (width >= 768px) {
-        padding: unset;
+        width: 50%;
+      }
+
+      .about-name {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        color: $white-color;
+        font-size: 1.2rem;
+        letter-spacing: 3px;
+
+        span {
+          color: $orange-color;
+        }
+      }
+
+      .about-me {
+        color: $white-color;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+        padding: 0 10px;
+        font-size: 1rem;
+
+        @media (width >= 768px) {
+          padding: unset;
+        }
+      }
+
+      .summary {
+        color: $white-color;
+        line-height: 25px;
+        padding: 0 10px;
+        letter-spacing: 2px;
+        font-size: 1rem;
+
+        @media (width >= 768px) {
+          padding: unset;
+          max-width: 600px;
+        }
       }
     }
 
-    .summary {
-      color: $white-color;
-      line-height: 25px;
-      padding: 0 10px;
-      letter-spacing: 2px;
-      font-size: 1rem;
-
+    .interest {
       @media (width >= 768px) {
-        padding: unset;
-        max-width: 600px;
-      }
-    }
-  }
-
-  .interest {
-    @media (width >= 768px) {
-      width: 50%;
-    }
-
-    .interest-wrapper {
-      margin-top: 20px;
-
-      @media (width >= 768px) {
-        margin-top: unset;
+        width: 50%;
       }
 
-      .interest-box {
-        border: 1px solid $white-color;
-        padding: 15px 20px;
-        max-width: 600px;
-        margin-left: auto;
+      .interest-wrapper {
+        margin-top: 20px;
 
-        &:first-child {
-          margin-bottom: 20px;
+        @media (width >= 768px) {
+          margin-top: unset;
         }
 
-        .interest-title {
-          color: $yellow-color;
+        .interest-box {
+          border: 1px solid $white-color;
+          padding: 15px 20px;
+          max-width: 600px;
+          margin-left: auto;
 
-          .return {
-            margin-left: 20px;
+          &:first-child {
+            margin-bottom: 20px;
           }
 
-          .value {
-            color: $orange-color;
-          }
-
-          .foreach {
-            margin-left: 20px;
-            color: $orange-color;
-          }
-
-          .console {
-            margin-left: 40px;
+          .interest-title {
             color: $yellow-color;
+
+            .return {
+              margin-left: 20px;
+            }
+
+            .value {
+              color: $orange-color;
+            }
+
+            .foreach {
+              margin-left: 20px;
+              color: $orange-color;
+            }
+
+            .console {
+              margin-left: 40px;
+              color: $yellow-color;
+            }
           }
-        }
 
-        .success {
-          color: $green-color;
-          margin-bottom: 20px;
-        }
+          .success {
+            color: $green-color;
+            margin-bottom: 20px;
+          }
 
-        .hobbie-wrapper,
-        .lang-flap-wrapper {
-          @include display_flex_space_between;
-          gap: 10px;
+          .hobbie-wrapper,
+          .lang-flap-wrapper {
+            @include display_flex_space_between;
+            gap: 10px;
 
-          .hobbie-item {
-            text-align: center;
+            .hobbie-item {
+              text-align: center;
 
-            .hobbie-name {
-              margin-top: 10px;
-              color: $white-color;
+              .hobbie-name {
+                margin-top: 10px;
+                color: $white-color;
+              }
             }
           }
         }
@@ -481,7 +446,7 @@ header {
   }
 }
 
-.my_journey {
+.cv_section.my_journey {
   .flight-announcement {
     text-align: center;
     margin-bottom: 50px;
@@ -690,6 +655,74 @@ header {
   }
 }
 
+.cv_section.Portfolio {
+  height: auto;
+
+  .switch-btn-wrapper {
+    text-align: center;
+
+    .switch-btn-box {
+      @include display_flex_center;
+      gap: 10px;
+
+      .switch-btn {
+        background-color: unset;
+        padding: 5px 20px;
+        outline: none;
+        color: $white-color;
+        cursor: pointer;
+        text-transform: uppercase;
+        border: none;
+        font-weight: 400;
+        transition: all 0.2333s ease-in;
+        font-family: $secondaryFont;
+
+        &.active {
+          color: $orange-color;
+        }
+
+        &:hover {
+          color: $orange-color;
+        }
+
+        @media (width >= 1024px) {
+          width: max-content;
+          padding: 15px 25px;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+
+  .portfolio-wrapper {
+    .portfolio {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+
+    .swiper {
+      width: 80%;
+      padding-top: 35px;
+    }
+
+    .swiper.landscape {
+      height: 250px;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+    }
+
+    .no-active-swiper {
+      display: none;
+    }
+  }
+}
+
 .skill-learn {
   .technology-wrapper {
     padding: 0 10px;
@@ -731,60 +764,6 @@ header {
         }
       }
     }
-  }
-}
-
-.cv_section.Portfolio {
-  height: auto;
-
-  .switch-btn-wrapper {
-    text-align: center;
-
-    .switch-btn-box {
-      @include display_flex_center;
-      gap: 10px;
-
-      .switch-btn {
-        background-color: unset;
-        padding: 5px 20px;
-        outline: none;
-        color: $white-color;
-        cursor: pointer;
-        text-transform: uppercase;
-        border: none;
-        font-weight: 400;
-        transition: all 0.2333s ease-in;
-        font-family: $secondaryFont;
-
-        &:hover {
-          color: $orange-color;
-        }
-
-        @media (width >= 1024px) {
-          width: max-content;
-          padding: 15px 25px;
-          font-size: 15px;
-        }
-      }
-    }
-  }
-
-  .swiper {
-    width: 80%;
-    padding-top: 35px;
-  }
-
-  .swiper.landscape {
-    height: 250px;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-  }
-
-  .no-active-swiper {
-    display: none;
   }
 }
 
