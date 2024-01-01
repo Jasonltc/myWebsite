@@ -80,9 +80,9 @@ function addButtonUp() {
   // add up button
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > 300) {
-      $(".to-the-top").fadeIn(600);
+      $(".action-btn").fadeIn(600);
     } else {
-      $(".to-the-top").fadeOut(600);
+      $(".action-btn").fadeOut(600);
     }
   });
 
