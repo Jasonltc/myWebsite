@@ -627,6 +627,31 @@ header {
       color: $white-color;
       font-size: 20px;
     }
+
+    .download {
+      margin-top: 20px;
+
+      a {
+        display: block;
+        color: $white-color;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid $white-color;
+        width: 200px;
+        margin: auto;
+        cursor: pointer;
+        transition: all 0.233s ease-in;
+
+        .fa-file-download {
+          transform: translate(5px, -1px);
+        }
+
+        &:hover {
+          color: $orange-color;
+          border-color: $orange-color;
+        }
+      }
+    }
   }
 }
 
@@ -1058,8 +1083,6 @@ header {
   bottom: 35px;
   right: 16px;
   z-index: 60;
-  @include display_flex_center;
-  gap: 20px;
   cursor: pointer;
 
   @media (width >=1024px) {
@@ -1067,8 +1090,7 @@ header {
     right: 35px;
   }
 
-  .to-the-top,
-  .dark-mode {
+  .to-the-top {
     width: 30px;
     height: 30px;
     padding: 10px;
@@ -1077,17 +1099,6 @@ header {
     background-color: $main-color;
     rotate: 45deg;
     z-index: 2;
-
-    .fa-lightbulb {
-      color: $orange-color;
-      rotate: -45deg;
-      position: absolute;
-      transform: translate(-2%, -68%);
-
-      @media (width >=1024px) {
-        transform: translate(-8%, -70%);
-      }
-    }
 
     .top {
       color: $orange-color;
