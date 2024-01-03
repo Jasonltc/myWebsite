@@ -712,15 +712,18 @@ header .header .menu-items .section-item .links {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
   height: 90px;
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo {
-  width: 80px;
+.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo-icon {
+  width: 100px;
   height: 80px;
   border: 1px solid #bab8b8;
   display: grid;
   place-items: center;
+}
+.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo-icon span {
+  color: #ffffff;
 }
 .cv_section.skill-learn .technology-wrapper .technology-used .category .cat {
   color: #ffffff;

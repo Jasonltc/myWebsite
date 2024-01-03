@@ -749,15 +749,19 @@ header {
 
         .logo-wrapper {
           @include display_flex_center;
-          gap: 30px;
+          gap: 15px;
           height: 90px;
 
-          .logo {
-            width: 80px;
+          .logo-icon {
+            width: 100px;
             height: 80px;
             border: 1px solid #bab8b8;
             display: grid;
             place-items: center;
+
+            span {
+              color: $white-color;
+            }
           }
         }
 
