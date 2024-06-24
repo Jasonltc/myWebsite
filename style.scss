@@ -911,6 +911,7 @@ header {
     margin-top: 50px;
 
     .project-wrapper {
+      transition: 0.5s;
       display: grid;
       gap: 15px;
       grid-template-columns: repeat(2, 1fr);
@@ -929,11 +930,48 @@ header {
 
       .indiv-project {
         border: 1px solid blue;
-        height: 150px;
+        height: auto;
         cursor: pointer;
+        background-color: #252525;
 
-        @media (width >= 768px) {
-          height: 300px;
+        .project-link {
+          color: $white-color;
+          text-decoration: none;
+          display: block;
+
+          .project-detail {
+            padding: 10px;
+          }
+
+          .project-intro {
+            margin-bottom: 20px;
+            width: 100%;
+          }
+
+          .tect-used-wrapper {
+            margin-top: 20px;
+
+            @media (width >= 768px) {
+              @include display_flex_space_between;
+            }
+
+            .tect-used {
+              display: flex;
+              align-items: center;
+
+              img {
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                margin-bottom: 5px;
+
+                @media (width >= 768px) {
+                  @include display_flex_space_between;
+                  margin-bottom: unset;
+                }
+              }
+            }
+          }
         }
       }
     }
