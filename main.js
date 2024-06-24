@@ -76,8 +76,8 @@ if (window.innerWidth >= 1024) {
   tl.to(".airplane", { y: 1470, color: "#ee4036" });
 }
 
+// add up button
 function addButtonUp() {
-  // add up button
   $(window).on("scroll", function () {
     if ($(this).scrollTop() > 300) {
       $(".action-btn").fadeIn(600);
@@ -92,12 +92,12 @@ function addButtonUp() {
   });
 }
 
+//date update
 function updateDate() {
   let date = new Date();
   let copyRight = document.querySelector(".all-rights");
   year = date.getFullYear();
   copyRight.innerHTML = `All rights reserved © ${year}`;
-  console.log(copyRight);
 }
 
 window.addEventListener("load", () => {

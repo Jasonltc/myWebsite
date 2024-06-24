@@ -521,7 +521,6 @@ header {
           height: 70px;
           line-height: 50px;
           background-color: $light-black;
-          box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
           border: 1px solid #272626;
         }
 
@@ -549,7 +548,7 @@ header {
         border: 1px solid $main-color;
         padding: 30px 25px;
         background-color: $light-black;
-        box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
+        // box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
         order: 2;
 
         @media (width >= 1224px) {

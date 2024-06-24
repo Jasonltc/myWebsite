@@ -494,7 +494,6 @@ header .header .menu-items .section-item .links {
   height: 70px;
   line-height: 50px;
   background-color: #292a2e;
-  box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
   border: 1px solid #272626;
 }
 .cv_section.my_journey .education_journey .time-stop .year .work-year.left-pos {
@@ -516,7 +515,6 @@ header .header .menu-items .section-item .links {
   border: 1px solid #242528;
   padding: 30px 25px;
   background-color: #292a2e;
-  box-shadow: 5px 5px 5px 0px rgb(28, 28, 28);
   order: 2;
 }
 @media (width >= 1224px) {
