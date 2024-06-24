@@ -662,55 +662,68 @@ header .header .menu-items .section-item .links {
   display: none;
 }
 
-.cv_section.skill-learn .technology-wrapper {
-  padding: 0 10px;
-}
-.cv_section.skill-learn .technology-wrapper .technology-used {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px 50px;
-}
 @media (width >= 768px) {
-  .cv_section.skill-learn .technology-wrapper .technology-used {
-    gap: 50px;
+  .cv_section.skill-learn .tect-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
   }
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category {
+.cv_section.skill-learn .tect-wrapper .tect {
+  border: 1px solid #252525;
+  padding: 20px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+@media (width >= 1224px) {
+  .cv_section.skill-learn .tect-wrapper .tect {
+    background-color: #252525;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+  }
+}
+.cv_section.skill-learn .tect-wrapper .tect h3 {
+  color: #ffffff;
+  margin-bottom: 20px;
   text-align: center;
+}
+.cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper {
   display: flex;
-  flex-direction: column;
-  margin-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (width >= 768px) {
-  .cv_section.skill-learn .technology-wrapper .technology-used .category {
-    margin-bottom: unset;
+  .cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 300px;
   }
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  height: 90px;
+@media (width >= 1024px) {
+  .cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper {
+    height: 500px;
+  }
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo-icon {
-  width: 100px;
-  height: 80px;
-  border: 1px solid #bab8b8;
-  display: grid;
-  place-items: center;
+@media (width >= 1224px) {
+  .cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper {
+    transition: 0.5s;
+    filter: brightness(0);
+  }
+  .cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper:hover {
+    filter: brightness(1);
+    transform: translateZ(50px);
+  }
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category .logo-wrapper .logo-icon span {
-  color: #ffffff;
+.cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper img {
+  width: 20%;
 }
-.cv_section.skill-learn .technology-wrapper .technology-used .category .cat {
-  color: #ffffff;
-  font-size: 13px;
-  text-transform: uppercase;
-  max-width: 200px;
-  margin: 5px auto 10px;
+@media (width >= 768px) {
+  .cv_section.skill-learn .tect-wrapper .tect .tect-learn-wrapper img {
+    width: 25%;
+  }
 }
 
 .cv_section.project-done .project {
@@ -962,32 +975,19 @@ header .header .menu-items .section-item .links {
 }
 .action-btn {
   position: fixed;
-  bottom: 35px;
+  bottom: 80px;
   right: 16px;
   z-index: 60;
   cursor: pointer;
+  font-size: 35px;
 }
 @media (width >= 1024px) {
   .action-btn {
-    bottom: 60px;
-    right: 35px;
+    right: 45px;
   }
 }
-.action-btn .to-the-top {
-  position: relative;
-  z-index: 2;
-}
-.action-btn .to-the-top .top {
-  color: #ee4036;
-  rotate: 45deg;
-  position: absolute;
-  transform: translate(-2%, -68%);
-  font-size: 25px;
-}
-@media (width >= 1024px) {
-  .action-btn .to-the-top .top {
-    transform: translate(-8%, -70%);
-  }
+.action-btn i {
+  color: #8bc34a;
 }
 
 footer {

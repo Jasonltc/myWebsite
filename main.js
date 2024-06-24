@@ -1,5 +1,5 @@
 function scramble() {
-  const phrases = ["Welcome Abort", "Have a safe flight and seat your belt"];
+  const phrases = ["Welcome Abort", "Seat your belt and Have a safe flight"];
   const el = document.querySelector(".flight-text");
   const fx = new TextScramble(el);
   let counter = 0;
@@ -99,6 +99,9 @@ function updateDate() {
   year = date.getFullYear();
   copyRight.innerHTML = `All rights reserved © ${year}`;
 }
+
+//function accordion
+let tect = document.querySelectorAll(".tect");
 
 window.addEventListener("load", () => {
   addButtonUp();

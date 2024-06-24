@@ -720,52 +720,59 @@ header {
 }
 
 .cv_section.skill-learn {
-  .technology-wrapper {
-    padding: 0 10px;
+  .tect-wrapper {
+    @media (width >= 768px) {
+      @include display_flex_space_around;
+      gap: 10px;
+    }
 
-    .technology-used {
-      @include display_flex_center;
-      flex-wrap: wrap;
-      gap: 10px 50px;
-
-      @media (width >= 768px) {
-        gap: 50px;
+    .tect {
+      @media (width >= 1224px) {
+        background-color: #252525;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
       }
 
-      .category {
+      border: 1px solid #252525;
+      padding: 20px;
+      width: 100%;
+      margin-bottom: 20px;
+
+      h3 {
+        color: $white-color;
+        margin-bottom: 20px;
         text-align: center;
-        display: flex;
-        flex-direction: column;
-        margin-bottom: 25px;
+      }
+
+      .tect-learn-wrapper {
+        @include display_flex_space_between;
 
         @media (width >= 768px) {
-          margin-bottom: unset;
+          @include display_flex_space_around;
+          flex-direction: column;
+          min-height: 300px;
         }
 
-        .logo-wrapper {
-          @include display_flex_center;
-          gap: 15px;
-          height: 90px;
+        @media (width >= 1024px) {
+          height: 500px;
+        }
 
-          .logo-icon {
-            width: 100px;
-            height: 80px;
-            border: 1px solid #bab8b8;
-            display: grid;
-            place-items: center;
+        @media (width >= 1224px) {
+          transition: 0.5s;
+          filter: brightness(0);
 
-            span {
-              color: $white-color;
-            }
+          &:hover {
+            filter: brightness(1);
+            transform: translateZ(50px);
           }
         }
 
-        .cat {
-          color: $white-color;
-          font-size: 13px;
-          text-transform: uppercase;
-          max-width: 200px;
-          margin: 5px auto 10px;
+        img {
+          width: 20%;
+
+          @media (width >= 768px) {
+            width: 25%;
+          }
         }
       }
     }
@@ -1079,31 +1086,18 @@ header {
 
 .action-btn {
   position: fixed;
-  bottom: 35px;
+  bottom: 80px;
   right: 16px;
   z-index: 60;
   cursor: pointer;
+  font-size: 35px;
 
   @media (width >=1024px) {
-    bottom: 60px;
-    right: 35px;
+    right: 45px;
   }
 
-  .to-the-top {
-    position: relative;
-    z-index: 2;
-
-    .top {
-      color: $orange-color;
-      rotate: 45deg;
-      position: absolute;
-      transform: translate(-2%, -68%);
-      font-size: 25px;
-
-      @media (width >=1024px) {
-        transform: translate(-8%, -70%);
-      }
-    }
+  i {
+    color: $green-color;
   }
 }
 
