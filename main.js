@@ -65,7 +65,7 @@ gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
 if (window.innerWidth >= 1024) {
   let tl = gsap.timeline({
     scrollTrigger: {
-      trigger: ".my_journey",
+      trigger: ".my-journey",
       start: "top top",
       end: "bottom 300",
       scrub: "true",

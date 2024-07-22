@@ -7,7 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  scroll-margin: 150px;
+  scroll-margin: 180px;
   font-family: $secondaryFont;
 }
 
@@ -140,21 +140,34 @@ header {
 }
 
 .intro {
-  .intro_animation {
+  .top-picture {
+    text-align: center;
+    margin-bottom: 20px;
+
+    .linkedin-pic {
+      border: 5px solid $white-color;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto;
+    }
+  }
+
+  .intro-animation {
     text-align: center;
 
     .started-animation {
       font-weight: bold;
       color: $white-color;
       max-width: max-content;
-      font-size: 25px;
+      font-size: 15px;
       position: relative;
       font-family: $secondaryFont;
       letter-spacing: 2px;
       margin: auto;
 
       @media (width >= 1224px) {
-        font-size: 45px;
+        font-size: 20px;
       }
 
       &::after,
@@ -181,17 +194,43 @@ header {
     }
 
     .welcome-text {
-      font-size: 22px;
+      font-size: 30px;
       color: $orange-color;
       font-weight: bold;
       padding: 20px 0;
-      transform: translateY(4px);
-      opacity: 0;
-      animation: fadeInUp 2s ease 4.5s forwards;
       letter-spacing: 2px;
+      // transform: translateY(4px);
+      // opacity: 1;
+      // animation: fadeInUp 2s ease 4.5s forwards;
 
       @media (width >= 1224px) {
-        font-size: 27px;
+        font-size: 45px;
+      }
+    }
+
+    .welcome-text-sub {
+      color: $white-color;
+      margin-bottom: 30px;
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+
+    .intro-btn-wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+
+      .intro-btn {
+        color: #ffffff;
+        padding: 10px 20px;
+        border: 1px solid #ffffff;
+        width: 200px;
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        text-transform: uppercase;
+        text-decoration: none;
+        // transition: all 0.233s ease-in;
       }
     }
   }
@@ -208,15 +247,15 @@ header {
     }
   }
 
-  @keyframes fadeInUp {
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+  // @keyframes fadeInUp {
+  //   to {
+  //     opacity: 1;
+  //     transform: translateY(0);
+  //   }
+  // }
 }
 
-.cv_section {
+.cv-section {
   padding: 30px 20px;
 
   @media (width >= 768px) {
@@ -259,7 +298,7 @@ header {
   }
 }
 
-.cv_section.brief {
+.cv-section.brief {
   .brief-wrapper {
     @media (width >= 768px) {
       @include display_flex_space_between;
@@ -390,7 +429,7 @@ header {
     }
   }
 
-  .profile_picture {
+  .profile-picture {
     padding: 20px;
     border-radius: 46% 54% 31% 86%/66% 44% 71% 49%;
 
@@ -414,7 +453,7 @@ header {
   }
 }
 
-.cv_section.my_journey {
+.cv-section.my-journey {
   .flight-announcement {
     text-align: center;
     margin-bottom: 50px;
@@ -431,7 +470,7 @@ header {
     }
   }
 
-  .education_journey {
+  .education-journey {
     position: relative;
     margin-top: 25px;
 
@@ -650,7 +689,7 @@ header {
   }
 }
 
-.cv_section.Portfolio {
+.cv-section.Portfolio {
   height: auto;
 
   .switch-btn-wrapper {
@@ -719,7 +758,7 @@ header {
   }
 }
 
-.cv_section.skill-learn {
+.cv-section.skill-learn {
   .tect-wrapper {
     @media (width >= 768px) {
       @include display_flex_space_around;
@@ -779,7 +818,7 @@ header {
   }
 }
 
-.cv_section.project-done {
+.cv-section.project-done {
   .project {
     @include display_flex_center;
     align-items: flex-start;
@@ -1013,7 +1052,7 @@ header {
   //   }
 }
 
-.cv_section.contact-me {
+.cv-section.contact-me {
   .contact-wrapper {
     @media (width >= 768px) {
       @include display_flex_center;
@@ -1022,7 +1061,7 @@ header {
       margin: auto;
     }
 
-    .contact_text {
+    .contact-text {
       width: 100%;
 
       @media (width >= 768px) {
@@ -1109,12 +1148,12 @@ header {
 @media (width >=2200px) {
   .header,
   .footer-wrapper,
-  .cv_section {
+  .cv-section {
     max-width: 1370px;
     margin: 0 auto;
   }
 
-  .cv_section.Portfolio {
+  .cv-section.Portfolio {
     .swiper,
     .swiper.landscape {
       height: 100%;
