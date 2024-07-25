@@ -837,39 +837,110 @@ header {
 }
 
 .cv-section.project-done {
-  .project {
-    @include display_flex_center;
-    align-items: flex-start;
-    max-width: 90%;
-    margin: auto;
-    gap: 30px;
+  .lastest-project {
+    margin-bottom: 20px;
 
-    .latest-work {
-      width: 50%;
+    @media (width >= 768px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
 
-      .project-text {
-        color: $white-color;
-        font-size: 15px;
-        letter-spacing: 5px;
-        width: fit-content;
-        margin: 0 auto 20px;
+    .last {
+      color: $white-color;
+      margin-bottom: 20px;
+    }
 
-        @media (width >= 768px) {
-          font-size: 20px;
-          padding-left: 15px;
-          margin: 0 auto 40px;
+    .newest-project {
+      margin-bottom: 20px;
+    }
+
+    .project-box.newest {
+      .frame {
+        height: 500px;
+      }
+    }
+  }
+
+  .project-wrapper {
+    display: grid;
+    overflow-y: scroll;
+    flex: 1;
+    gap: 10px;
+
+    @media (width >= 768px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (width >= 1024px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .project-box {
+    border: 1px solid red;
+
+    .project-link {
+      color: $white-color;
+      text-decoration: none;
+
+      .frame {
+        width: 100%;
+        background-color: $main-color;
+        text-align: center;
+        margin-bottom: 20px;
+        height: 300px;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
 
-      .project-square-l {
-        height: 150px;
-        border: 1px solid blue;
-        cursor: pointer;
+      .project-title,
+      .project-detail,
+      .tect-used {
+        margin-bottom: 20px;
+        padding: 0 20px;
+      }
 
-        @media (width >= 768px) {
-          height: 400px;
-          max-width: 740px;
-          margin: auto;
+      .tect-used {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .tect-wrapper {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+
+          .tect {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: #252525;
+            display: grid;
+            place-items: center;
+            border: 1px solid #ffffff;
+
+            &:nth-child(2) {
+              transform: translateX(-5px);
+            }
+
+            &:nth-child(3) {
+              transform: translateX(-10px);
+            }
+
+            img {
+              width: 60%;
+            }
+          }
+        }
+
+        .fa-external-link-alt {
+          padding-left: 5px;
         }
       }
     }
@@ -962,73 +1033,6 @@ header {
   //     }
   //   }
   // }
-
-  .project-box {
-    width: 100%;
-    margin-top: 50px;
-
-    .project-wrapper {
-      transition: 0.5s;
-      display: grid;
-      gap: 15px;
-      grid-template-columns: repeat(2, 1fr);
-
-      @media (width >= 768px) {
-        grid-template-columns: repeat(3, 1fr);
-      }
-
-      @media (width >= 1224px) {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .indiv-project {
-        border: 1px solid blue;
-        height: auto;
-        cursor: pointer;
-        background-color: #252525;
-
-        .project-link {
-          color: $white-color;
-          text-decoration: none;
-          display: block;
-
-          .project-detail {
-            padding: 10px;
-          }
-
-          .project-intro {
-            margin-bottom: 20px;
-            width: 100%;
-          }
-
-          .tect-used-wrapper {
-            margin-top: 20px;
-
-            @media (width >= 768px) {
-              @include display_flex_space_between;
-            }
-
-            .tect-used {
-              display: flex;
-              align-items: center;
-
-              img {
-                width: 20px;
-                height: 20px;
-                border-radius: 50%;
-                margin-bottom: 5px;
-
-                @media (width >= 768px) {
-                  @include display_flex_space_between;
-                  margin-bottom: unset;
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 
   // .filter {
   //   display: flex;
@@ -1159,7 +1163,7 @@ header {
   }
 }
 
-@media (width >=2200px) {
+@media (width >=1500px) {
   .header,
   .footer-wrapper,
   .cv-section {
