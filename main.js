@@ -109,3 +109,32 @@ window.addEventListener("load", () => {
   sliderPort();
   updateDate();
 });
+
+// see more
+let seeMore = document.querySelector(".see-more");
+let seeLess = document.querySelector(".see-less");
+let workMobile = document.querySelector(".project-wrapper");
+
+seeMore.addEventListener("click", () => {
+  workMobile.classList.add("active");
+  if (workMobile.classList.contains("active")) {
+    seeMore.style.display = "none";
+  } else {
+    seeMore.style.display = "block";
+  }
+});
+
+seeLess.addEventListener("click", () => {
+  workMobile.classList.remove("active");
+  if (workMobile.classList.contains("active")) {
+    seeMore.style.display = "none";
+  } else {
+    seeMore.style.display = "block";
+  }
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth >= 1024) {
+    workMobile.classList.remove("active");
+  }
+});

@@ -68,7 +68,7 @@ body {
 }
 
 .high-light-green {
-  color: $green-color;
+  color: $darker-green-color;
 }
 
 header {
@@ -215,9 +215,12 @@ header {
     }
 
     .intro-btn-wrapper {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
+      @media (width >= 768px) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+      }
 
       .intro-btn {
         color: #ffffff;
@@ -229,7 +232,20 @@ header {
         background-color: transparent;
         text-transform: uppercase;
         text-decoration: none;
+        margin: 0 auto;
         // transition: all 0.233s ease-in;
+
+        @media (width >= 768px) {
+          margin: unset;
+        }
+
+        &:first-child {
+          margin-bottom: 20px;
+
+          @media (width >= 768px) {
+            margin-bottom: unset;
+          }
+        }
 
         &:hover {
           color: $darker-green-color;
@@ -783,17 +799,17 @@ header {
     }
 
     .tect {
+      border: 1px solid #252525;
+      padding: 20px;
+      width: 100%;
+      margin-bottom: 20px;
+
       @media (width >= 1224px) {
         background-color: #252525;
         transform-style: preserve-3d;
         transform: perspective(1000px);
         max-width: 300px;
       }
-
-      border: 1px solid #252525;
-      padding: 20px;
-      width: 100%;
-      margin-bottom: 20px;
 
       h3 {
         color: $white-color;
@@ -837,6 +853,14 @@ header {
 }
 
 .cv-section.project-done {
+  .last {
+    color: $darker-green-color;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+
   .lastest-project {
     margin-bottom: 20px;
 
@@ -847,39 +871,71 @@ header {
       gap: 10px;
     }
 
-    .last {
-      color: $white-color;
-      margin-bottom: 20px;
-    }
-
     .newest-project {
       margin-bottom: 20px;
     }
 
     .project-box.newest {
       .frame {
-        height: 500px;
+        height: 300px;
       }
     }
   }
 
-  .project-wrapper {
-    display: grid;
-    overflow-y: scroll;
-    flex: 1;
-    gap: 10px;
+  .btn-mobile {
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 1px solid #ffffff;
+    width: 150px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    text-transform: uppercase;
+    margin: 0 auto;
+    background-color: $main-color;
+    margin-bottom: 20px;
 
-    @media (width >= 768px) {
-      grid-template-columns: repeat(2, 1fr);
+    @media (width >= 1024px) {
+      display: none;
+    }
+  }
+
+  .project-wrapper {
+    display: none;
+    position: relative;
+
+    &.active {
+      display: block;
+
+      @media (width >= 768px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
     }
 
     @media (width >= 1024px) {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .see-less {
+      @media (width >= 768px) {
+        position: absolute;
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      @media (width >= 1024px) {
+        display: none;
+      }
     }
   }
 
   .project-box {
-    border: 1px solid red;
+    background-color: $main-color;
 
     .project-link {
       color: $white-color;
@@ -906,10 +962,21 @@ header {
         padding: 0 20px;
       }
 
+      .project-title {
+        text-transform: capitalize;
+        font-size: 1.5rem;
+        color: $darker-green-color;
+      }
+
       .tect-used {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        padding-bottom: 25px;
+
+        @media (width >= 1024px) {
+          padding-bottom: unset;
+        }
 
         .tect-wrapper {
           display: flex;
