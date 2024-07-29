@@ -729,7 +729,8 @@ header .header .menu-items .section-item .links {
 }
 @media (width >= 768px) {
   .cv-section.project-done .lastest-project {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     align-items: center;
     gap: 10px;
@@ -796,7 +797,11 @@ header .header .menu-items .section-item .links {
 }
 .cv-section.project-done .project-box {
   background-color: #242528;
-  border: 2px solid beige;
+}
+@media (width >= 768px) {
+  .cv-section.project-done .project-box {
+    border: 2px solid beige;
+  }
 }
 .cv-section.project-done .project-box .project-link {
   color: #ffffff;
@@ -825,6 +830,14 @@ header .header .menu-items .section-item .links {
   text-transform: capitalize;
   font-size: 1.5rem;
   color: #9acd32;
+}
+.cv-section.project-done .project-box .project-link .project-detail {
+  height: auto;
+}
+@media (width >= 768px) {
+  .cv-section.project-done .project-box .project-link .project-detail {
+    height: 80px;
+  }
 }
 .cv-section.project-done .project-box .project-link .tect-used {
   display: flex;
