@@ -869,6 +869,7 @@ header {
       justify-content: center;
       align-items: center;
       gap: 10px;
+      margin-bottom: 40px;
     }
 
     .newest-project {
@@ -936,6 +937,7 @@ header {
 
   .project-box {
     background-color: $main-color;
+    border: 2px solid beige;
 
     .project-link {
       color: $white-color;
@@ -990,7 +992,7 @@ header {
             background-color: #252525;
             display: grid;
             place-items: center;
-            border: 1px solid #ffffff;
+            border: 1px solid #03758f;
 
             &:nth-child(2) {
               transform: translateX(-5px);

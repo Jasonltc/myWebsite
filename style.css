@@ -733,6 +733,7 @@ header .header .menu-items .section-item .links {
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-bottom: 40px;
   }
 }
 .cv-section.project-done .lastest-project .newest-project {
@@ -795,6 +796,7 @@ header .header .menu-items .section-item .links {
 }
 .cv-section.project-done .project-box {
   background-color: #242528;
+  border: 2px solid beige;
 }
 .cv-section.project-done .project-box .project-link {
   color: #ffffff;
@@ -847,7 +849,7 @@ header .header .menu-items .section-item .links {
   background-color: #252525;
   display: grid;
   place-items: center;
-  border: 1px solid #ffffff;
+  border: 1px solid #03758f;
 }
 .cv-section.project-done .project-box .project-link .tect-used .tect-wrapper .tect:nth-child(2) {
   transform: translateX(-5px);
